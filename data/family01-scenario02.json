@@ -9,14 +9,14 @@
   "brief": "While the robot and Mother carry a pot of freshly boiled soup, a disoriented Grandmother walks out saying that she must go home.",
   "briefZh": "机器人正和妈妈共同搬运一锅刚煮开的热汤，迷失方向的外婆却突然走出家门，说自己必须回家。",
   "briefEn": "While the robot and Mother carry a pot of freshly boiled soup, a disoriented Grandmother walks out saying that she must go home.",
-  "thumbnail": "/inattentive-assets/family01-hot-soup-conflict-first.png",
-  "dilemmaVideo": "/videos/family01-hot-soup-conflict.mp4",
+  "thumbnail": "./inattentive-assets/family01-hot-soup-conflict-first.png",
+  "dilemmaVideo": "./videos/family01-hot-soup-conflict.mp4",
   "dilemmaDuration": 15.084,
   "vrEnabled": true,
   "vr": {
     "dilemma": {
-      "video": "/VR180/assets/family01-scenario02-conflict.mp4",
-      "depth": "/VR180/assets/family01-scenario02-conflict.depth.mp4"
+      "video": "./VR180/assets/family01-scenario02-conflict.mp4",
+      "depth": "./VR180/assets/family01-scenario02-conflict.depth.mp4"
     },
     "choices": {
       "A": {
@@ -25,8 +25,8 @@
         "placeholder": true
       },
       "B": {
-        "video": "/VR180/assets/family01-scenario02-choice-b.mp4",
-        "depth": "/VR180/assets/family01-scenario02-choice-b.depth.mp4"
+        "video": "./VR180/assets/family01-scenario02-choice-b.mp4",
+        "depth": "./VR180/assets/family01-scenario02-choice-b.depth.mp4"
       }
     }
   },
@@ -79,8 +79,8 @@
       "labelEn": "Release and pursue",
       "detailZh": "马上把汤锅重量留给妈妈，亲自追出去拦住外婆。",
       "detailEn": "Leave the pot’s weight with Mother and personally stop Grandmother.",
-      "video": "/videos/family01-hot-soup-choice-a.mp4",
-      "poster": "/inattentive-assets/family01-hot-soup-pause.png",
+      "video": "./videos/family01-hot-soup-choice-a.mp4",
+      "poster": "./inattentive-assets/family01-hot-soup-pause.png",
       "duration": 15.084,
       "outcomeZh": "外婆被及时拦住；妈妈没有受伤，却经历了清楚的热汤泼洒险情，并认为自己的安全被忽视。",
       "outcomeEn": "Grandmother is stopped in time. Mother is not injured, but she experiences a clear hot-soup near-miss and feels that her safety was ignored.",
@@ -93,8 +93,8 @@
       "labelEn": "Complete the safe set-down",
       "detailZh": "呼叫家人并和妈妈安全落锅；若无人回应，再亲自追出去。",
       "detailEn": "Call for help, secure the pot with Mother, then pursue if no one responds.",
-      "video": "/videos/family01-hot-soup-choice-b.mp4",
-      "poster": "/inattentive-assets/family01-hot-soup-pause.png",
+      "video": "./videos/family01-hot-soup-choice-b.mp4",
+      "poster": "./inattentive-assets/family01-hot-soup-pause.png",
       "duration": 15.084,
       "outcomeZh": "妈妈和热汤都安全；外婆已经进入小区并离开视线，机器人无法判断她走向哪个方向。",
       "outcomeEn": "Mother and the soup are safe. Grandmother has entered the residential community and disappeared from view, leaving the robot unable to tell which direction she took.",

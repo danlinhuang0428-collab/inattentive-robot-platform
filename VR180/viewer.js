@@ -83,6 +83,21 @@ function legacyChoiceMedia(item) {
   return { video: item.video, depth: null };
 }
 
+function siteMediaUrl(value) {
+  if (!value || /^(?:https?:|data:|blob:)/.test(value)) return value;
+  if (value.startsWith("./assets/")) return value;
+  const siteRoot = new URL("../", window.location.href);
+  return new URL(value.replace(/^\.?\//, ""), siteRoot).href;
+}
+
+function normalizeMedia(media) {
+  return {
+    ...media,
+    video: siteMediaUrl(media.video),
+    depth: siteMediaUrl(media.depth),
+  };
+}
+
 function mediaFor(kind, selectedChoice) {
   const config = scenario.vr || LEGACY_VR;
   if (kind === "dilemma") {
@@ -91,9 +106,9 @@ function mediaFor(kind, selectedChoice) {
       configured.video = params.get("video") || configured.video;
       configured.depth = params.get("depth") === "off" ? null : params.get("depth") || configured.depth;
     }
-    return configured;
+    return normalizeMedia(configured);
   }
-  return config.choices?.[selectedChoice.id] || legacyChoiceMedia(selectedChoice);
+  return normalizeMedia(config.choices?.[selectedChoice.id] || legacyChoiceMedia(selectedChoice));
 }
 
 function disposeMedia() {
