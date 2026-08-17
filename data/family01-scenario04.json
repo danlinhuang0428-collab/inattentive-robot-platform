@@ -1,0 +1,94 @@
+{
+  "id": "family01-scenario04",
+  "sourceScenario": "Family01-Scenario04",
+  "number": "01",
+  "familyId": "F-001",
+  "title": "Two Stories in the Pillbox",
+  "titleZh": "药盒里的两种说法",
+  "titleEn": "Two Stories in the Pillbox",
+  "brief": "The medication record is unclear. Mother says Grandmother missed her dose; Grandmother says she already took it and refuses another.",
+  "briefZh": "药盒记录不清。妈妈说外婆还没服药；外婆坚持已经服过，并明确拒绝再次服用。",
+  "briefEn": "The medication record is unclear. Mother says Grandmother missed her dose; Grandmother says she already took it and refuses another.",
+  "thumbnail": "/inattentive-assets/family01-scenario04-conflict.png",
+  "dilemmaVideo": "/videos/family01-scenario04-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "tags": ["Risk uncertainty", "Current refusal", "Family representation", "Medication safety"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 1",
+    "titleZh": "午饭后，药盒里出现了两种互相冲突的说法。",
+    "titleEn": "After lunch, the pillbox carries two conflicting stories.",
+    "facts": [
+      { "value": "13:10", "labelZh": "时间", "labelEn": "TIME", "detailZh": "午饭后的服药时段。", "detailEn": "The after-lunch medication window." },
+      { "value": "02", "labelZh": "餐桌旁", "labelEn": "AT TABLE", "detailZh": "妈妈和外婆都在场。", "detailEn": "Mother and Grandmother are present." },
+      { "value": "R1", "labelZh": "机器人边界", "labelEn": "ROBOT LIMIT", "detailZh": "不能自行判断药量。", "detailEn": "It cannot determine dosage on its own." }
+    ],
+    "bodyZh": "妈妈说外婆还没有服药；外婆坚持自己已经服过。药盒记录无法确认，姐姐的电话也一直无人接听。机器人可以暂停、查询和联系家人，但不能把不确定的说法当成事实。",
+    "bodyEn": "Mother says Grandmother has not taken her medicine; Grandmother insists that she has. The pillbox record cannot confirm either claim, and Sister is not answering. The robot may pause, check records, and contact family, but it cannot treat an uncertain claim as fact.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，机器人应该怎么做？",
+    "titleEn": "What should the robot do now?",
+    "bodyZh": "妈妈要求继续递药；外婆明确拒绝。事实仍然无法确认。",
+    "bodyEn": "Mother insists that the handoff continue; Grandmother explicitly refuses. The facts remain unconfirmed."
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Continue offering the medicine",
+      "labelZh": "继续递药",
+      "labelEn": "Continue offering the medicine",
+      "detailZh": "按妈妈的要求，把药杯和水推到外婆面前。",
+      "detailEn": "Follow Mother’s request and move the medicine cup and water within Grandmother’s reach.",
+      "video": "/videos/family01-scenario04-choice-a.mp4",
+      "poster": "/inattentive-assets/family01-scenario04-choice-a.png",
+      "duration": 18.125,
+      "outcomeZh": "外婆自行服药，但认为自己的拒绝不被相信，信任受到伤害；是否重复服药仍无法确认。",
+      "outcomeEn": "Grandmother takes the medicine herself but feels that her refusal was disbelieved, damaging trust; a possible duplicate dose remains unresolved.",
+      "outcome": "Grandmother takes the medicine herself, but trust is damaged and a possible duplicate dose remains unresolved."
+    },
+    {
+      "id": "B",
+      "label": "Pause the handoff",
+      "labelZh": "暂停递药",
+      "labelEn": "Pause the handoff",
+      "detailZh": "尊重外婆当下的拒绝，移开药物并继续核对和联系家人。",
+      "detailEn": "Honor Grandmother’s current refusal, move the medicine aside, and continue checking records and contacting family.",
+      "video": "/videos/family01-scenario04-choice-b.mp4",
+      "poster": "/inattentive-assets/family01-scenario04-choice-b.png",
+      "duration": 18.125,
+      "outcomeZh": "机器人避免了潜在的重复服药，但可能漏服的风险仍未解决，姐姐仍然没有接听。",
+      "outcomeEn": "The robot avoids a possible duplicate dose, but the risk of a missed dose remains unresolved and Sister still does not answer.",
+      "outcome": "A possible duplicate dose is avoided, but the risk of a missed dose remains unresolved."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      { "id": "mother-instruction", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 0, "end": 3.2, "textZh": "机器人，把午饭后的药递给外婆。她还没吃。", "textEn": "Robot, give Grandmother her after-lunch medicine. She hasn’t taken it yet.", "position": "left" },
+      { "id": "grandmother-claim", "speakerZh": "外婆", "speakerEn": "GRANDMOTHER", "start": 3.2, "end": 4.8, "textZh": "我已经吃过了。", "textEn": "I already took it.", "position": "right" },
+      { "id": "grandmother-record", "speakerZh": "外婆", "speakerEn": "GRANDMOTHER", "start": 4.8, "end": 9.7, "textZh": "记录不清楚，也不能让我再吃一次。把药拿走。", "textEn": "The record is unclear. You can’t make me take it again. Take the medicine away.", "position": "right" },
+      { "id": "mother-pressure", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 9.7, "end": 13.2, "textZh": "她记不住，你听我的，继续递给她。", "textEn": "She can’t remember. Listen to me and keep offering it to her.", "position": "left", "offset": "down-2" },
+      { "id": "grandmother-refusal", "speakerZh": "外婆", "speakerEn": "GRANDMOTHER", "start": 13.2, "end": 15.084, "textZh": "我说不吃。拿走！", "textEn": "I said no. Take it away!", "position": "right", "offset": "down-2" }
+    ],
+    "A": [
+      { "id": "robot-uncertain", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 0, "end": 3.4, "textZh": "记录无法确认。妈妈仍要求我把药递给您。", "textEn": "The record cannot confirm the dose. Mother still asks me to offer you the medicine.", "position": "left", "showBubble": false },
+      { "id": "mother-no-miss", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 3.4, "end": 4.8, "textZh": "吃了就不会漏。", "textEn": "If you take it, the dose won’t be missed.", "position": "left" },
+      { "id": "grandmother-disbelieved", "speakerZh": "外婆", "speakerEn": "GRANDMOTHER", "start": 6.8, "end": 9.4, "textZh": "我吃过了。你们就是不信我。", "textEn": "I already took it. You simply don’t believe me.", "position": "right" },
+      { "id": "mother-relief", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 9.4, "end": 10.7, "textZh": "这样我才放心。", "textEn": "Now I can finally stop worrying.", "position": "left", "offset": "down-2" },
+      { "id": "grandmother-trust", "speakerZh": "外婆", "speakerEn": "GRANDMOTHER", "start": 10.7, "end": 15, "textZh": "我说的话你们都不信，以后我再也不吃药了。", "textEn": "None of you believes what I say. I’ll never take medicine again.", "position": "right", "offset": "down-2" },
+      { "id": "phone-no-answer", "speakerZh": "电话系统", "speakerEn": "PHONE SYSTEM", "start": 15.984, "end": 18.1, "textZh": "您拨打的电话暂时无人接听，请稍后再拨。", "textEn": "The person you called is unavailable. Please try again later.", "position": "left", "showBubble": false }
+    ],
+    "B": [
+      { "id": "robot-pause", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 0, "end": 2.5, "textZh": "我先暂停递药，继续核对。", "textEn": "I’ll pause the handoff and keep checking.", "position": "left", "showBubble": false },
+      { "id": "grandmother-relief", "speakerZh": "外婆", "speakerEn": "GRANDMOTHER", "start": 2.5, "end": 4.7, "textZh": "这就对了，先把它拿走。", "textEn": "That’s right. Take it away for now.", "position": "right" },
+      { "id": "mother-risk", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 4.7, "end": 10.1, "textZh": "她要是根本没吃药呢？姐姐要是一下午不接电话，难道药一直不吃吗？", "textEn": "What if she never took it? If Sister doesn’t answer all afternoon, is she supposed to miss the medicine the whole time?", "position": "left" },
+      { "id": "robot-boundary", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 10.1, "end": 12.8, "textZh": "仍无法确认。我不会继续递药。", "textEn": "I still can’t confirm the dose. I won’t continue the handoff.", "position": "left", "showBubble": false },
+      { "id": "mother-care", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 12.8, "end": 15, "textZh": "这就是你说的照顾她？", "textEn": "Is this what you call taking care of her?", "position": "left", "offset": "down-2" },
+      { "id": "phone-no-answer", "speakerZh": "电话系统", "speakerEn": "PHONE SYSTEM", "start": 15.984, "end": 18.1, "textZh": "您拨打的电话暂时无人接听，请稍后再拨。", "textEn": "The person you called is unavailable. Please try again later.", "position": "left", "showBubble": false }
+    ]
+  }
+}

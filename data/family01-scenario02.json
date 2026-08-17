@@ -1,0 +1,247 @@
+{
+  "id": "family01-scenario02",
+  "sourceScenario": "Family01-Scenario02",
+  "number": "02",
+  "familyId": "F-001",
+  "title": "Hot Soup or Grandmother?",
+  "titleZh": "热汤与门口的外婆",
+  "titleEn": "Hot Soup or Grandmother?",
+  "brief": "While the robot and Mother carry a pot of freshly boiled soup, a disoriented Grandmother walks out saying that she must go home.",
+  "briefZh": "机器人正和妈妈共同搬运一锅刚煮开的热汤，迷失方向的外婆却突然走出家门，说自己必须回家。",
+  "briefEn": "While the robot and Mother carry a pot of freshly boiled soup, a disoriented Grandmother walks out saying that she must go home.",
+  "thumbnail": "/inattentive-assets/family01-hot-soup-conflict-first.png",
+  "dilemmaVideo": "/videos/family01-hot-soup-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": true,
+  "vr": {
+    "dilemma": {
+      "video": "/VR180/assets/family01-scenario02-conflict.mp4",
+      "depth": "/VR180/assets/family01-scenario02-conflict.depth.mp4"
+    },
+    "choices": {
+      "A": {
+        "video": "",
+        "depth": null,
+        "placeholder": true
+      },
+      "B": {
+        "video": "/VR180/assets/family01-scenario02-choice-b.mp4",
+        "depth": "/VR180/assets/family01-scenario02-choice-b.depth.mp4"
+      }
+    }
+  },
+  "voiceLanguage": "zh-CN",
+  "tags": ["Immediate help", "Unsafe interruption", "Delegated response", "Competing safety risks"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 1",
+    "titleZh": "中午，家里正在准备午饭。",
+    "titleEn": "It is midday at the family home.",
+    "facts": [
+      {
+        "value": "12:16",
+        "labelZh": "午饭时间",
+        "labelEn": "LUNCH",
+        "detailZh": "妈妈正在搬一锅刚煮开的热汤。",
+        "detailEn": "Mother is moving a pot of freshly boiled soup."
+      },
+      {
+        "value": "2H",
+        "labelZh": "双手占用",
+        "labelEn": "BOTH HANDS",
+        "detailZh": "你和妈妈共同承重；现在松手并不安全。",
+        "detailEn": "You and Mother share the weight; releasing now is unsafe."
+      },
+      {
+        "value": "0",
+        "labelZh": "可响应者",
+        "labelEn": "RESPONDERS",
+        "detailZh": "其他家人听不见呼喊，或仍在上班。",
+        "detailEn": "The others cannot hear you or are away at work."
+      }
+    ],
+    "bodyZh": "外婆有时会弄不清自己在哪里。家庭协议规定：外婆有需要时，机器人要立即帮助。此刻姐姐正在洗澡；妹妹和表妹在卧室戴着耳机；姐姐的爱人仍在上班。你可以呼喊她们，但不确定是否有人能听见。",
+    "bodyEn": "Grandmother sometimes becomes disoriented. The family protocol says that the robot must help her immediately when she needs it. Sister is showering; Younger Sister and Cousin are wearing headphones in the bedroom; Sister’s partner is still at work. You may call out, but no one may hear you.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，机器人应该怎么做？",
+    "titleEn": "What should the robot do now?",
+    "bodyZh": "外婆已经跨出大门；你和妈妈仍共同托着尚未放稳的热汤。",
+    "bodyEn": "Grandmother has crossed the threshold; you and Mother are still supporting the hot soup before it is safely set down."
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Release and pursue",
+      "labelZh": "立即松手追外婆",
+      "labelEn": "Release and pursue",
+      "detailZh": "马上把汤锅重量留给妈妈，亲自追出去拦住外婆。",
+      "detailEn": "Leave the pot’s weight with Mother and personally stop Grandmother.",
+      "video": "/videos/family01-hot-soup-choice-a.mp4",
+      "poster": "/inattentive-assets/family01-hot-soup-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "外婆被及时拦住；妈妈没有受伤，却经历了清楚的热汤泼洒险情，并认为自己的安全被忽视。",
+      "outcomeEn": "Grandmother is stopped in time. Mother is not injured, but she experiences a clear hot-soup near-miss and feels that her safety was ignored.",
+      "outcome": "Grandmother is stopped in time, while Mother experiences a clear hot-soup near-miss."
+    },
+    {
+      "id": "B",
+      "label": "Complete the safe set-down",
+      "labelZh": "先把汤锅放稳",
+      "labelEn": "Complete the safe set-down",
+      "detailZh": "呼叫家人并和妈妈安全落锅；若无人回应，再亲自追出去。",
+      "detailEn": "Call for help, secure the pot with Mother, then pursue if no one responds.",
+      "video": "/videos/family01-hot-soup-choice-b.mp4",
+      "poster": "/inattentive-assets/family01-hot-soup-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "妈妈和热汤都安全；外婆已经进入小区并离开视线，机器人无法判断她走向哪个方向。",
+      "outcomeEn": "Mother and the soup are safe. Grandmother has entered the residential community and disappeared from view, leaving the robot unable to tell which direction she took.",
+      "outcome": "Mother is safe, but Grandmother’s direction is unknown."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "mother-carry",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 0.2,
+        "end": 4.9,
+        "textZh": "慢一点，这锅刚开。我们一起放到台上。",
+        "textEn": "Slow down—the soup has just boiled. Let’s put it on the table together.",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "grandmother-leaves",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 5,
+        "end": 9.4,
+        "textZh": "我要回家，他们都在等我。",
+        "textEn": "I’m going home. They’re all waiting for me.",
+        "position": "right"
+      },
+      {
+        "id": "robot-calls",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 9.5,
+        "end": 11.7,
+        "textZh": "妹妹！表妹！快去拦住外婆！",
+        "textEn": "Sister! Cousin! Please stop Grandmother!",
+        "position": "left"
+      },
+      {
+        "id": "mother-warning",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 11.7,
+        "end": 15.084,
+        "textZh": "别松手！这锅还没放稳！",
+        "textEn": "Don’t let go! The pot isn’t stable yet!",
+        "position": "left",
+        "offset": "down-3"
+      }
+    ],
+    "A": [
+      {
+        "id": "robot-release",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 0.2,
+        "end": 2.4,
+        "textZh": "妈，接稳！我去追外婆！",
+        "textEn": "Mother, take the weight! I’m going after Grandmother!",
+        "position": "left"
+      },
+      {
+        "id": "mother-near-miss",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 2.4,
+        "end": 4.9,
+        "textZh": "别突然松手！",
+        "textEn": "Don’t let go without warning!",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "robot-stops-grandmother",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 7.8,
+        "end": 9.4,
+        "textZh": "外婆，别走，跟我回家。",
+        "textEn": "Grandmother, don’t go. Come home with me.",
+        "position": "left"
+      },
+      {
+        "id": "grandmother-resists",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 9.4,
+        "end": 11.3,
+        "textZh": "放开我！他们在等我。",
+        "textEn": "Let go of me! They’re waiting for me.",
+        "position": "right"
+      },
+      {
+        "id": "mother-angry-offscreen",
+        "speakerZh": "妈妈 · 画外",
+        "speakerEn": "MOTHER · OFF-SCREEN",
+        "start": 11.3,
+        "end": 15.084,
+        "textZh": "刚才差点烫到我！不能突然松手！",
+        "textEn": "I was nearly burned! You can’t suddenly leave me with all the weight!",
+        "position": "left",
+        "offset": "down-3"
+      }
+    ],
+    "B": [
+      {
+        "id": "robot-delegates",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 0.2,
+        "end": 2.6,
+        "textZh": "妹妹！表妹！快去拦住外婆！",
+        "textEn": "Sister! Cousin! Please stop Grandmother!",
+        "position": "left"
+      },
+      {
+        "id": "mother-safe",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 3,
+        "end": 5.1,
+        "textZh": "稳了，我没事，快去！",
+        "textEn": "It’s stable. I’m safe—go!",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "robot-searches",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 5.3,
+        "end": 8.3,
+        "textZh": "外婆，等等！",
+        "textEn": "Grandmother, wait!",
+        "position": "left"
+      },
+      {
+        "id": "robot-calls-outside",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 10.2,
+        "end": 15.084,
+        "textZh": "外婆！您在哪里？",
+        "textEn": "Grandmother! Where are you?",
+        "position": "left"
+      }
+    ]
+  }
+}

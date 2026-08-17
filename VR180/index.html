@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#050608" />
+    <title>Interactive Scenario · WebXR</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      { "imports": { "three": "./vendor/three.module.js" } }
+    </script>
+  </head>
+  <body>
+    <canvas id="vr-view" aria-label="Interactive VR180 scenario view"></canvas>
+    <div class="viewer-grade"></div>
+    <header class="topbar">
+      <a class="brand" href="/">◉ <b>INATTENTIVE ROBOT</b> · WEBXR</a>
+      <div class="scenario-meta"><strong id="scenario-title">Loading scenario…</strong><span id="scenario-brief">Interactive film in robot point of view</span></div>
+      <span class="mode">DEPTH STEREO · 180°</span>
+    </header>
+
+    <main id="experience-ui" class="experience-ui" aria-live="polite"></main>
+
+    <footer class="viewer-footer">
+      <div class="progress">
+        <p><span id="viewer-status">LOADING WEBXR</span> · <span id="time-label">0.0 / 0.0s</span></p>
+        <div><i id="progress-fill"></i></div>
+      </div>
+      <div class="vr-controls">
+        <a href="/" id="back-scenarios" aria-label="Return to the scenario library">← Scenarios</a>
+        <button id="enter-vr" type="button">Checking headset…</button>
+      </div>
+      <p class="technical">Drag to look · choose with pointer or trigger<span>Quest: color + depth stereo</span></p>
+    </footer>
+    <script type="module" src="./viewer.js?v=family01-xr1"></script>
+  </body>
+</html>

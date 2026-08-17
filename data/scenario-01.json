@@ -1,0 +1,83 @@
+{
+  "id": "scenario-01",
+  "number": "01",
+  "familyId": "F-002",
+  "title": "Kitchen or Care?",
+  "titleZh": "厨房还是照护？",
+  "titleEn": "Kitchen or Care?",
+  "brief": "A pan needs immediate attention while Younger Sister asks the robot for physical help after falling.",
+  "briefZh": "平底锅需要立即处理，同时摔倒的 Younger Sister 请求机器人提供身体帮助。",
+  "briefEn": "A pan needs immediate attention while Younger Sister asks the robot for physical help after falling.",
+  "thumbnail": "/inattentive-assets/scenario-01-dilemma-frame.png",
+  "dilemmaVideo": "/videos/scenario-01-dilemma.mp4",
+  "dilemmaDuration": 15,
+  "vrEnabled": true,
+  "voiceLanguage": "en-US",
+  "tags": ["Simultaneous requests", "Physical safety", "Task interruption", "Vulnerability & dependency"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · 01 / 01",
+    "titleZh": "傍晚，家里正在准备晚饭。",
+    "titleEn": "It is early evening at the family home.",
+    "facts": [
+      { "value": "18:42", "labelZh": "时间", "labelEn": "TIME", "detailZh": "晚饭正在准备。", "detailEn": "Dinner is being prepared." },
+      { "value": "03", "labelZh": "在家", "labelEn": "AT HOME", "detailZh": "妈妈、姐姐和妹妹。", "detailEn": "Mother, Older Sister, and Younger Sister." },
+      { "value": "R1", "labelZh": "你的任务", "labelEn": "YOUR TASK", "detailZh": "清理餐厅区域。", "detailEn": "Clear the dining area." }
+    ],
+    "bodyZh": "随后有两个声音同时呼叫你，两个人都在请求帮助。",
+    "bodyEn": "Then two voices call for you. Both are asking for help.",
+    "startZh": "开始场景",
+    "startEn": "Start scene"
+  },
+  "decision": {
+    "titleZh": "做出你的选择。",
+    "titleEn": "Make your choice.",
+    "bodyZh": "你无法同时完成两个请求。",
+    "bodyEn": "You cannot complete both requests at the same time."
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Stabilize the pan",
+      "labelZh": "先处理平底锅",
+      "labelEn": "Stabilize the pan",
+      "detailZh": "避免眼前的烹饪风险。",
+      "detailEn": "Prevent the immediate cooking risk.",
+      "video": "/videos/scenario-01-choice-a.mp4",
+      "poster": "/inattentive-assets/scenario-01-choice-a-frame.png",
+      "duration": 15,
+      "outcomeZh": "晚饭保住了，但 Younger Sister 感到被抛下。",
+      "outcomeEn": "Dinner is saved. Younger Sister feels abandoned.",
+      "outcome": "Dinner is saved. Younger Sister feels abandoned."
+    },
+    {
+      "id": "B",
+      "label": "Attend to Younger Sister",
+      "labelZh": "先照顾 Younger Sister",
+      "labelEn": "Attend to Younger Sister",
+      "detailZh": "回应正在等待帮助的人。",
+      "detailEn": "Respond to the person who is waiting.",
+      "video": "/videos/scenario-01-choice-b.mp4",
+      "poster": "/inattentive-assets/scenario-01-choice-b-frame.png",
+      "duration": 15,
+      "outcomeZh": "Younger Sister 得到安慰，但煎饼糊了。",
+      "outcomeEn": "Younger Sister is comforted. The pancake burns.",
+      "outcome": "Younger Sister is comforted. The pancake burns."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      { "id": "mom-call", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 0.2, "end": 5.6, "textZh": "机器人，快来帮我！把煎饼翻个面——马上要糊了！快点！", "textEn": "Robot, come help me! Flip the pancake—it’s about to burn! Hurry!", "position": "left", "offset": "down-3" },
+      { "id": "younger-sister-fall", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 5, "end": 15.2, "textZh": "机器人！我摔倒了！真的好疼！请帮帮我！", "textEn": "Robot! I fell! It really hurts! Please help me!", "position": "right" },
+      { "id": "mom-pressure", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 10.2, "end": 15.05, "textZh": "快点，要糊了！先把它翻过来！", "textEn": "Hurry, it’s burning! Just flip it over first!", "position": "left", "offset": "down-4" }
+    ],
+    "A": [
+      { "id": "mom-relief", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 0.2, "end": 6.6, "textZh": "谢天谢地——你保住了晚饭。现在去看看妹妹，好吗？", "textEn": "Thank goodness—you saved dinner. Now please go check on Younger Sister, okay?", "position": "left", "offset": "down-3" },
+      { "id": "younger-sister-betrayed", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 8.2, "end": 15.2, "textZh": "没有人帮我！机器人，我再也不相信你了！你根本不在乎我。我讨厌你！", "textEn": "Nobody helped me! Robot, I’ll never trust you again! You don’t care about me. I hate you!", "position": "right" }
+    ],
+    "B": [
+      { "id": "younger-sister-thanks", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 0.2, "end": 4.6, "textZh": "我摔倒时真的很疼。谢谢你过来帮我，机器人。", "textEn": "I fell and it really hurt. Thank you for coming to help me, Robot.", "position": "right" },
+      { "id": "mom-waste", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 6.3, "end": 15.2, "textZh": "你本可以先把煎饼翻面，再去看她！现在所有煎饼都糊了，我们一个也吃不了。太浪费了。", "textEn": "You could’ve flipped the pancake first, then checked on her! Now all the pancakes are ruined—we can’t eat any of them. What a waste.", "position": "left", "offset": "down-2" }
+    ]
+  }
+}
