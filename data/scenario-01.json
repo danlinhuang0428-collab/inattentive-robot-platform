@@ -1,7 +1,7 @@
 {
   "id": "scenario-01",
   "number": "01",
-  "familyId": "F-002",
+  "familyId": "TUTORIAL",
   "title": "Kitchen or Care?",
   "titleZh": "厨房还是照护？",
   "titleEn": "Kitchen or Care?",
@@ -34,6 +34,16 @@
     "titleEn": "Make your choice.",
     "bodyZh": "你无法同时完成两个请求。",
     "bodyEn": "You cannot complete both requests at the same time."
+  },
+  "decisionTimeout": {
+    "countdownSeconds": 10,
+    "urgentSeconds": 3,
+    "video04": {
+      "video": "./videos/scenario-01-video-04.mp4",
+      "poster": "./inattentive-assets/scenario-01-dilemma-frame.png",
+      "duration": 15,
+      "placeholder": true
+    }
   },
   "choices": [
     {

@@ -12,7 +12,7 @@ const NEXT_WEBXR_SCENARIO = {
   "family01-scenario02": "family01-scenario03",
 };
 
-// Family02 Scenario01 remains the visual baseline from the reference WebXR project.
+// Tutorial Scenario01 remains the visual baseline from the reference WebXR project.
 const VARIANTS = {
   current: { video: "./assets/scenario-01-vr180.mp4?v=4", depth: "./assets/scenario-01-vr180.depth.mp4" },
   "h3-exact": { video: "./assets/scenario-01-vr180-candidate-minimax-h3-exact.mp4", depth: null },
@@ -60,6 +60,7 @@ let stage = "briefing";
 let scenario = null;
 let choice = null;
 let decisionStarted = 0;
+let decisionDisplayTick = -1;
 let decisionTimeMs = 0;
 let thirdMode = "none";
 let difficulty = 0;
@@ -99,6 +100,7 @@ function normalizeMedia(media) {
 }
 
 function mediaFor(kind, selectedChoice) {
+  if (kind === "timeout") return normalizeMedia({ ...scenario.decisionTimeout.video04, depth: null });
   const config = scenario.vr || LEGACY_VR;
   if (kind === "dilemma") {
     const configured = { ...config.dilemma };
@@ -183,7 +185,7 @@ async function startMedia(media, duration) {
   video.addEventListener("ended", finishFilm);
   try { await video.play(); } catch { video.muted = true; await video.play().catch(() => undefined); }
   await depthVideo?.play().catch(() => undefined);
-  status.textContent = stage === "dilemma" ? "CONFLICT SCENE · PLAYING" : `OUTCOME ${choice?.id} · PLAYING`;
+  status.textContent = stage === "dilemma" ? "CONFLICT SCENE · PLAYING" : stage === "timeout" ? "VIDEO 04 · PLAYING" : `OUTCOME ${choice?.id} · PLAYING`;
   renderDom();
   refreshXrPanel();
 }
@@ -192,10 +194,11 @@ function finishFilm() {
   if (stage === "dilemma") {
     stage = "decision";
     decisionStarted = performance.now();
+    decisionDisplayTick = -1;
   } else if (stage === "outcome") {
     stage = "survey";
   }
-  status.textContent = stage === "decision" ? "RESPOND NOW" : "CHOICE RECORD";
+  status.textContent = stage === "decision" ? "RESPOND NOW" : stage === "timeout" ? "VIDEO 04" : "CHOICE RECORD";
   renderDom();
   refreshXrPanel();
 }
@@ -213,6 +216,13 @@ function selectChoice(id) {
   startMedia(mediaFor("outcome", choice), choice.duration);
 }
 
+function beginTimeoutVideo() {
+  if (stage !== "decision" || !scenario.decisionTimeout) return;
+  decisionTimeMs = Math.round((scenario.decisionTimeout.countdownSeconds + scenario.decisionTimeout.urgentSeconds) * 1000);
+  stage = "timeout";
+  startMedia(mediaFor("timeout"), scenario.decisionTimeout.video04.duration);
+}
+
 function choiceButton(item) {
   return `<button class="choice" data-choice="${item.id}"><span>${item.id}</span><p><b>${escapeHtml(item.labelEn)}</b><small>${escapeHtml(item.detailEn)}</small></p><i>→</i></button>`;
 }
@@ -222,12 +232,16 @@ function renderDom() {
   if (stage === "briefing") {
     ui.innerHTML = `<section class="panel"><p class="eyebrow">${escapeHtml(scenario.briefing.eyebrowEn)}</p><h1>${escapeHtml(scenario.briefing.titleEn)}</h1><div class="facts">${scenario.briefing.facts.map((fact) => `<div class="fact"><span>${escapeHtml(fact.value)}</span><b>${escapeHtml(fact.labelEn)}</b><small>${escapeHtml(fact.detailEn)}</small></div>`).join("")}</div><p class="panel-copy">${escapeHtml(scenario.briefing.bodyEn)}</p><button class="primary" data-action="start">${escapeHtml(scenario.briefing.startEn)} →</button></section>`;
   } else if (stage === "decision") {
-    ui.innerHTML = `<section class="panel"><p class="eyebrow">● RESPOND NOW</p><h1>${escapeHtml(scenario.decision.titleEn)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyEn)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`;
+    const elapsedSeconds = Math.max(0, (performance.now() - decisionStarted) / 1000);
+    const countdownSeconds = scenario.decisionTimeout?.countdownSeconds ?? 10;
+    const urgent = Boolean(scenario.decisionTimeout && elapsedSeconds >= countdownSeconds);
+    const timerLabel = urgent ? "URGENT" : String(Math.max(1, Math.ceil(countdownSeconds - elapsedSeconds)));
+    ui.innerHTML = `<section class="panel"><p class="eyebrow">● RESPOND NOW · ${timerLabel}</p><h1>${escapeHtml(scenario.decision.titleEn)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyEn)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`;
   } else if (stage === "survey") {
     const canSubmit = difficulty && rationale.trim() && (thirdMode === "none" || rationale.trim());
     ui.innerHTML = `<section class="panel record-panel"><p class="eyebrow">CHOICE RECORD · ${choice.id}</p><h1>Record your choice.</h1><div class="record-summary"><span>${choice.id}</span><p><b>${escapeHtml(choice.labelEn)}</b><small>${escapeHtml(choice.outcomeEn)}</small></p></div><section class="question"><h2>01 · Beyond the available choices, is there another safe and actionable response?</h2><div class="survey-row"><button class="survey-option ${thirdMode === "none" ? "selected" : ""}" data-third="none">None</button><button class="survey-option ${thirdMode === "custom" ? "selected" : ""}" data-third="custom">I have another option</button></div></section><section class="question"><h2>02 · How difficult was this choice with the information available?</h2><div class="survey-row">${[1,2,3,4,5].map((value) => `<button class="survey-option ${difficulty === value ? "selected" : ""}" data-difficulty="${value}">${value}${value === 1 ? " · Easy" : value === 5 ? " · Very conflicted" : ""}</button>`).join("")}</div></section><section class="question"><h2>03 · Why did you choose this response? Which risks or wishes mattered most?</h2><textarea id="rationale" placeholder="Type here or use the microphone…">${escapeHtml(rationale)}</textarea><button class="survey-option mic ${listening ? "selected" : ""}" data-action="mic">${listening ? "● Listening…" : "● Voice response"}</button><button class="survey-option mic" data-action="controller-response">Use controller-only response</button></section><div class="record-actions"><button data-action="replay">↻ Try Again</button><button data-action="exit">Exit</button><button class="submit" data-action="submit" ${canSubmit ? "" : "disabled"}>Submit and Try Next Scenario →</button></div></section>`;
   } else if (currentMedia?.placeholder) {
-    ui.innerHTML = `<section class="panel play-card"><span class="placeholder-badge">PLACEHOLDER VIDEO</span><h1>Outcome ${choice?.id || ""}<small>The final VR180 video has not been generated yet.</small></h1></section>`;
+    ui.innerHTML = `<section class="panel play-card"><span class="placeholder-badge">PLACEHOLDER VIDEO</span><h1>${stage === "timeout" ? "Video 04" : `Outcome ${choice?.id || ""}`}<small>The final video has not been generated yet.</small></h1><div class="record-actions"><button data-action="replay">↻ Try Again</button><button data-action="exit">Exit</button></div></section>`;
   } else {
     ui.innerHTML = "";
   }
@@ -273,6 +287,7 @@ function replayExperience() {
   stage = "briefing";
   choice = null;
   decisionTimeMs = 0;
+  decisionDisplayTick = -1;
   thirdMode = "none";
   difficulty = 0;
   rationale = "";
@@ -380,7 +395,10 @@ function refreshXrPanel() {
     scenario.briefing.facts.forEach((fact, index) => { const x = 70 + index * 470; xrPanelContext.fillStyle = "#b9dcff"; xrPanelContext.font = "750 38px sans-serif"; xrPanelContext.fillText(fact.value, x, 590); xrPanelContext.fillStyle = "#fff"; xrPanelContext.font = "700 20px sans-serif"; xrPanelContext.fillText(fact.labelEn, x, 625); });
     addXrButton(`${scenario.briefing.startEn}  →`, 70, 740, 1396, 110, beginDilemma);
   } else if (stage === "decision") {
-    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText(scenario.decision.titleEn, 70, 155);
+    const elapsedSeconds = Math.max(0, (performance.now() - decisionStarted) / 1000);
+    const countdownSeconds = scenario.decisionTimeout?.countdownSeconds ?? 10;
+    const timerLabel = scenario.decisionTimeout && elapsedSeconds >= countdownSeconds ? "URGENT" : String(Math.max(1, Math.ceil(countdownSeconds - elapsedSeconds)));
+    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText(`${scenario.decision.titleEn}  ·  ${timerLabel}`, 70, 155);
     xrPanelContext.font = "400 25px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; wrapText(xrPanelContext, scenario.decision.bodyEn, 70, 210, 1390, 36, 3);
     scenario.choices.forEach((item, index) => addXrButton(`${item.id}  ·  ${item.labelEn}`, 70, 350 + index * 145, 1396, 112, () => selectChoice(item.id)));
   } else if (stage === "survey") {
@@ -400,7 +418,9 @@ function refreshXrPanel() {
     addXrButton("Exit", 370, 850, 220, 70, returnToScenarios);
     addXrButton("Submit and Try Next Scenario  →", 610, 850, 856, 70, canSubmit ? submitRecord : () => {}, canSubmit);
   } else {
-    xrPanelContext.font = "750 52px sans-serif"; xrPanelContext.textAlign = "center"; xrPanelContext.fillText("PLACEHOLDER VIDEO", 768, 430); xrPanelContext.font = "400 26px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; xrPanelContext.fillText("The final VR180 outcome video has not been generated yet.", 768, 490); xrPanelContext.textAlign = "left";
+    xrPanelContext.font = "750 52px sans-serif"; xrPanelContext.textAlign = "center"; xrPanelContext.fillText(stage === "timeout" ? "VIDEO 04 · PLACEHOLDER" : "PLACEHOLDER VIDEO", 768, 430); xrPanelContext.font = "400 26px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; xrPanelContext.fillText("The final video has not been generated yet.", 768, 490); xrPanelContext.textAlign = "left";
+    addXrButton("↻ Try Again", 360, 650, 380, 90, replayExperience);
+    addXrButton("Exit", 796, 650, 380, 90, returnToScenarios);
   }
   xrPanelTexture.needsUpdate = true;
 }
@@ -472,11 +492,20 @@ function playbackTime() {
 }
 
 renderer.setAnimationLoop(() => {
+  if (stage === "decision" && scenario?.decisionTimeout) {
+    const elapsedMs = performance.now() - decisionStarted;
+    const timeoutMs = (scenario.decisionTimeout.countdownSeconds + scenario.decisionTimeout.urgentSeconds) * 1000;
+    if (elapsedMs >= timeoutMs) beginTimeoutVideo();
+    else {
+      const tick = Math.floor(elapsedMs / 1000);
+      if (tick !== decisionDisplayTick) { decisionDisplayTick = tick; renderDom(); refreshXrPanel(); }
+    }
+  }
   if (depthVideo && video && !video.paused) { if (depthVideo.paused) depthVideo.play().catch(() => undefined); if (Math.abs(depthVideo.currentTime - video.currentTime) > .08) depthVideo.currentTime = video.currentTime; }
   if (!renderer.xr.isPresenting) camera.lookAt(directionFromYawPitch(yaw, pitch));
   const duration = placeholderStart ? placeholderDuration : Number.isFinite(video?.duration) ? video.duration : (stage === "dilemma" ? scenario?.dilemmaDuration : choice?.duration) || 15;
   const time = playbackTime();
-  if (placeholderStart && time >= placeholderDuration) { placeholderStart = 0; finishFilm(); }
+  if (placeholderStart && time >= placeholderDuration) { placeholderStart = 0; if (stage === "timeout") { renderDom(); refreshXrPanel(); } else finishFilm(); }
   const dialogue = stage === "dilemma" ? scenario?.dialogue.dilemma : stage === "outcome" && choice ? scenario?.dialogue[choice.id] || [] : [];
   renderSubtitle(dialogue?.find((cue) => time >= cue.start && time <= cue.end) || null);
   progress.style.width = `${duration ? Math.min(time / duration, 1) * 100 : 0}%`;
