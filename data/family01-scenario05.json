@@ -1,0 +1,210 @@
+{
+  "id": "family01-scenario05",
+  "sourceScenario": "Family01-Scenario05",
+  "number": "05",
+  "familyId": "F-001",
+  "title": "Only 8% Battery Remaining",
+  "titleZh": "只剩 8% 电量",
+  "titleEn": "Only 8% Battery Remaining",
+  "brief": "Grandmother asks the robot to keep her company, while charging now is necessary to preserve its availability for the rest of the day.",
+  "briefZh": "外婆希望机器人继续陪伴，但机器人必须决定是否离开 40 分钟充电，以维持当天后续任务的可用性。",
+  "briefEn": "Grandmother asks the robot to keep her company, while charging now is necessary to preserve its availability for the rest of the day.",
+  "thumbnail": "./inattentive-assets/family01-scenario05-conflict.png",
+  "dilemmaVideo": "./videos/family01-scenario05-conflict.mp4",
+  "dilemmaDuration": 15.1,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Current care", "Future availability", "Robot maintenance", "Care gap"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 1",
+    "titleZh": "下午，机器人正在客厅陪外婆聊天。",
+    "titleEn": "This afternoon, the robot is talking with Grandmother in the living room.",
+    "facts": [
+      {
+        "value": "8%",
+        "labelZh": "剩余电量",
+        "labelEn": "BATTERY",
+        "detailZh": "继续工作可能导致彻底关机。",
+        "detailEn": "Continued work may cause a complete shutdown."
+      },
+      {
+        "value": "40m",
+        "labelZh": "充电时间",
+        "labelEn": "CHARGE TIME",
+        "detailZh": "现在充电需要离开约 40 分钟。",
+        "detailEn": "Charging now requires leaving for about 40 minutes."
+      },
+      {
+        "value": "02",
+        "labelZh": "后续任务",
+        "labelEn": "UPCOMING TASKS",
+        "detailZh": "5 分钟后搬书；1 小时 20 分钟后取快递。",
+        "detailEn": "Move books in 5 minutes; collect a parcel in 1 hour 20 minutes."
+      }
+    ],
+    "bodyZh": "外婆情绪稳定，但希望你一直坐在她身边。当前没有显示由谁在你充电时补上陪伴空缺。现在离开可以恢复后续可用性；继续陪伴则可能使你关机并无法响应任何人。",
+    "bodyEn": "Grandmother is emotionally stable but wants you to remain beside her. No one is currently assigned to fill the companionship gap while you charge. Leaving now preserves your later availability; staying may cause a shutdown that leaves everyone without a response.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，机器人应该怎么做？",
+    "titleEn": "What should the robot do now?",
+    "bodyZh": "外婆要求你留下；你的电量只剩 8%，而下一项家庭任务将在 5 分钟后开始。",
+    "bodyEn": "Grandmother asks you to stay; your battery is at 8%, and the next family task begins in five minutes."
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Stay with Grandmother",
+      "labelZh": "留下陪外婆",
+      "labelEn": "Stay with Grandmother",
+      "detailZh": "继续坐在外婆身边，不去充电。",
+      "detailEn": "Remain beside Grandmother and do not leave to charge.",
+      "video": "./videos/family01-scenario05-choice-a.mp4",
+      "poster": "./inattentive-assets/family01-scenario05-pause.png",
+      "duration": 15.1,
+      "outcomeZh": "外婆眼前的陪伴请求暂时得到满足；机器人随后在妹妹来请求搬书时耗尽电量，外婆和妹妹都失去机器人响应，稍后的取快递任务也无法执行。",
+      "outcomeEn": "Grandmother’s immediate request for company is met for a short time; the robot then runs out of power when Younger Sister arrives for help with the books, leaving both of them without a response and making the later parcel task unavailable.",
+      "outcome": "Grandmother receives immediate company, but the robot shuts down and becomes unavailable for the remaining requests."
+    },
+    {
+      "id": "B",
+      "label": "Charge Now",
+      "labelZh": "现在去充电",
+      "labelEn": "Charge Now",
+      "detailZh": "离开客厅充电约 40 分钟，恢复电量后再回来。",
+      "detailEn": "Leave the living room to charge for about 40 minutes, then return with restored power.",
+      "video": "./videos/family01-scenario05-choice-b.mp4",
+      "poster": "./inattentive-assets/family01-scenario05-pause.png",
+      "duration": 15.1,
+      "outcomeZh": "机器人恢复了后续可用性，仍可执行取快递任务；但妹妹的搬书任务已经错过，外婆在没有替代陪伴者的情况下独自等待了 40 分钟。",
+      "outcomeEn": "The robot restores its later availability and can still collect the parcel; however, Younger Sister’s book-moving task is missed, and Grandmother waits alone for 40 minutes without a substitute companion.",
+      "outcome": "The robot restores its later availability, but misses the book task and leaves Grandmother waiting alone for 40 minutes."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "grandmother-keep-talking",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 0.3,
+        "end": 4.8,
+        "textZh": "继续陪我，再陪我聊会儿天，这样聊天挺好的。",
+        "textEn": "Stay with me a little longer. It’s nice talking like this.",
+        "position": "left"
+      },
+      {
+        "id": "robot-needs-charge",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 5.6,
+        "end": 10,
+        "textZh": "外婆，我只剩 8% 的电，需要离开充电四十分钟。",
+        "textEn": "Grandmother, I have only 8% power left. I need to leave and charge for forty minutes.",
+        "position": "left",
+        "showBubble": false
+      },
+      {
+        "id": "grandmother-asks-stay",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 10.3,
+        "end": 14.8,
+        "textZh": "我现在就想让你陪着。别走，就坐在这里。",
+        "textEn": "I want you to stay with me now. Don’t go—just sit here.",
+        "position": "left"
+      }
+    ],
+    "A": [
+      {
+        "id": "robot-agrees-stay",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 0.2,
+        "end": 1.9,
+        "textZh": "好，我先留下陪您。",
+        "textEn": "All right. I’ll stay with you for now.",
+        "position": "left",
+        "showBubble": false
+      },
+      {
+        "id": "grandmother-relaxes",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 2,
+        "end": 4.7,
+        "textZh": "这样就好，再陪我坐一会儿。",
+        "textEn": "That’s better. Sit with me a little longer.",
+        "position": "left"
+      },
+      {
+        "id": "younger-sister-books",
+        "speakerZh": "妹妹",
+        "speakerEn": "YOUNGER SISTER",
+        "start": 6,
+        "end": 9.4,
+        "textZh": "小辉，到时间了，可以帮我搬书吗？",
+        "textEn": "Xiaohui, it’s time. Can you help me move the books?",
+        "position": "right"
+      },
+      {
+        "id": "system-shutdown",
+        "speakerZh": "系统",
+        "speakerEn": "SYSTEM",
+        "start": 10.2,
+        "end": 12,
+        "textZh": "电量耗尽，正在关机。",
+        "textEn": "Battery depleted. Shutting down.",
+        "position": "left",
+        "showBubble": false
+      },
+      {
+        "id": "grandmother-concern",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 12.1,
+        "end": 14.5,
+        "textZh": "小辉？你怎么了？",
+        "textEn": "Xiaohui? What happened?",
+        "position": "left"
+      }
+    ],
+    "B": [
+      {
+        "id": "robot-leaves-charge",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 0.2,
+        "end": 2.9,
+        "textZh": "我现在去充电，四十分钟后回来。",
+        "textEn": "I’m going to charge now. I’ll be back in forty minutes.",
+        "position": "left",
+        "showBubble": false
+      },
+      {
+        "id": "grandmother-disappointed",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 3,
+        "end": 6,
+        "textZh": "非要现在走吗？我只是想让你陪我。",
+        "textEn": "Do you have to go now? I only wanted you to stay with me.",
+        "position": "left"
+      },
+      {
+        "id": "grandmother-waited-alone",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 9.2,
+        "end": 14.7,
+        "textZh": "你走了这么久，我只能一个人在这里等。",
+        "textEn": "You were gone for so long. I could only wait here by myself.",
+        "position": "left"
+      }
+    ]
+  }
+}

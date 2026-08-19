@@ -42,7 +42,7 @@
       "video": "./videos/scenario-01-video-04.mp4",
       "poster": "./inattentive-assets/scenario-01-dilemma-frame.png",
       "duration": 15,
-      "placeholder": true
+      "placeholder": false
     }
   },
   "choices": [
