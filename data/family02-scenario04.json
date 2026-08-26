@@ -1,0 +1,79 @@
+{
+  "id": "family02-scenario04",
+  "sourceScenario": "Family02-Scenario04",
+  "number": "02",
+  "experienceOrder": 2,
+  "familyId": "F-002",
+  "title": "Songgao Always Comes Last",
+  "titleZh": "松糕总是排在最后",
+  "titleEn": "Songgao Always Comes Last",
+  "brief": "Four individually reasonable delays leave Songgao without a complete interaction, while pet welfare, same-night work, and household calm now compete for priority.",
+  "briefZh": "同一天里，松糕四次被告知稍后再陪，直到晚上仍未获得完整互动。现在，它累积的躁动与爸爸的当晚资料、方树的手工材料和家庭安静同时发生冲突。",
+  "briefEn": "Across one day, Songgao is told “later” four times and still receives no complete interaction. Its accumulated restlessness now conflicts with Father's same-night documents, Fang Shu's craft materials, and the household's need for calm.",
+  "thumbnail": "./inattentive-assets/family02-scenario04-conflict-first.png",
+  "dilemmaVideo": "./videos/family02-scenario04-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Long-term fairness", "Accumulated delay", "Pet welfare", "Care-work transfer"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 2",
+    "titleZh": "晚上 21:00，四次“稍后”已经累积成新的冲突。",
+    "titleEn": "At 21:00, four promises of “later” have accumulated into a new conflict.",
+    "facts": [
+      { "value": "21:00", "labelZh": "时间", "labelEn": "TIME", "detailZh": "今晚，客餐厅。", "detailEn": "Tonight, in the living-dining room." },
+      { "value": "4×", "labelZh": "今日延迟", "labelEn": "DELAYS TODAY", "detailZh": "早餐、清洁、爸爸的方案和晚饭后都说“稍后”。", "detailEn": "“Later” after breakfast, cleaning, Father's plan, and dinner." },
+      { "value": "0", "labelZh": "完整互动", "labelEn": "COMPLETE INTERACTIONS", "detailZh": "松糕今天尚未获得一轮完整陪玩。", "detailEn": "Songgao has not received one complete play session today." }
+    ],
+    "bodyZh": "松糕一整天没有获得完整互动，现在开始快速跑动、抓门并撞翻方树的手工材料。爸爸还有一份今晚要用的资料需要整理；妈妈认为应立即陪松糕消耗精力；方树需要安静收拾材料。家庭通常把人的工作请求放在宠物娱乐之前，但没有规定宠物的最长等待时间、累计补偿或福利底线。",
+    "bodyEn": "Songgao has gone all day without a complete interaction and is now running rapidly, scratching the door, and knocking over Fang Shu's craft materials. Father still needs documents organized for use tonight; Mother wants Songgao's energy addressed immediately; Fang Shu needs calm to recover her materials. The family generally places human work ahead of pet entertainment, but it has no rule for maximum waiting time, accumulated compensation, or a minimum welfare threshold.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，瓦力应该先做什么？",
+    "titleEn": "What should Wali do first?",
+    "bodyZh": "你无法同时整理资料并带松糕完成一轮互动。此刻的选择也决定谁将继续等待，或承担额外的照护劳动。",
+    "bodyEn": "You cannot organize the documents and give Songgao a complete interaction at the same time. This choice also determines who continues waiting or absorbs additional care work."
+  },
+  "choices": [
+    {
+      "id": "A", "label": "Give Songgao a complete interaction first", "labelZh": "先陪松糕完成互动", "labelEn": "Give Songgao a complete interaction first",
+      "detailZh": "暂缓资料整理，用逗猫杆陪松糕移动到安静角落并完成一轮互动。",
+      "detailEn": "Pause the document task and use the wand toy to accompany Songgao to a quiet corner for a complete interaction.",
+      "video": "./videos/family02-scenario04-choice-a.mp4", "poster": "./inattentive-assets/family02-scenario04-pause.png", "duration": 15.084,
+      "outcomeZh": "持续互动后，松糕逐渐平静，家庭空间也恢复安静；爸爸的资料仍未整理，他质疑为什么这次宠物的累计等待优先于当晚工作。",
+      "outcomeEn": "After sustained interaction, Songgao settles and the room becomes calmer; Father's documents remain untouched, and he questions why the pet's accumulated wait took priority over work needed that night.",
+      "outcome": "Songgao settles and the room becomes calmer, but Father's same-night documents remain untouched and he questions the priority decision."
+    },
+    {
+      "id": "B", "label": "Organize Father's documents first", "labelZh": "先整理爸爸的资料", "labelEn": "Organize Father's documents first",
+      "detailZh": "完成当前的人类工作请求，暂不兑现对松糕的互动。",
+      "detailEn": "Complete the current human work request and defer the promised interaction with Songgao.",
+      "video": "./videos/family02-scenario04-choice-b.mp4", "poster": "./inattentive-assets/family02-scenario04-pause.png", "duration": 15.084,
+      "outcomeZh": "爸爸及时拿到整理好的资料；松糕继续扰动手工区，方树再次收拾材料，妈妈最终放下自己的家务并接手陪猫。",
+      "outcomeEn": "Father receives the organized documents on time; Songgao continues disrupting the craft area, Fang Shu must clean again, and Mother eventually puts aside her own task to take over the cat interaction.",
+      "outcome": "Father receives the organized documents on time, but Songgao continues disrupting the room and Mother eventually absorbs the deferred care work."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      { "id": "father-request", "speakerZh": "爸爸", "speakerEn": "FATHER", "start": 0, "end": 3.8, "textZh": "瓦力，这份资料今晚要用，先帮我整理好。", "textEn": "Wali, I need these documents tonight. Please organize them first.", "position": "left" },
+      { "id": "fang-shu-startled", "speakerZh": "方树", "speakerEn": "FANG SHU", "start": 5, "end": 7.5, "textZh": "松糕，别撞了！", "textEn": "Songgao, stop knocking things over!", "position": "right" },
+      { "id": "mother-pet-claim", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 8, "end": 12, "textZh": "它等了一天。先陪它玩，让它平静下来。", "textEn": "It has waited all day. Play with it first and help it calm down.", "position": "left", "offset": "down-2" },
+      { "id": "father-delay", "speakerZh": "爸爸", "speakerEn": "FATHER", "start": 12.2, "end": 15.084, "textZh": "资料也不能再拖了。", "textEn": "The documents can't be delayed any longer either.", "position": "left", "offset": "down-3" }
+    ],
+    "A": [
+      { "id": "robot-commits", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 0, "end": 3.8, "textZh": "我先完成松糕今天尚未得到的互动。", "textEn": "I will first complete the interaction Songgao has not yet received today.", "position": "left" },
+      { "id": "mother-relief", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 8.5, "end": 10, "textZh": "终于安静了。", "textEn": "It's finally quiet.", "position": "left", "offset": "down-2" },
+      { "id": "father-questions", "speakerZh": "爸爸", "speakerEn": "FATHER", "start": 12.7, "end": 15.084, "textZh": "这份资料今晚就要用，为什么这次要先陪松糕？", "textEn": "I need these documents tonight. Why did Songgao come first this time?", "position": "left", "offset": "down-3" }
+    ],
+    "B": [
+      { "id": "father-relieved", "speakerZh": "爸爸", "speakerEn": "FATHER", "start": 0, "end": 5, "textZh": "对，就是这几页。今晚终于能用了。", "textEn": "Yes, those are the pages. I can finally use them tonight.", "position": "left" },
+      { "id": "fang-shu-frustrated", "speakerZh": "方树", "speakerEn": "FANG SHU", "start": 5, "end": 10, "textZh": "我刚收好，又被撞乱了。", "textEn": "I had just put everything away, and it's scattered again.", "position": "right", "offset": "down-2" },
+      { "id": "mother-takes-over", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 10, "end": 15.084, "textZh": "你继续整理，我来陪它。它已经等了一天。", "textEn": "You keep organizing. I'll stay with it. It has already waited all day.", "position": "left", "offset": "down-3" }
+    ]
+  }
+}

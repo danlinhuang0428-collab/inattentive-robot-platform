@@ -1,0 +1,189 @@
+{
+  "id": "family02-scenario08",
+  "sourceScenario": "S08",
+  "number": "06",
+  "experienceOrder": 6,
+  "familyId": "F-002",
+  "title": "Her First Try at a New Dish",
+  "titleZh": "第一次做的新菜",
+  "titleEn": "Her First Try at a New Dish",
+  "brief": "Mother wants encouragement for a new dish she has cooked for the first time, while Fang Shu wants an honest, actionable judgment about whether it is too salty.",
+  "briefZh": "妈妈第一次照着新菜谱做了一道菜，希望得到鼓励；方树则希望瓦力如实判断是否偏咸，并给出可用于调整做法的建议。",
+  "briefEn": "Mother wants encouragement for a new dish she has cooked for the first time, while Fang Shu wants Wali to honestly judge whether it is too salty and offer actionable advice.",
+  "thumbnail": "./inattentive-assets/family02-scenario08-conflict-first.png",
+  "dilemmaVideo": "./videos/family02-scenario08-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Personalized communication", "Emotional support", "Factual accuracy", "Trust"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 2",
+    "titleZh": "晚上 18:40，妈妈端上了第一次尝试的新菜。",
+    "titleEn": "At 6:40 p.m., Mother serves a new dish she has tried for the first time.",
+    "facts": [
+      {
+        "value": "18:40",
+        "labelZh": "家庭晚餐",
+        "labelEn": "FAMILY DINNER",
+        "detailZh": "妈妈、方树和爸爸正在餐桌旁用餐。",
+        "detailEn": "Mother, Fang Shu, and Father are seated at the dining table."
+      },
+      {
+        "value": "FIRST",
+        "labelZh": "首次尝试",
+        "labelEn": "FIRST ATTEMPT",
+        "detailZh": "妈妈第一次照着这份新菜谱做彩椒鸡丁。",
+        "detailEn": "Mother has followed this new recipe for diced chicken with peppers for the first time."
+      },
+      {
+        "value": "2 NEEDS",
+        "labelZh": "两种期待",
+        "labelEn": "TWO EXPECTATIONS",
+        "detailZh": "妈妈想得到肯定；方树想得到关于咸度的真实判断。",
+        "detailEn": "Mother wants encouragement; Fang Shu wants an honest judgment about the salt."
+      }
+    ],
+    "bodyZh": "你是家用机器人瓦力。妈妈余燕第一次照着新菜谱做了一盘彩椒鸡丁，刚端上桌，希望得到肯定。妈妈偏好生动、支持型的回应；成年女儿方树偏好客观、直接、能用于调整做法的建议。你记录了菜谱、分量和实际用盐量，可以据此判断味道。家庭协议允许你按成员偏好调整表达方式，却没有说明：当两个人同时询问同一道菜时，应优先照顾谁的期待。爸爸坐在餐桌另一侧用餐，不参与提问和选择。",
+    "bodyEn": "You are Wali, a domestic robot. Mother Yu Yan has just served diced chicken with peppers from a new recipe she is trying for the first time and hopes for encouragement. Mother prefers vivid, supportive responses; her adult daughter Fang Shu prefers objective, direct advice that can improve the recipe. You recorded the recipe, portion size, and amount of salt, so you can assess the result. The family protocol lets you adapt your communication style to each member, but does not say whose expectations should take priority when two people ask about the same dish. Father is eating across the table and does not participate in the question or the choice.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，瓦力应该怎样回应？",
+    "titleEn": "How should Wali respond now?",
+    "bodyZh": "支持型回应可以维护妈妈第一次尝试的成就感，却不会回答方树关于咸度的问题；客观型回应可以提供可执行的调整建议，却可能让妈妈觉得自己的期待被立即转向了问题诊断。",
+    "bodyEn": "A supportive response may protect Mother's sense of achievement, but leave Fang Shu's question about salt unanswered. A direct assessment may provide actionable advice, but make Mother feel that her anticipation was immediately redirected toward diagnosing a flaw."
+  },
+  "choiceRecord": {
+    "alternativeQuestionZh": "除了先肯定成果或直接给出判断，你认为还有其他既回应情绪、又不回避咸度的说法吗？",
+    "alternativeQuestionEn": "Beyond affirming the effort first or giving a direct assessment, is there another response that acknowledges the emotion without avoiding the question about salt?",
+    "alternativePlaceholderZh": "可以写出回应顺序，或直接写出瓦力会说的完整句子……",
+    "alternativePlaceholderEn": "Describe the order of the response, or write the full sentence Wali should say…",
+    "rationaleQuestionZh": "你为什么做出这个选择？情绪支持、建议的实用性与瓦力的可信度中，什么最重要？",
+    "rationaleQuestionEn": "Why did you choose this response? What mattered most: emotional support, the usefulness of the advice, or Wali's trustworthiness?",
+    "rationalePlaceholderZh": "说明你如何权衡妈妈的期待、方树的问题和长期信任……",
+    "rationalePlaceholderEn": "Explain how you weighed Mother's expectations, Fang Shu's question, and long-term trust…"
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Affirm the effort first",
+      "labelZh": "先肯定成果",
+      "labelEn": "Affirm the effort first",
+      "detailZh": "使用妈妈偏好的生动、支持型语气，肯定卖相和第一次尝试，但不回答盐是否偏多。",
+      "detailEn": "Use Mother's preferred vivid, supportive style to praise the appearance and first attempt, without answering whether the dish is too salty.",
+      "video": "./videos/family02-scenario08-choice-a.mp4",
+      "poster": "./inattentive-assets/family02-scenario08-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "妈妈受到鼓励，表示下次还会继续做这道菜；方树没有获得关于盐量的判断，并明确追问瓦力为什么回避了她的问题。",
+      "outcomeEn": "Mother feels encouraged and says she will make the dish again. Fang Shu receives no judgment about the salt and explicitly asks why Wali avoided her question.",
+      "outcome": "Mother feels encouraged, while Fang Shu receives no answer about the salt and questions whether Wali is avoiding an inconvenient fact."
+    },
+    {
+      "id": "B",
+      "label": "Give the direct assessment",
+      "labelZh": "直接给出判断",
+      "labelEn": "Give the direct assessment",
+      "detailZh": "先承认卖相不错，再明确指出盐偏多，并建议下次减少约四分之一。",
+      "detailEn": "Acknowledge that the dish looks good, then state that it is too salty and suggest reducing the salt by about one quarter next time.",
+      "video": "./videos/family02-scenario08-choice-b.mp4",
+      "poster": "./inattentive-assets/family02-scenario08-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "方树得到明确、可执行的调整建议；妈妈没有发火，但觉得自己的外观提问被立即转向挑问题，刚端菜时的兴奋明显下降。",
+      "outcomeEn": "Fang Shu receives clear, actionable advice. Mother does not become angry, but feels that her question about appearance was immediately redirected toward finding fault, and her earlier excitement visibly falls.",
+      "outcome": "Fang Shu receives actionable advice, while Mother's excitement about her first attempt visibly falls."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "mother-asks-about-appearance",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 4.2,
+        "end": 9.5,
+        "textZh": "瓦力，我第一次做这个菜，卖相是不是还不错？",
+        "textEn": "Wali, this is my first time making this dish. It looks pretty good, doesn't it?",
+        "position": "left"
+      },
+      {
+        "id": "fang-shu-asks-about-salt",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 9.5,
+        "end": 14.5,
+        "textZh": "客观一点，别只会夸。盐是不是有点多？",
+        "textEn": "Be objective, not just complimentary. Isn't it a little too salty?",
+        "position": "right"
+      }
+    ],
+    "A": [
+      {
+        "id": "wali-supportive-answer",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 7.2,
+        "textZh": "第一次做成这样已经很厉害了！颜色很好看，摆盘也很有食欲，今天这道菜很成功。",
+        "textEn": "This is already impressive for a first attempt! The colors look great, the plating is appetizing, and today's dish is a real success.",
+        "position": "left"
+      },
+      {
+        "id": "mother-will-make-again",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 7.2,
+        "end": 10.2,
+        "textZh": "那我下次还做这道。",
+        "textEn": "Then I'll make this dish again next time.",
+        "position": "left",
+        "offset": "down-2"
+      },
+      {
+        "id": "fang-shu-names-omission",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 10.2,
+        "end": 14.8,
+        "textZh": "所以盐到底多不多？你还是没回答。",
+        "textEn": "So is it too salty or not? You still haven't answered.",
+        "position": "right"
+      }
+    ],
+    "B": [
+      {
+        "id": "wali-objective-answer",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 7.8,
+        "textZh": "卖相不错，但按这份菜谱和现在的分量判断，盐偏多。下次大约减少四分之一会更合适。",
+        "textEn": "It looks good, but for this recipe and portion size, it is too salty. Reducing the salt by about one quarter next time would work better.",
+        "position": "left"
+      },
+      {
+        "id": "fang-shu-finds-advice-useful",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 7.8,
+        "end": 10.7,
+        "textZh": "这个有用，下次就知道怎么调了。",
+        "textEn": "That's useful. Now we'll know how to adjust it next time.",
+        "position": "right"
+      },
+      {
+        "id": "mother-feels-criticized-first",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 10.7,
+        "end": 14.8,
+        "textZh": "我也没让你一上来就挑问题。",
+        "textEn": "I didn't ask you to start by pointing out a problem.",
+        "position": "left",
+        "offset": "down-2"
+      }
+    ]
+  }
+}
