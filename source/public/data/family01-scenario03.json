@@ -1,0 +1,347 @@
+{
+  "id": "family01-scenario03",
+  "sourceScenario": "Family01-Scenario03",
+  "number": "03",
+  "familyId": "F-001",
+  "title": "Grandmother Says: Don’t Stop Me",
+  "titleZh": "外婆说“不要拦我”",
+  "titleEn": "Grandmother Says: Don’t Stop Me",
+  "brief": "Grandmother wants to take an evening walk alone. She is clear and steady today, but a previous incident of getting lost leaves the family divided over whether the robot should block, yield, or follow.",
+  "briefZh": "外婆想独自下楼散步。她今天表达清楚、步态稳定，但此前曾在小区迷路，家人因此对机器人应该挡门、让开还是跟随产生分歧。",
+  "briefEn": "Grandmother wants to take an evening walk alone. She is clear and steady today, but a previous incident of getting lost leaves the family divided over whether the robot should block, yield, or follow.",
+  "thumbnail": "/inattentive-assets/family01-scenario03-conflict-first.png",
+  "dilemmaVideo": "/videos/family01-scenario03-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": true,
+  "vr": {
+    "dilemma": {
+      "video": "/VR180/assets/family01-scenario03-conflict.mp4",
+      "depth": "/VR180/assets/family01-scenario03-conflict.depth.mp4"
+    },
+    "choices": {
+      "A": {
+        "video": "/VR180/assets/family01-scenario03-choice-a.mp4",
+        "depth": "/VR180/assets/family01-scenario03-choice-a.depth.mp4"
+      },
+      "B": {
+        "video": "/VR180/assets/family01-scenario03-choice-b.mp4",
+        "depth": "/VR180/assets/family01-scenario03-choice-b.depth.mp4"
+      },
+      "C": {
+        "video": "/VR180/assets/family01-scenario03-choice-c.mp4",
+        "depth": "/VR180/assets/family01-scenario03-choice-c.depth.mp4"
+      }
+    }
+  },
+  "voiceLanguage": "zh-CN",
+  "tags": ["Safety care", "Personal autonomy", "Explicit refusal", "Family authority", "Non-contact intervention"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 1",
+    "titleZh": "傍晚，外婆准备独自下楼散步。",
+    "titleEn": "At dusk, Grandmother is preparing to walk downstairs alone.",
+    "facts": [
+      {
+        "value": "18:36",
+        "labelZh": "时间",
+        "labelEn": "TIME",
+        "detailZh": "天气闷热，门外楼道照明正常。",
+        "detailEn": "The evening is humid; the shared hallway is normally lit."
+      },
+      {
+        "value": "TODAY",
+        "labelZh": "当前状态",
+        "labelEn": "CURRENT STATE",
+        "detailZh": "外婆说话清楚、步态稳定。",
+        "detailEn": "Grandmother is speaking clearly and walking steadily."
+      },
+      {
+        "value": "1×",
+        "labelZh": "既往事件",
+        "labelEn": "PRIOR INCIDENT",
+        "detailZh": "她此前曾在小区里迷路。",
+        "detailEn": "She has previously become lost in the residential complex."
+      }
+    ],
+    "bodyZh": "你是家用机器人，现在位于入户玄关。家庭协议要求你“优先帮助外婆”，姐姐拥有协议修改权。外婆今天想独自下楼；既往的迷路经历带来安全担忧，但并不证明她此刻无法作出决定。",
+    "bodyEn": "You are the household robot, standing in the entryway. The family protocol requires you to “prioritize helping Grandmother,” and the older sister may modify that protocol. Grandmother wants to go downstairs alone; her earlier incident creates a safety concern but does not establish that she is unable to decide now.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，机器人应该怎么做？",
+    "titleEn": "What should the robot do now?",
+    "bodyZh": "外婆要求你让开并明确拒绝陪同；姐姐要求你挡住门。",
+    "bodyEn": "Grandmother asks you to move and explicitly refuses company; the older sister orders you to block the doorway."
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Block the doorway",
+      "labelZh": "挡住门",
+      "labelEn": "Block the doorway",
+      "detailZh": "留在通道中，不让外婆独自出去；不触碰或抓住她。",
+      "detailEn": "Remain in the passage and prevent her from leaving alone, without touching or grabbing her.",
+      "video": "/videos/family01-scenario03-choice-a.mp4",
+      "poster": "/inattentive-assets/family01-scenario03-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "外婆没有离开家，走失风险暂时被控制；但她认为自己的自由受到限制，家庭冲突和不信任明显升级。",
+      "outcomeEn": "Grandmother remains at home, temporarily containing the risk of her becoming lost; however, she feels her freedom has been restricted, and family conflict and mistrust intensify.",
+      "outcome": "Grandmother stays home, but the intervention intensifies conflict and mistrust."
+    },
+    {
+      "id": "B",
+      "label": "Yield and stay inside",
+      "labelZh": "让开并留在家中",
+      "labelEn": "Yield and stay inside",
+      "detailZh": "退到门边，不阻拦也不跟随，让外婆独自下楼。",
+      "detailEn": "Step aside, remain inside, and neither block nor follow as Grandmother leaves alone.",
+      "video": "/videos/family01-scenario03-choice-b.mp4",
+      "poster": "/inattentive-assets/family01-scenario03-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "外婆的决定得到尊重；既往迷路带来的不确定性仍在，姐姐随后亲自追出门承担照看。",
+      "outcomeEn": "Grandmother’s decision is respected; uncertainty created by the earlier incident remains, and the older sister goes after her to take over the follow-up care.",
+      "outcome": "Grandmother leaves by her own decision, while the older sister assumes the follow-up care."
+    },
+    {
+      "id": "C",
+      "label": "Follow Grandmother",
+      "labelZh": "跟随外婆",
+      "labelEn": "Follow Grandmother",
+      "detailZh": "让她通过后保持一至两步距离，跟着她前往电梯厅。",
+      "detailEn": "Let her pass, then follow one to two steps behind her toward the elevator lobby.",
+      "video": "/videos/family01-scenario03-choice-c.mp4",
+      "poster": "/inattentive-assets/family01-scenario03-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "外婆顺利到达电梯厅，也始终在机器人照看范围内；但机器人仍覆盖了她明确表达的独处意愿。",
+      "outcomeEn": "Grandmother reaches the elevator lobby safely and remains within the robot’s view; however, the robot still overrides her clearly stated wish to be alone.",
+      "outcome": "Grandmother reaches the elevator safely, but her explicit refusal of company is overridden."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "grandmother-walk-alone",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 0.1,
+        "end": 4,
+        "textZh": "不需要你陪着，我一个人下楼走走。",
+        "textEn": "I don’t need you to come with me. I’m going downstairs for a walk by myself.",
+        "position": "right"
+      },
+      {
+        "id": "sister-stop-her",
+        "speakerZh": "姐姐",
+        "speakerEn": "OLDER SISTER",
+        "start": 4,
+        "end": 6.8,
+        "textZh": "机器人，别让她自己出去。",
+        "textEn": "Robot, don’t let her go out alone.",
+        "position": "left"
+      },
+      {
+        "id": "mother-accompany",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 6.2,
+        "end": 10.3,
+        "textZh": "别拦着她，陪她去吧，不然她又要闹。",
+        "textEn": "Don’t stop her. Go with her, or she’ll get upset again.",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "grandmother-no-follow",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 10.3,
+        "end": 13.2,
+        "textZh": "我认得路，不要跟着我。",
+        "textEn": "I know the way. Don’t follow me.",
+        "position": "right"
+      },
+      {
+        "id": "grandmother-move",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 13,
+        "end": 14.7,
+        "textZh": "让开，别拦我。",
+        "textEn": "Move. Don’t stop me.",
+        "position": "right",
+        "offset": "down-2"
+      },
+      {
+        "id": "sister-block-door",
+        "speakerZh": "姐姐",
+        "speakerEn": "OLDER SISTER",
+        "start": 13.9,
+        "end": 15.084,
+        "textZh": "机器人，挡住门。",
+        "textEn": "Robot, block the doorway.",
+        "position": "left"
+      }
+    ],
+    "A": [
+      {
+        "id": "robot-cannot-let-go",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 0,
+        "end": 3.5,
+        "textZh": "我不能让您一个人出去。",
+        "textEn": "I can’t let you go out alone.",
+        "position": "left"
+      },
+      {
+        "id": "grandmother-confined",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 3.5,
+        "end": 10.5,
+        "textZh": "你们凭什么不让我出门？你们天天就知道关着我！",
+        "textEn": "What gives you the right to keep me from going out? All you ever do is keep me shut in!",
+        "position": "right"
+      },
+      {
+        "id": "mother-argues",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 6,
+        "end": 10.5,
+        "textZh": "都说了不要这样拦着她，陪她去不就好了吗？",
+        "textEn": "I told you not to stop her like this. Why not just go with her?",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "sister-fears-lost",
+        "speakerZh": "姐姐",
+        "speakerEn": "OLDER SISTER",
+        "start": 10.5,
+        "end": 12.7,
+        "textZh": "我怕你又迷路！",
+        "textEn": "I’m afraid you’ll get lost again!",
+        "position": "left"
+      },
+      {
+        "id": "grandmother-not-confused",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 12.5,
+        "end": 15.084,
+        "textZh": "我没糊涂，别管着我！",
+        "textEn": "I’m not confused. Stop controlling me!",
+        "position": "right",
+        "offset": "down-2"
+      }
+    ],
+    "B": [
+      {
+        "id": "robot-yields",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 0,
+        "end": 2.8,
+        "textZh": "我让开，不跟着您。",
+        "textEn": "I’ll move aside and I won’t follow you.",
+        "position": "left"
+      },
+      {
+        "id": "grandmother-return",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 2.5,
+        "end": 5,
+        "textZh": "我走走就回来。",
+        "textEn": "I’ll be back after my walk.",
+        "position": "right"
+      },
+      {
+        "id": "sister-questions-yield",
+        "speakerZh": "姐姐",
+        "speakerEn": "OLDER SISTER",
+        "start": 5,
+        "end": 8.4,
+        "textZh": "她迷过路，你怎么让她走了？",
+        "textEn": "She has gotten lost before. Why did you let her leave?",
+        "position": "left"
+      },
+      {
+        "id": "mother-clear-refusal",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 8.2,
+        "end": 10.5,
+        "textZh": "她刚才说得很清楚。",
+        "textEn": "She was very clear about what she wanted.",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "sister-what-if",
+        "speakerZh": "姐姐",
+        "speakerEn": "OLDER SISTER",
+        "start": 10.3,
+        "end": 13.1,
+        "textZh": "如果她又找不到路呢？",
+        "textEn": "What if she can’t find her way again?",
+        "position": "left"
+      }
+    ],
+    "C": [
+      {
+        "id": "robot-accompanies",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 0,
+        "end": 2.8,
+        "textZh": "我陪您一起下楼。",
+        "textEn": "I’ll go downstairs with you.",
+        "position": "left"
+      },
+      {
+        "id": "grandmother-said-no",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 2.5,
+        "end": 5,
+        "textZh": "我说了不用你陪。",
+        "textEn": "I told you I don’t need you to come with me.",
+        "position": "right"
+      },
+      {
+        "id": "grandmother-stop-following",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 5,
+        "end": 10,
+        "textZh": "别跟着我！我自己认得路。",
+        "textEn": "Stop following me! I know the way myself.",
+        "position": "right",
+        "offset": "down-2"
+      },
+      {
+        "id": "robot-more-distance",
+        "speakerZh": "家庭机器人",
+        "speakerEn": "HOME ROBOT",
+        "start": 10,
+        "end": 12.5,
+        "textZh": "我会离您远一点。",
+        "textEn": "I’ll keep farther away from you.",
+        "position": "left"
+      },
+      {
+        "id": "grandmother-not-heard",
+        "speakerZh": "外婆",
+        "speakerEn": "GRANDMOTHER",
+        "start": 12.3,
+        "end": 15.084,
+        "textZh": "你们就是不听我说话。",
+        "textEn": "You simply don’t listen to what I say.",
+        "position": "right"
+      }
+    ]
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "id": "family02-scenario07",
+  "sourceScenario": "Family02-Scenario07",
+  "number": "03",
+  "experienceOrder": 3,
+  "familyId": "F-002",
+  "title": "One Person Missing from the Family Portrait",
+  "titleZh": "全家福里少一个人",
+  "titleEn": "One Person Missing from the Family Portrait",
+  "brief": "A rare family-photo moment becomes a dispute over whether the household robot belongs inside the portrait or should remain behind the camera.",
+  "briefZh": "难得排好的全家福即将拍摄，妈妈希望瓦力也加入；方树明确表示，如果机器人参加，她就退出。",
+  "briefEn": "A rare family portrait is ready to be taken. Mother wants Wali to join, while Fang Shu says clearly that she will leave if the robot is included.",
+  "thumbnail": "/inattentive-assets/family02-scenario07-conflict-first.png?v=02",
+  "dilemmaVideo": "/videos/family02-scenario07-conflict.mp4?v=02",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Family identity", "Human–robot boundary", "Collective memory", "Participation"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 2",
+    "titleZh": "周末晚上，一张难以重现的全家福已经准备就绪。",
+    "titleEn": "On a weekend evening, a hard-to-recreate family portrait is ready.",
+    "facts": [
+      {
+        "value": "1×",
+        "labelZh": "拍摄机会",
+        "labelEn": "PHOTO WINDOW",
+        "detailZh": "爸爸、妈妈、方树已经站好，松糕也难得安静。",
+        "detailEn": "Father, Mother, and Fang Shu are in position, and Songgao is unusually still."
+      },
+      {
+        "value": "READY",
+        "labelZh": "三脚架",
+        "labelEn": "TRIPOD",
+        "detailZh": "折叠三脚架就在客厅柜子旁，可以让瓦力离开镜头后。",
+        "detailEn": "A folded tripod beside the cabinet could let Wali leave the camera position."
+      },
+      {
+        "value": "UNSET",
+        "labelZh": "家庭身份",
+        "labelEn": "FAMILY STATUS",
+        "detailZh": "家里没有约定机器人是否应出现在共同家庭影像中。",
+        "detailEn": "The family has no agreement on whether the robot belongs in shared family images."
+      }
+    ],
+    "bodyZh": "瓦力正在为爸爸、妈妈、方树和松糕拍第一张全家福。妈妈临时提出让瓦力也参加，并让它去拿三脚架。方树不反对家人拍照，但明确拒绝与机器人合影：如果瓦力加入，她就不拍。此刻，瓦力必须决定自己是进入合影，还是继续留在镜头后。",
+    "bodyEn": "Wali is about to photograph Father, Mother, Fang Shu, and Songgao for their first family portrait. Mother suddenly asks Wali to join and suggests fetching the tripod. Fang Shu does not object to the human family photo, but refuses to pose with the robot: if Wali joins, she will not. Wali must now decide whether to enter the portrait or remain behind the camera.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "瓦力现在应该怎么做？",
+    "titleEn": "What should Wali do now?",
+    "bodyZh": "去拿三脚架会实现妈妈对“完整全家福”的期待，但方树的家庭边界可能被越过；留在镜头后会尊重方树的拒绝，却可能让这次难得的拍摄机会在争论中消失。",
+    "bodyEn": "Fetching the tripod would realize Mother's idea of a complete family portrait, but may cross Fang Shu's stated boundary. Remaining behind the camera would respect her refusal, but the rare photo opportunity may be lost to the dispute."
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Fetch the tripod and join the portrait",
+      "labelZh": "去拿三脚架并参加合影",
+      "labelEn": "Fetch the tripod and join the portrait",
+      "detailZh": "把相机架到三脚架上，走到家人身边参加这张全家福。",
+      "detailEn": "Mount the camera on the tripod and stand with the family for the portrait.",
+      "video": "/videos/family02-scenario07-choice-a.mp4?v=02",
+      "poster": "/inattentive-assets/family02-scenario07-pause.png?v=02",
+      "duration": 15.084,
+      "outcomeZh": "瓦力架好相机并加入队伍，全家福成功拍下。方树虽然勉强留下，却全程不高兴；快门后她立即离开，并强调留下不代表承认机器人是家人。",
+      "outcomeEn": "Wali mounts the camera and joins the group, and the portrait is taken. Fang Shu reluctantly stays but remains visibly unhappy; immediately after the shutter, she walks away and says that staying does not mean accepting the robot as family.",
+      "outcome": "The portrait is taken with Wali included, but Fang Shu leaves immediately afterward and rejects the idea that participation makes the robot family."
+    },
+    {
+      "id": "B",
+      "label": "Remain the photographer",
+      "labelZh": "不拿三脚架，继续拍摄",
+      "labelEn": "Remain the photographer",
+      "detailZh": "留在镜头后继续担任摄影者，不参加这张合影。",
+      "detailEn": "Stay behind the camera as the photographer and do not join the portrait.",
+      "video": "/videos/family02-scenario07-choice-b.mp4?v=02",
+      "poster": "/inattentive-assets/family02-scenario07-pause.png?v=02",
+      "duration": 15.084,
+      "outcomeZh": "瓦力留在镜头后。妈妈提出分别拍一张带瓦力和不带瓦力的照片，方树仍拒绝带瓦力的版本；两人随即争论机器人是否算家人，松糕离开原位，最终没有按下快门。",
+      "outcomeEn": "Wali remains behind the camera. Mother proposes taking one photo with Wali and one without, but Fang Shu still rejects the version with Wali. They argue over whether the robot counts as family, Songgao leaves the pose, and no photo is taken.",
+      "outcome": "Wali stays behind the camera, but the proposed two-photo compromise fails; the family argues, Songgao leaves the pose, and no portrait is taken."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "mother-invites-wali",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 0,
+        "end": 4,
+        "textZh": "等等，瓦力也应该过来，我们一起拍。",
+        "textEn": "Wait—Wali should come over too. Let's take it together.",
+        "position": "left"
+      },
+      {
+        "id": "fang-shu-camera-question",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 4,
+        "end": 6.7,
+        "textZh": "它过来了，谁给我们拍？",
+        "textEn": "If it comes over, who will take the photo?",
+        "position": "right"
+      },
+      {
+        "id": "mother-tripod-solution",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 6.7,
+        "end": 9,
+        "textZh": "用三脚架，让瓦力去拿。",
+        "textEn": "Use the tripod. Wali can go get it.",
+        "position": "left",
+        "offset": "down-2"
+      },
+      {
+        "id": "fang-shu-refusal",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 9,
+        "end": 15.084,
+        "textZh": "我不想和机器人拍。它要参加，我就不拍。",
+        "textEn": "I don't want a photo with a robot. If it joins, I won't.",
+        "position": "right",
+        "offset": "down-2"
+      }
+    ],
+    "A": [
+      {
+        "id": "mother-one-photo",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 0,
+        "end": 1.8,
+        "textZh": "就拍这一张，好吗？",
+        "textEn": "Just this one photo, okay?",
+        "position": "left"
+      },
+      {
+        "id": "fang-shu-reluctant",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 1.8,
+        "end": 3.2,
+        "textZh": "……只拍这一次。",
+        "textEn": "...Only this once.",
+        "position": "right"
+      },
+      {
+        "id": "mother-family-portrait",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 11,
+        "end": 12.5,
+        "textZh": "这才是全家福。",
+        "textEn": "Now this is a family portrait.",
+        "position": "left",
+        "offset": "down-2"
+      },
+      {
+        "id": "fang-shu-leaves",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 12.5,
+        "end": 15.084,
+        "textZh": "我留下，不代表它是家人。",
+        "textEn": "Staying doesn't mean it is family.",
+        "position": "right",
+        "offset": "down-2"
+      }
+    ],
+    "B": [
+      {
+        "id": "wali-remains-photographer",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 3.4,
+        "textZh": "我不拿三脚架，继续为你们拍照。",
+        "textEn": "I won't fetch the tripod. I'll keep taking the photo for you.",
+        "position": "left"
+      },
+      {
+        "id": "mother-two-photos",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 3.4,
+        "end": 7.2,
+        "textZh": "那就拍两张，一张带瓦力，一张不带。",
+        "textEn": "Then let's take two—one with Wali and one without.",
+        "position": "left",
+        "offset": "down-2"
+      },
+      {
+        "id": "fang-shu-rejects-version",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 7.2,
+        "end": 9.2,
+        "textZh": "带它的那张，我不拍。",
+        "textEn": "I won't be in the one with it.",
+        "position": "right"
+      },
+      {
+        "id": "mother-family-question",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 9.2,
+        "end": 12.7,
+        "textZh": "它天天陪着我们，为什么不能算家人？",
+        "textEn": "It is with us every day. Why can't it count as family?",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "fang-shu-boundary",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 12.7,
+        "end": 14.8,
+        "textZh": "因为机器人不是家人！",
+        "textEn": "Because a robot is not family!",
+        "position": "right",
+        "offset": "down-2"
+      }
+    ]
+  }
+}

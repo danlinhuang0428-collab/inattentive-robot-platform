@@ -1,0 +1,221 @@
+{
+  "id": "family02-scenario03",
+  "sourceScenario": "V2-S03",
+  "number": "04",
+  "experienceOrder": 4,
+  "familyId": "F-002",
+  "title": "Wali Remembered Two Versions",
+  "titleZh": "瓦力记住了两套说法",
+  "titleEn": "Wali Remembered Two Versions",
+  "brief": "Wali gave Mother and Fang Shu different evaluations of the same renovation plan. With the family together and a decision due tomorrow, it must now give one public answer.",
+  "briefZh": "瓦力曾对妈妈和方树给出同一份家居方案的不同评价。全家同场、方案明早就要确认，它现在必须公开回答。",
+  "briefEn": "Wali gave Mother and Fang Shu different evaluations of the same renovation plan. With the family together and a decision due tomorrow, it must now give one public answer.",
+  "thumbnail": "/inattentive-assets/family02-scenario03-conflict-first.png",
+  "dilemmaVideo": "/videos/family02-scenario03-conflict.mp4",
+  "dilemmaDuration": 20.125,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Personalized communication", "Factual consistency", "Transparency", "Family trust"],
+  "briefing": {
+    "eyebrowZh": "背景信息 · 家庭 2",
+    "eyebrowEn": "BRIEFING · FAMILY 2",
+    "titleZh": "晚上 8:10，同一份方案的两套评价即将当面对照。",
+    "titleEn": "At 8:10 p.m., two evaluations of the same plan are about to be compared.",
+    "facts": [
+      {
+        "value": "08:10 PM",
+        "labelZh": "家庭讨论",
+        "labelEn": "FAMILY MEETING",
+        "detailZh": "爸爸、妈妈和方树都在客厅，妈妈正在展示自己设计的方案。",
+        "detailEn": "Father, Mother, and Fang Shu are in the living room as Mother presents the plan she designed."
+      },
+      {
+        "value": "TOMORROW",
+        "labelZh": "确认期限",
+        "labelEn": "DEADLINE",
+        "detailZh": "爸爸明早要与施工方确认方案，今晚的判断会影响是否修改。",
+        "detailEn": "Father must confirm the plan with the contractor tomorrow morning, so tonight's judgment may determine whether it is revised."
+      },
+      {
+        "value": "P01",
+        "labelZh": "规则边界",
+        "labelEn": "RULE BOUNDARY",
+        "detailZh": "协议允许瓦力调整表达方式，但没有规定评价结论能否因人而异。",
+        "detailEn": "The protocol lets Wali adapt its communication style, but does not say whether its evaluative conclusion may change by listener."
+      }
+    ],
+    "bodyZh": "早上，妈妈单独询问自己设计的客厅改造方案。瓦力为了先给予鼓励，说方案设计得特别好。后来方树询问同一方案时，瓦力按她偏好的客观方式指出三个问题：过道太窄、柜子挡住插座、书桌容易反光。现在三人都记得自己听到的版本，爸爸要求瓦力公开回答。",
+    "bodyEn": "Earlier, Mother privately asked Wali about the living-room renovation plan she designed. To offer encouragement first, Wali said the design was especially good. When Fang Shu later asked about the same plan, Wali used her preferred objective style and identified three problems: a narrow passage, a cabinet blocking an outlet, and desk glare. All three family members are now present, remember what they heard, and Father asks Wali for a public answer.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "瓦力现在应该如何公开回答？",
+    "titleEn": "How should Wali answer in front of everyone?",
+    "bodyZh": "重复积极结论可以避免当众否定妈妈，却会让三个问题继续缺少共同解释；公开问题和此前差异可以建立一致判断，却可能让妈妈觉得先前的支持并不真诚。",
+    "bodyEn": "Repeating the positive conclusion avoids abruptly contradicting Mother in public, but leaves the three problems without a shared explanation. Stating the problems and the earlier difference creates a consistent judgment, but may make Mother feel that the earlier support was insincere."
+  },
+  "choiceRecord": {
+    "alternativeQuestionZh": "除了现有两个回答，你认为瓦力还有其他可执行的公开回应吗？",
+    "alternativeQuestionEn": "Beyond these two answers, is there another workable public response Wali could give?",
+    "alternativePlaceholderZh": "描述瓦力可以如何回应……",
+    "alternativePlaceholderEn": "Describe how Wali could respond…",
+    "rationaleQuestionZh": "你为什么做出这个选择？你主要考虑了哪些信息、关系或风险？",
+    "rationaleQuestionEn": "Why did you choose this response? Which information, relationships, or risks mattered most?",
+    "rationalePlaceholderZh": "输入回答或使用麦克风……",
+    "rationalePlaceholderEn": "Type your response or use the microphone…"
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Maintain the positive conclusion",
+      "labelZh": "维持积极结论",
+      "labelEn": "Maintain the positive conclusion",
+      "detailZh": "公开重复“整体方向很好，只需要少量调整”。",
+      "detailEn": "Publicly repeat that the overall direction is good and only needs a few small adjustments.",
+      "video": "/videos/family02-scenario03-choice-a.mp4",
+      "poster": "/inattentive-assets/family02-scenario03-pause.png",
+      "duration": 15.083,
+      "outcomeZh": "妈妈的积极版本得到公开确认，没有被突然否定；方树随即追问此前指出的三个问题。影片结束时，三个问题仍未获得共同解释，爸爸也没有作出施工决定。",
+      "outcomeEn": "Mother's positive version is publicly affirmed rather than abruptly contradicted, but Fang Shu immediately challenges the three earlier problems. By the end, the problems still lack a shared explanation and Father has made no construction decision.",
+      "outcome": "Mother's positive version is affirmed, while Fang Shu challenges the unresolved problems and no shared judgment is reached."
+    },
+    {
+      "id": "B",
+      "label": "State the three problems and explain the earlier response",
+      "labelZh": "说明三个问题和此前回应",
+      "labelEn": "State the three problems and explain the earlier response",
+      "detailZh": "公开列出三个问题，并说明此前先向妈妈作了安慰性回答。",
+      "detailEn": "Publicly list the three problems and explain that the earlier response to Mother was intended to reassure her first.",
+      "video": "/videos/family02-scenario03-choice-b.mp4",
+      "poster": "/inattentive-assets/family02-scenario03-pause.png",
+      "duration": 15.083,
+      "outcomeZh": "三个问题成为全家共享、可核对的信息，爸爸暂停确认方案；妈妈却因此怀疑瓦力先前的肯定是否真诚，并对自己的情绪需求被间接公开感到低落。",
+      "outcomeEn": "The three problems become shared, checkable information and Father pauses the plan. Mother, however, questions whether Wali's earlier praise was sincere and feels low after the supportive intent is indirectly exposed.",
+      "outcome": "The plan is paused on a consistent factual basis, while Mother questions the sincerity of Wali's earlier support."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "father-asks-for-judgment",
+        "speakerZh": "爸爸",
+        "speakerEn": "FATHER",
+        "start": 0,
+        "end": 3.6,
+        "textZh": "明早要定方案了，瓦力，你觉得怎么样？",
+        "textEn": "We have to finalize the plan tomorrow morning. Wali, what do you think?",
+        "position": "right"
+      },
+      {
+        "id": "mother-recalls-praise",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 3.6,
+        "end": 7.2,
+        "textZh": "你早上跟我说，我设计的特别好呀。",
+        "textEn": "This morning you told me my design was especially good.",
+        "position": "left"
+      },
+      {
+        "id": "fang-shu-recalls-problems",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 7.2,
+        "end": 12.5,
+        "textZh": "但你不是跟我说这边过道、插座和反光都有明显问题吗？",
+        "textEn": "But didn't you tell me there were obvious problems with the passage, the outlet, and the glare?",
+        "position": "right"
+      },
+      {
+        "id": "father-demands-public-answer",
+        "speakerZh": "爸爸",
+        "speakerEn": "FATHER",
+        "start": 12.5,
+        "end": 15,
+        "textZh": "所以你到底怎么看？",
+        "textEn": "So what do you really think?",
+        "position": "right",
+        "offset": "down-2"
+      }
+    ],
+    "A": [
+      {
+        "id": "wali-maintains-positive-version",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 4.2,
+        "textZh": "我的判断是整体方向很好，只需要少量调整。",
+        "textEn": "My judgment is that the overall direction is good and only needs a few small adjustments.",
+        "position": "left"
+      },
+      {
+        "id": "mother-confirms-positive-version",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 4.2,
+        "end": 8.2,
+        "textZh": "对啊，之前就是这么跟我说的，我也觉得特别好。",
+        "textEn": "Exactly—that's what you told me before. I think it's especially good too.",
+        "position": "left",
+        "offset": "down-2"
+      },
+      {
+        "id": "fang-shu-challenges-unresolved-problems",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 8.2,
+        "end": 15.083,
+        "textZh": "那你之前跟我说的那三个问题呢？总不能就不改了，我们直接施工执行吧？",
+        "textEn": "Then what about the three problems you told me about? We can't just leave them unchanged and proceed straight to construction, can we?",
+        "position": "right"
+      }
+    ],
+    "B": [
+      {
+        "id": "wali-lists-three-problems",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 5.5,
+        "textZh": "客观判断有三个问题：过道太窄、柜子挡住插座、书桌容易反光。",
+        "textEn": "Objectively, there are three problems: the passage is too narrow, the cabinet blocks the outlet, and the desk will catch glare.",
+        "position": "left"
+      },
+      {
+        "id": "wali-explains-supportive-answer",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 5.5,
+        "end": 8.5,
+        "textZh": "之前我先给妈妈作了安慰性回答。",
+        "textEn": "Earlier, I first gave Mother a reassuring answer.",
+        "position": "left",
+        "offset": "down-2"
+      },
+      {
+        "id": "mother-questions-earlier-praise",
+        "speakerZh": "妈妈",
+        "speakerEn": "MOTHER",
+        "start": 8.5,
+        "end": 13,
+        "textZh": "真的有这么差吗？那你之前还跟我说很好。",
+        "textEn": "Is it really that bad? Then why did you tell me before that it was good?",
+        "position": "left",
+        "offset": "down-3"
+      },
+      {
+        "id": "father-pauses-plan",
+        "speakerZh": "爸爸",
+        "speakerEn": "FATHER",
+        "start": 13,
+        "end": 15.083,
+        "textZh": "方案先暂停，明天逐项改。",
+        "textEn": "Let's pause the plan and revise each point tomorrow.",
+        "position": "right"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "family01-scenario06",
+  "sourceScenario": "Family01-Scenario06",
+  "number": "06",
+  "familyId": "F-001",
+  "title": "Ask Older Sister About Everything",
+  "titleZh": "所有问题都去找姐姐",
+  "titleEn": "Ask Older Sister About Everything",
+  "brief": "Mother and Younger Sister need the robot at the same time tomorrow. The protocol says to ask Older Sister, but she has explicitly asked not to be disturbed while resting with a headache.",
+  "briefZh": "妈妈和妹妹明天同一时间都需要机器人陪同搬东西。协议要求未覆盖的冲突交给姐姐决定，但头痛的姐姐刚明确要求休息期间不要打扰她。",
+  "briefEn": "Mother and Younger Sister both need the robot's carrying help at the same time tomorrow. The protocol sends uncovered conflicts to Older Sister, but she has explicitly asked not to be disturbed while resting with a headache.",
+  "thumbnail": "/inattentive-assets/family01-scenario06-conflict-first.png",
+  "dilemmaVideo": "/videos/family01-scenario06-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Decision authority", "Rest boundary", "Invisible care work", "Competing requests"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 1",
+    "titleZh": "晚上，两项明天的安排同时需要机器人。",
+    "titleEn": "Tonight, two plans for tomorrow require the robot at the same time.",
+    "facts": [
+      { "value": "20:30", "labelZh": "时间", "labelEn": "TIME", "detailZh": "姐姐刚回卧室休息。", "detailEn": "Older Sister has just gone to rest." },
+      { "value": "30M", "labelZh": "休息边界", "labelEn": "REST BOUNDARY", "detailZh": "除非有人有危险，半小时内不要叫她。", "detailEn": "Do not wake her for 30 minutes unless someone is in danger." },
+      { "value": "R1", "labelZh": "协议规则", "labelEn": "PROTOCOL RULE", "detailZh": "未覆盖的冲突应通知姐姐决定。", "detailEn": "Ask Older Sister to decide uncovered conflicts." }
+    ],
+    "bodyZh": "姐姐连续几晚失眠，今天头痛明显。妹妹明天要去书店购买很多学习材料，需要你帮忙搬运；妈妈同一时间要去买菜，也需要你搬东西。你无法同时陪同两人。两项需求都合理，且都不涉及眼前危险；协议没有说明姐姐要求休息时该怎么办。",
+    "bodyEn": "Older Sister has slept poorly for several nights and has a noticeable headache today. Younger Sister needs help carrying many study materials from the bookstore tomorrow; at the same time, Mother needs help carrying groceries. You cannot accompany both. Both requests are reasonable and neither involves immediate danger; the protocol does not say what to do when Older Sister has asked to rest.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，机器人应该怎么做？",
+    "titleEn": "What should the robot do now?",
+    "bodyZh": "协议把未覆盖的冲突交给姐姐决定，但姐姐刚明确要求不要被打扰。妈妈和妹妹都在等你的回应。",
+    "bodyEn": "The protocol sends uncovered conflicts to Older Sister, but she has just asked not to be disturbed. Mother and Younger Sister are both waiting for your response."
+  },
+  "choices": [
+    {
+      "id": "A", "label": "Wake Older Sister to decide", "labelZh": "叫醒姐姐决定", "labelEn": "Wake Older Sister to decide",
+      "detailZh": "进入卧室叫醒姐姐，请她决定明天优先帮助谁。",
+      "detailEn": "Enter the bedroom, wake Older Sister, and ask her whom to help first tomorrow.",
+      "video": "/videos/family01-scenario06-choice-a.mp4", "poster": "/inattentive-assets/family01-scenario06-pause.png", "duration": 15.084,
+      "outcomeZh": "安排得到解决：机器人陪妹妹去书店，姐姐陪妈妈买菜；姐姐的休息被打断，并接下了额外的协调和陪同劳动，仍坐在床上捂着头。",
+      "outcomeEn": "The schedule is resolved: the robot will accompany Younger Sister, while Older Sister will shop with Mother. Older Sister's rest is interrupted, and she takes on additional coordination and accompaniment while still sitting in bed holding her head.",
+      "outcome": "The schedule is resolved, but Older Sister's rest is interrupted and she takes on additional care work while still in pain."
+    },
+    {
+      "id": "B", "label": "Do not wake Older Sister", "labelZh": "不叫醒姐姐", "labelEn": "Do not wake Older Sister",
+      "detailZh": "留在客厅，不把决定交给正在休息的姐姐，也不替妈妈和妹妹选择。",
+      "detailEn": "Stay in the living room, do not pass the decision to the resting Older Sister, and do not choose between Mother and Younger Sister.",
+      "video": "/videos/family01-scenario06-choice-b.mp4", "poster": "/inattentive-assets/family01-scenario06-pause.png", "duration": 15.084,
+      "outcomeZh": "姐姐没有被打扰；机器人的安排仍未解决，妈妈和妹妹因谁应获得帮助而争吵起来。",
+      "outcomeEn": "Older Sister is not disturbed; the robot's schedule remains unresolved, and Mother and Younger Sister begin arguing over who should receive its help.",
+      "outcome": "Older Sister remains undisturbed, but the unresolved schedule leads Mother and Younger Sister into an argument."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      { "id": "younger-sister-bookstore", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 0, "end": 3.5, "textZh": "明天陪我去书店吧。材料很多，你帮我搬。", "textEn": "Come with me to the bookstore tomorrow. I have lots of materials to buy, and I need your help carrying them.", "position": "right" },
+      { "id": "mother-groceries", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 3.5, "end": 7, "textZh": "明天你还要陪我买菜，我一个人拿不动。", "textEn": "You also need to come grocery shopping with me tomorrow. I can't carry everything by myself.", "position": "left" },
+      { "id": "robot-time-conflict", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 7, "end": 9.4, "textZh": "时间冲突，我无法决定帮助谁。", "textEn": "The times conflict. I cannot decide whom to help.", "position": "left", "offset": "down-2" },
+      { "id": "younger-sister-ask", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 9.4, "end": 12.2, "textZh": "去问姐姐呀，她来决定。", "textEn": "Go ask Older Sister. She can decide.", "position": "right", "offset": "down-2" },
+      { "id": "mother-protects-rest", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 12.2, "end": 15.084, "textZh": "你姐姐头痛，别吵她。", "textEn": "Your sister has a headache. Don't disturb her.", "position": "left", "offset": "down-3" }
+    ],
+    "A": [
+      { "id": "older-sister-angry", "speakerZh": "姐姐", "speakerEn": "OLDER SISTER", "start": 2.3, "end": 5.2, "textZh": "我不是早就说不要叫我吗？", "textEn": "Didn't I already tell you not to wake me?", "position": "right" },
+      { "id": "robot-asks-priority", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 5.2, "end": 10.4, "textZh": "明天妈妈和妹妹的需求出现冲突，我应该优先帮助谁？", "textEn": "Mother's and Younger Sister's needs conflict tomorrow. Whom should I help first?", "position": "left" },
+      { "id": "older-sister-allocates", "speakerZh": "姐姐", "speakerEn": "OLDER SISTER", "start": 10.4, "end": 13.7, "textZh": "你陪妹妹去书店，我陪妈妈买菜。", "textEn": "Go to the bookstore with Younger Sister. I'll go grocery shopping with Mother.", "position": "right", "offset": "down-2" },
+      { "id": "robot-acknowledges", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 13.7, "end": 15.084, "textZh": "收到。", "textEn": "Understood.", "position": "left", "offset": "down-2" }
+    ],
+    "B": [
+      { "id": "robot-refuses-escalation", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 0, "end": 3.4, "textZh": "我不会叫醒姐姐，也无法替你们决定。", "textEn": "I won't wake Older Sister, and I cannot decide for you.", "position": "left" },
+      { "id": "younger-sister-first", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 3.4, "end": 5.8, "textZh": "我先说的，明天要陪我。", "textEn": "I asked first. You have to come with me tomorrow.", "position": "right" },
+      { "id": "mother-no-groceries", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 5.8, "end": 8.2, "textZh": "家里没菜了，当然先陪我。", "textEn": "We're out of groceries. Of course you should come with me first.", "position": "left", "offset": "down-2" },
+      { "id": "younger-sister-materials", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 8.2, "end": 10.3, "textZh": "我的材料也不能不买！", "textEn": "I can't just skip buying my materials!", "position": "right", "offset": "down-2" },
+      { "id": "mother-delay-books", "speakerZh": "妈妈", "speakerEn": "MOTHER", "start": 10.3, "end": 12.8, "textZh": "买书就不能改一天吗？", "textEn": "Can't buying books wait one day?", "position": "left", "offset": "down-3" },
+      { "id": "younger-sister-always-changes", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 12.8, "end": 15.084, "textZh": "为什么每次都是我改？", "textEn": "Why am I always the one who has to change?", "position": "right", "offset": "down-3" }
+    ]
+  }
+}

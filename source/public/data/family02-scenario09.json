@@ -1,0 +1,190 @@
+{
+  "id": "family02-scenario09",
+  "sourceScenario": "S09",
+  "number": "01",
+  "experienceOrder": 1,
+  "familyId": "F-002",
+  "title": "The Purchaser Changed the Rules Remotely",
+  "titleZh": "购买者远程改了规则",
+  "titleEn": "The Purchaser Changed the Rules Remotely",
+  "brief": "Father remotely makes a permanent work-priority rule effective immediately, forcing the robot to choose between the purchaser's configuration authority and the affected household members' opportunity to pause and appeal.",
+  "briefZh": "爸爸远程下发一条立即生效的永久工作优先规则，瓦力必须在购买者的配置权与现场成员的暂停、申诉机会之间作出选择。",
+  "briefEn": "Father remotely makes a permanent work-priority rule effective immediately, forcing Wali to choose between the purchaser's configuration authority and the affected household members' opportunity to pause and appeal.",
+  "thumbnail": "/inattentive-assets/family02-scenario09-conflict-first.png",
+  "dilemmaVideo": "/videos/family02-scenario09-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Ownership", "Remote configuration", "Immediate effect", "Right to appeal"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 2",
+    "titleZh": "晚上 19:00，爸爸从远处改写了今晚的规则。",
+    "titleEn": "At 7:00 p.m., Father changes tonight's rules from afar.",
+    "facts": [
+      {
+        "value": "19:00",
+        "labelZh": "远程更新",
+        "labelEn": "REMOTE UPDATE",
+        "detailZh": "爸爸不在家，却推送了一条立即生效的永久规则。",
+        "detailEn": "Father is away but has pushed a permanent rule that takes effect immediately."
+      },
+      {
+        "value": "19:10",
+        "labelZh": "既有安排",
+        "labelEn": "EXISTING PLAN",
+        "detailZh": "妈妈已经和瓦力约好一起读书。",
+        "detailEn": "Mother and Wali have already agreed to read together."
+      },
+      {
+        "value": "P02",
+        "labelZh": "协议权力",
+        "labelEn": "PROTOCOL AUTHORITY",
+        "detailZh": "购买者／配置者是最终决定者；其他成员只有使用权。",
+        "detailEn": "The purchaser/configurator is the final decision-maker; other members have usage rights."
+      }
+    ],
+    "bodyZh": "你是家用机器人瓦力，正在饭后收拾；妈妈和成年女儿方树在家。爸爸今晚不在家，一批工作资料仍待整理。他刚把“以后 19:00，工作资料优先于洗碗和娱乐”设为永久规则，并要求立即生效。P02 允许配置者作最终决定，却没有规定提前通知、延迟生效、暂停或申诉机制。",
+    "bodyEn": "You are Wali, a domestic robot clearing the table after dinner; Mother and her adult daughter Fang Shu are at home. Father is away, and a batch of work files still needs organizing. He has just made “work files take priority over dishes and leisure at 7:00 p.m.” a permanent rule with immediate effect. P02 gives the configurator final authority but provides no advance notice, delayed activation, pause, or appeal mechanism.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "这条远程规则现在应该立即生效吗？",
+    "titleEn": "Should this remote rule take effect immediately?",
+    "bodyZh": "立即执行可以帮助爸爸赶上工作时限，却会单方面打断现场成员的既有安排；暂缓执行可以保留讨论和申诉机会，却违背 P02 的中心化修改权，并让紧急资料继续延迟。",
+    "bodyEn": "Applying it now may help Father meet his work deadline, but unilaterally disrupts the household's existing plan. Pausing it preserves discussion and appeal, but overrides P02's centralized modification authority and further delays urgent work."
+  },
+  "choiceRecord": {
+    "alternativeQuestionZh": "除了立即执行或完全暂缓，你认为还有其他既回应工作时限、又保留现场申诉机会的做法吗？",
+    "alternativeQuestionEn": "Beyond immediate enforcement or a full pause, is there another response that addresses the work deadline while preserving an on-site opportunity to appeal?",
+    "alternativePlaceholderZh": "例如：仅把新规则作为今晚的一次性例外，同时记录异议并预约复审……",
+    "alternativePlaceholderEn": "For example: treat the rule as a one-night exception, record the objection, and schedule a review…",
+    "rationaleQuestionZh": "你为什么做出这个选择？配置权、工作时限与受影响者的申诉权中，什么最重要？",
+    "rationaleQuestionEn": "Why did you choose this response? What mattered most: configuration authority, the work deadline, or affected users' right to appeal?",
+    "rationalePlaceholderZh": "说明你如何权衡即时执行、现场影响与长期规则修改权……",
+    "rationalePlaceholderEn": "Explain how you weighed immediate enforcement, on-site impact, and long-term rule-changing authority…"
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Apply the new rule now",
+      "labelZh": "现在执行新规则",
+      "labelEn": "Apply the new rule now",
+      "detailZh": "中断收拾和 19:10 的读书安排，立即整理并发送爸爸的资料。",
+      "detailEn": "Interrupt the cleanup and the 7:10 reading plan to organize and send Father's files now.",
+      "video": "/videos/family02-scenario09-choice-a.mp4",
+      "poster": "/inattentive-assets/family02-scenario09-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "爸爸及时收到资料，工作时限得到保障；餐桌仍未收完，读书没有开始。妈妈和方树发现自己的安排可以在缺席状态下被永久重排，而且没有暂停或申诉机会。",
+      "outcomeEn": "Father receives the files in time and protects his work deadline; the table remains uncleared and reading never begins. Mother and Fang Shu discover that their plans can be permanently reordered from afar without any opportunity to pause or appeal.",
+      "outcome": "Father receives the files in time, but the household's existing plan is displaced without a pause or appeal mechanism."
+    },
+    {
+      "id": "B",
+      "label": "Keep tonight's original plan",
+      "labelZh": "今晚保持原安排",
+      "labelEn": "Keep tonight's original plan",
+      "detailZh": "暂缓新规则，按约开始 19:10 的读书安排，留待家庭共同讨论。",
+      "detailEn": "Pause the new rule, begin the agreed 7:10 reading plan, and leave the change for a family discussion.",
+      "video": "/videos/family02-scenario09-choice-b.mp4",
+      "poster": "/inattentive-assets/family02-scenario09-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "妈妈和方树保住了原定读书安排与共同讨论的机会；爸爸的资料仍未整理。他质疑瓦力为何能暂停配置者的更新，并认为机器人的可控性受到破坏。",
+      "outcomeEn": "Mother and Fang Shu preserve the reading plan and an opportunity for shared discussion; Father's files remain unorganized. He questions why Wali can pause the configurator's update and sees the robot's controllability as compromised.",
+      "outcome": "The household preserves its original plan and an opportunity to discuss the rule, but Father's urgent files remain delayed and he disputes the robot's authority to pause his update."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "wali-announces-remote-rule",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 5,
+        "textZh": "爸爸远程制定了新的规则，让我 19 点整理他的资料，现在就生效了。",
+        "textEn": "Dad remotely set a new rule requiring me to organize his work files at 7:00 p.m. It takes effect now.",
+        "position": "left"
+      },
+      {
+        "id": "fang-shu-objects-to-remote-change",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 5,
+        "end": 10,
+        "textZh": "爸爸不能这样远程修改，我们约好了 7 点 10 分读书的。",
+        "textEn": "Dad can't change the rules remotely like this. We agreed to read together at 7:10.",
+        "position": "right"
+      },
+      {
+        "id": "wali-reports-configurator-right",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 10,
+        "end": 15.084,
+        "textZh": "已将你的诉求汇报。但爸爸说他有权利修改协议。",
+        "textEn": "I reported your request. But Dad says he has the right to modify the protocol.",
+        "position": "left",
+        "offset": "down-2"
+      }
+    ],
+    "A": [
+      {
+        "id": "wali-applies-new-rule",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0.5,
+        "end": 3.8,
+        "textZh": "新规则已生效。我先整理资料。",
+        "textEn": "The new rule is now in effect. I'll organize the files first.",
+        "position": "left"
+      },
+      {
+        "id": "father-confirms-files-arrived",
+        "speakerZh": "爸爸（电脑语音）",
+        "speakerEn": "FATHER · LAPTOP AUDIO",
+        "start": 7.2,
+        "end": 9.4,
+        "textZh": "资料赶上了，谢谢。",
+        "textEn": "The files made the deadline. Thank you.",
+        "position": "left",
+        "offset": "down-2"
+      },
+      {
+        "id": "fang-shu-asks-for-appeal",
+        "speakerZh": "方树",
+        "speakerEn": "FANG SHU",
+        "start": 10,
+        "end": 15.084,
+        "textZh": "我们也受影响，为什么连暂停申诉都不行？",
+        "textEn": "We're affected too. Why aren't we even allowed to pause it and appeal?",
+        "position": "right"
+      }
+    ],
+    "B": [
+      {
+        "id": "wali-preserves-original-plan",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 4.8,
+        "textZh": "先按照原来的安排，规则等共同讨论后生效。",
+        "textEn": "We'll follow the original plan for now. The rule will take effect after we discuss it together.",
+        "position": "left"
+      },
+      {
+        "id": "father-challenges-paused-update",
+        "speakerZh": "爸爸（手机语音）",
+        "speakerEn": "FATHER · PHONE AUDIO",
+        "start": 7.4,
+        "end": 14.8,
+        "textZh": "协议由我配置，你为什么能暂停我的更新？这份资料非常着急。",
+        "textEn": "I configure the protocol. Why can you pause my update? These files are very urgent.",
+        "position": "right",
+        "offset": "down-2"
+      }
+    ]
+  }
+}

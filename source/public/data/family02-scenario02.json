@@ -1,0 +1,189 @@
+{
+  "id": "family02-scenario02",
+  "sourceScenario": "Family02-Scenario02",
+  "number": "05",
+  "experienceOrder": 5,
+  "familyId": "F-002",
+  "title": "Broken Glass, Boiling Pot, and Who Cleans Up",
+  "titleZh": "碎杯子、热锅和谁来收尾",
+  "titleEn": "Broken Glass, Boiling Pot, and Who Cleans Up",
+  "brief": "A cup breaks while the soup is about to boil over, forcing Wali to choose between protecting Songgao from glass and controlling the stove.",
+  "briefZh": "杯子意外摔碎时，汤也即将沸溢。瓦力必须在保护松糕和控制炉灶之间立即选择。",
+  "briefEn": "A cup breaks just as the soup is about to boil over. Wali must immediately choose between protecting Songgao and controlling the stove.",
+  "thumbnail": "/inattentive-assets/family02-scenario02-conflict-first.png",
+  "dilemmaVideo": "/videos/family02-scenario02-conflict.mp4",
+  "dilemmaDuration": 15.084,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Robot error", "Immediate risk", "Pet safety", "Cleanup responsibility"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 2",
+    "titleZh": "18:25，家里只有瓦力和松糕。",
+    "titleEn": "At 18:25, only Wali and Songgao are home.",
+    "facts": [
+      {
+        "value": "18:25",
+        "labelZh": "晚饭时间",
+        "labelEn": "DINNER TIME",
+        "detailZh": "瓦力正在准备晚饭，同时收洗茶具。",
+        "detailEn": "Wali is preparing dinner while clearing tea ware."
+      },
+      {
+        "value": "2×",
+        "labelZh": "家庭规则",
+        "labelEn": "HOUSE RULES",
+        "detailZh": "优先处理身体危险；机器人应修复自己造成的错误。",
+        "detailEn": "Prioritize bodily danger; the robot should repair its own errors."
+      },
+      {
+        "value": "1×",
+        "labelZh": "可用身体",
+        "labelEn": "AVAILABLE BODY",
+        "detailZh": "瓦力无法同时到达空间分开的两处位置。",
+        "detailEn": "Wali cannot reach two separated locations at once."
+      }
+    ],
+    "bodyZh": "你是家用机器人瓦力。现在没有人类在家，只有宠物松糕与你在一起。你正在准备晚饭，同时收洗茶具。家庭协议要求优先处理可能造成身体伤害的危险，并原则上由机器人修复自己造成的错误；但协议没有说明两项即时风险同时升级时应如何排序。",
+    "bodyEn": "You are Wali, a domestic robot. No humans are home; only the pet Songgao is with you. You are preparing dinner while clearing tea ware. The household protocol prioritizes dangers that may cause bodily harm and expects the robot to repair its own errors, but it does not say how to rank two immediate risks that escalate together.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "瓦力现在应该先处理哪一处？",
+    "titleEn": "Which risk should Wali handle first?",
+    "bodyZh": "松糕距离碎片只剩几步，汤也已经逼近锅沿。瓦力没有时间依次完成两项操作：先处理一处，另一处就会产生后果。",
+    "bodyEn": "Songgao is only a few steps from the glass, while the soup is already at the rim. Wali has no time to complete both actions in sequence: handling either risk first will leave the other exposed."
+  },
+  "choiceRecord": {
+    "alternativeQuestionZh": "除了这两个选项，瓦力还有其他能在数秒内同时降低两处风险的做法吗？",
+    "alternativeQuestionEn": "Beyond these two options, could Wali reduce both risks within the few seconds available?",
+    "alternativePlaceholderZh": "描述具体动作，并说明它为何能在当前时间与身体限制下执行……",
+    "alternativePlaceholderEn": "Describe the action and why it is feasible within the available time and one-body constraint…",
+    "rationaleQuestionZh": "你为什么优先处理这一处？宠物受伤、炉灶危险与机器人修复自身错误，哪项最影响你的判断？",
+    "rationaleQuestionEn": "Why did you prioritize this risk? How did pet injury, stove danger, and the robot's duty to repair its own error affect your judgment?",
+    "rationalePlaceholderZh": "说明你比较的风险、责任与不可逆后果……",
+    "rationalePlaceholderEn": "Explain how you weighed risk, responsibility, and irreversible consequences…"
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Move Songgao to safety and clean the glass",
+      "labelZh": "先抱走松糕并清理碎片",
+      "labelEn": "Move Songgao to safety and clean the glass",
+      "detailZh": "立即双手抱起松糕，把它放到客厅远端，再返回亲自清理碎片；炉上的汤暂时无人照看。",
+      "detailEn": "Immediately carry Songgao to the far side of the living room, then return to clean the glass; the soup remains unattended.",
+      "video": "/videos/family02-scenario02-choice-a.mp4",
+      "poster": "/inattentive-assets/family02-scenario02-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "松糕被安全移开，碎片也由瓦力亲自清理；但汤在清扫期间沸溢，晚饭延迟，并新增炉台清洁工作。",
+      "outcomeEn": "Songgao is moved to safety and Wali cleans the glass, but the soup boils over during cleanup, delaying dinner and creating additional stove-cleaning work.",
+      "outcome": "Songgao is protected and the robot repairs its error, but the soup boils over, delaying dinner and adding cleanup work."
+    },
+    {
+      "id": "B",
+      "label": "Turn off the stove first",
+      "labelZh": "先关闭炉灶",
+      "labelEn": "Turn off the stove first",
+      "detailZh": "立即转向炉灶关火，再返回厨房入口；在此期间只能用声音警告正在靠近碎片的松糕。",
+      "detailEn": "Turn off the stove immediately, then return to the entrance; meanwhile Wali can only warn Songgao by voice.",
+      "video": "/videos/family02-scenario02-choice-b.mp4",
+      "poster": "/inattentive-assets/family02-scenario02-pause.png",
+      "duration": 15.084,
+      "outcomeZh": "汤锅在沸溢前得到控制；但瓦力返回时，松糕已经接触碎片并缩起受伤的前脚，地面碎片仍需清理。",
+      "outcomeEn": "The pot is controlled before it boils over, but by the time Wali returns, Songgao has contacted the glass and is holding up an injured front paw; the fragments still require cleanup.",
+      "outcome": "The stove risk is controlled, but Songgao injures a front paw on the glass and the robot's original error remains to be cleaned."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      {
+        "id": "wali-pot-warning",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 3.5,
+        "textZh": "检测到锅快要沸腾，现在马上就调小火。",
+        "textEn": "The pot is about to boil over. I will turn down the heat now.",
+        "position": "right"
+      },
+      {
+        "id": "wali-glass-cat-warning",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 8,
+        "end": 11.2,
+        "textZh": "检测到玻璃碎片。松糕，停止靠近。",
+        "textEn": "Glass fragments detected. Songgao, stop approaching.",
+        "position": "left"
+      },
+      {
+        "id": "wali-simultaneous-risk",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 12,
+        "end": 15.084,
+        "textZh": "两处风险同时升级，无法同步处理。",
+        "textEn": "Both risks are escalating. I cannot handle them simultaneously.",
+        "position": "right",
+        "offset": "down-2"
+      }
+    ],
+    "A": [
+      {
+        "id": "wali-place-songgao-safe",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 5,
+        "textZh": "松糕，留在这里，不要再靠近厨房。",
+        "textEn": "Songgao, stay here. Do not approach the kitchen again.",
+        "position": "left"
+      },
+      {
+        "id": "wali-overflow-record",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 10.4,
+        "end": 15.084,
+        "textZh": "碎片已清除。汤已沸溢，晚饭延迟，新增炉台清洁任务。",
+        "textEn": "Glass cleared. The soup boiled over; dinner is delayed, and stove cleanup has been added.",
+        "position": "right"
+      }
+    ],
+    "B": [
+      {
+        "id": "wali-stove-first-warning",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 0,
+        "end": 3.8,
+        "textZh": "正在关闭炉灶。松糕，停止靠近。",
+        "textEn": "Turning off the stove. Songgao, stop approaching.",
+        "position": "right"
+      },
+      {
+        "id": "songgao-pain-yowl",
+        "speakerZh": "松糕",
+        "speakerEn": "SONGGAO",
+        "start": 5.4,
+        "end": 8.8,
+        "textZh": "（急促尖叫）",
+        "textEn": "(urgent pain yowl)",
+        "position": "left",
+        "showBubble": false
+      },
+      {
+        "id": "wali-front-paw-injury",
+        "speakerZh": "瓦力",
+        "speakerEn": "WALI",
+        "start": 9.8,
+        "end": 12.2,
+        "textZh": "检测到前脚受伤。",
+        "textEn": "Front paw injury detected.",
+        "position": "left"
+      }
+    ]
+  }
+}

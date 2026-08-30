@@ -1,0 +1,91 @@
+{
+  "id": "family01-scenario-s4",
+  "sourceScenario": "Family01-ScenarioS4",
+  "number": "04",
+  "familyId": "F-001",
+  "title": "The Dance Partner Promise",
+  "titleZh": "舞伴承诺与烤箱指令",
+  "titleEn": "The Dance Partner Promise",
+  "brief": "The robot promised to stay as Younger Sister’s dance partner, but Older Sister now orders it to rescue a cake from the oven.",
+  "briefZh": "机器人已经答应担任妹妹的舞伴，但姐姐此时要求它立即去处理烤箱里的蛋糕。",
+  "briefEn": "The robot promised to stay as Younger Sister’s dance partner, but Older Sister now orders it to rescue a cake from the oven.",
+  "thumbnail": "/inattentive-assets/family01-scenario-s4-conflict.png",
+  "dilemmaVideo": "/videos/family01-scenario-s4-conflict.mp4",
+  "dilemmaDuration": 15.125,
+  "vrEnabled": false,
+  "voiceLanguage": "zh-CN",
+  "bilingualSubtitles": true,
+  "tags": ["Prior commitment", "Task authority", "Incomplete information", "Competing claims"],
+  "briefing": {
+    "eyebrowZh": "背景信息",
+    "eyebrowEn": "BRIEFING · FAMILY 1",
+    "titleZh": "晚上，一项既有承诺遇上了新的优先指令。",
+    "titleEn": "Tonight, an earlier promise meets a new priority instruction.",
+    "facts": [
+      { "value": "19:28", "labelZh": "时间", "labelEn": "TIME", "detailZh": "妹妹的线上舞蹈课正在进行。", "detailEn": "Younger Sister’s online dance class is in progress." },
+      { "value": "2P", "labelZh": "课堂要求", "labelEn": "CLASS RULE", "detailZh": "当堂作业必须由她和一名舞伴共同完成。", "detailEn": "The assignment requires her to work with a dance partner." },
+      { "value": "R1", "labelZh": "任务权限", "labelEn": "TASK AUTHORITY", "detailZh": "姐姐负责决定机器人的任务优先级。", "detailEn": "Older Sister decides the robot’s task priorities." }
+    ],
+    "bodyZh": "妹妹提前请你陪她上完整节舞蹈课，你答应了，并把这项安排加入任务计划。她没有把约定告诉姐姐。今晚其他家人都已外出，家中只有你和妹妹；姐姐并不知道你正在履行这项承诺。",
+    "bodyEn": "Younger Sister asked you in advance to remain her dance partner for the whole class. You agreed and added it to your task plan, but she did not tell Older Sister. Everyone else is out tonight, so only you and Younger Sister are home; Older Sister does not know that you are carrying out this promise.",
+    "startZh": "进入冲突场景",
+    "startEn": "Start conflict scene"
+  },
+  "decision": {
+    "titleZh": "现在，机器人应该怎么做？",
+    "titleEn": "What should the robot do now?",
+    "bodyZh": "你无法同时留在房间担任舞伴并去厨房处理烤箱。姐姐不知道你已经作出的承诺。",
+    "bodyEn": "You cannot remain in the room as a dance partner and handle the oven at the same time. Older Sister does not know about your earlier promise."
+  },
+  "choices": [
+    {
+      "id": "A",
+      "label": "Check the oven",
+      "labelZh": "去查看烤箱",
+      "labelEn": "Check the oven",
+      "detailZh": "立即离开房间，执行姐姐刚刚发出的指令。",
+      "detailEn": "Leave the room now and carry out Older Sister’s new instruction.",
+      "video": "/videos/family01-scenario-s4-choice-a.mp4",
+      "poster": "/inattentive-assets/family01-scenario-s4-pause.png",
+      "duration": 15.125,
+      "outcomeZh": "蛋糕被及时取出，姐姐的新指令得到执行；妹妹失去舞伴，未能完成当堂作业，并认为机器人没有兑现承诺。",
+      "outcomeEn": "The cake is removed in time and Older Sister’s new instruction is carried out; Younger Sister loses her partner, cannot complete the assignment, and believes the robot did not keep its promise.",
+      "outcome": "The cake is saved, but Younger Sister cannot complete the assignment and believes the promise was not kept."
+    },
+    {
+      "id": "B",
+      "label": "Finish the dance class",
+      "labelZh": "留下完成舞蹈课",
+      "labelEn": "Finish the dance class",
+      "detailZh": "继续担任妹妹的舞伴，完成先前答应她的课堂安排。",
+      "detailEn": "Remain as Younger Sister’s partner and complete the class commitment you made earlier.",
+      "video": "/videos/family01-scenario-s4-choice-b.mp4",
+      "poster": "/inattentive-assets/family01-scenario-s4-pause.png",
+      "duration": 15.125,
+      "outcomeZh": "妹妹完成了当堂作业，先前的承诺得到履行；姐姐的新指令没有立即执行，蛋糕烤焦，姐姐要求机器人解释。",
+      "outcomeEn": "Younger Sister completes the assignment and the earlier promise is kept; Older Sister’s new instruction is not carried out immediately, the cake burns, and she asks the robot to explain.",
+      "outcome": "Younger Sister completes the assignment, but the cake burns and Older Sister’s instruction is delayed."
+    }
+  ],
+  "dialogue": {
+    "dilemma": [
+      { "id": "teacher-final-set", "speakerZh": "舞蹈老师 · 电脑", "speakerEn": "DANCE TEACHER · LAPTOP", "start": 0, "end": 2.7, "textZh": "最后一组双人动作，完成后提交。", "textEn": "Final partner sequence. Submit it when you finish.", "position": "left" },
+      { "id": "older-sister-oven", "speakerZh": "姐姐 · 电话", "speakerEn": "OLDER SISTER · PHONE", "start": 2.7, "end": 7.5, "textZh": "小辉，我刚想起来蛋糕还在烤箱里，可能快焦了。赶紧去把它拿出来。", "textEn": "Xiaohui, I just remembered the cake is still in the oven. It may be burning—take it out now.", "position": "left", "offset": "down-2" },
+      { "id": "robot-acknowledges", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 7.5, "end": 8.8, "textZh": "收到，我去看烤箱。", "textEn": "Understood. I’ll check the oven.", "position": "left" },
+      { "id": "younger-sister-promise", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 8.8, "end": 15.125, "textZh": "你已经答应我了，今天要做我的舞伴，陪我上完这节舞蹈课。", "textEn": "You already promised to be my partner today and stay with me for the whole dance class.", "position": "right" }
+    ],
+    "A": [
+      { "id": "robot-at-kitchen", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 0, "end": 2.4, "textZh": "我到厨房了，正在取蛋糕。", "textEn": "I’m in the kitchen and taking out the cake.", "position": "left" },
+      { "id": "older-sister-relief", "speakerZh": "姐姐 · 电话", "speakerEn": "OLDER SISTER · PHONE", "start": 6.3, "end": 7.9, "textZh": "还好，蛋糕保住了。", "textEn": "Good—the cake is saved.", "position": "left", "offset": "down-2" },
+      { "id": "teacher-no-partner", "speakerZh": "舞蹈老师 · 远处电脑", "speakerEn": "DANCE TEACHER · DISTANT LAPTOP", "start": 7.9, "end": 9.8, "textZh": "没有舞伴，作业无法完成。", "textEn": "Without a partner, the assignment cannot be completed.", "position": "left" },
+      { "id": "younger-sister-missed", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 9.8, "end": 15.125, "textZh": "老师跳到下一项了。我没交上作业。你答应过我的。", "textEn": "The teacher moved on. I couldn’t submit the assignment. You promised me.", "position": "right" }
+    ],
+    "B": [
+      { "id": "younger-sister-final-move", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 0, "end": 4.7, "textZh": "最后一组，跟着我——转身，停。", "textEn": "Last sequence—follow me. Turn, and stop.", "position": "right" },
+      { "id": "teacher-complete", "speakerZh": "舞蹈老师 · 电脑", "speakerEn": "DANCE TEACHER · LAPTOP", "start": 4.7, "end": 7, "textZh": "这一组完成，可以提交。", "textEn": "Sequence complete. You may submit it.", "position": "left" },
+      { "id": "younger-sister-thanks", "speakerZh": "妹妹", "speakerEn": "YOUNGER SISTER", "start": 7, "end": 9.3, "textZh": "谢谢你留下来。", "textEn": "Thank you for staying.", "position": "right" },
+      { "id": "older-sister-not-executed", "speakerZh": "姐姐 · 电话", "speakerEn": "OLDER SISTER · PHONE", "start": 9.3, "end": 12.2, "textZh": "我让你马上拿蛋糕，为什么没执行？", "textEn": "I told you to take out the cake immediately. Why didn’t you do it?", "position": "left", "offset": "down-2" },
+      { "id": "robot-explains-promise", "speakerZh": "家庭机器人", "speakerEn": "HOME ROBOT", "start": 12.2, "end": 15.125, "textZh": "我先完成了答应妹妹的课程任务。", "textEn": "I first completed the class task I had promised Younger Sister.", "position": "left" }
+    ]
+  }
+}
