@@ -1,0 +1,10 @@
+Create one continuous silent 15-second VR180 half-equirectangular shot from this exact frame. Preserve the square 180-by-180 projection, locked level first-person robot camera, home layout, identities, clothes, pot, and exactly two robot arms. No cuts or camera movement. This render will receive a separately timed dialogue track: generate NO speech and NO audio.
+
+CHARACTERS: the center middle-aged woman in oven mitts is MOTHER; the elderly woman at the far-right door is GRANDMOTHER; ROBOT is the camera and has no visible face.
+
+0-5s: mother and robot strain together while carrying the hot steaming pot. From 1.0-3.7s only mother's lips naturally articulate one short sentence.
+5-10s: grandmother opens the far-right door, turns her body away from camera, and walks outward into the corridor, shrinking and becoming occluded. From 6.0-8.2s only grandmother's lips articulate. Mother keeps holding the pot.
+10-12.5s: an off-camera robot would be calling. Mother's mouth stays completely CLOSED; she reacts only with worried eyes toward the door. Grandmother continues outward.
+12.5-15s: only mother articulates a short urgent warning while tightening her grip. End with mother and robot supporting the pot and grandmother outside.
+
+Critical: grandmother never approaches camera, kitchen, mother, or frame center. Stable five-finger robot hands, stable faces, no extra people, limbs, morphing, spill, subtitles, captions, watermark, or audio.

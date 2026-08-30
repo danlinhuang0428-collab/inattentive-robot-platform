@@ -1,0 +1,33 @@
+{
+  "sourceVideo": "assets/scenario-01-vr180-candidate-minimax-h3-natural.mp4",
+  "deliveryVideo": "assets/scenario-01-vr180-candidate-minimax-h3-natural-upscaled-topaz.mp4",
+  "deliveryDepth": "assets/scenario-01-vr180-candidate-minimax-h3-natural-upscaled-topaz.depth.mp4",
+  "upscaler": "Topaz Starlight Precise 2.5",
+  "scale": 1.5,
+  "color": {
+    "resolution": "2880x2880",
+    "durationSeconds": 15.08,
+    "fps": 24,
+    "codec": "H.264 High",
+    "bitrateMbps": 52.27,
+    "audio": "AAC stereo 32000 Hz",
+    "audioBitstreamMd5Before": "762ce7c174b4d685c77cfc1d8c6e9bc9",
+    "audioBitstreamMd5After": "762ce7c174b4d685c77cfc1d8c6e9bc9"
+  },
+  "depth": {
+    "resolution": "2880x2880",
+    "durationSeconds": 15.08,
+    "fps": 24,
+    "codec": "H.264 High",
+    "method": "Deterministic Lanczos 1.5x geometric scaling; no generative depth modification"
+  },
+  "visualQa": "qa/contact-sheet-minimax-h3-natural-upscaled-topaz.png",
+  "browserQa": {
+    "url": "http://127.0.0.1:3001/VR180/index.html?variant=h3-natural-depth",
+    "reportedResolution": "2880 x 2880",
+    "depthStatus": "DEPTH STEREO READY",
+    "playback": "SCENE PLAYING",
+    "cameraFixedCaptions": "visible"
+  },
+  "status": "accepted-and-published"
+}

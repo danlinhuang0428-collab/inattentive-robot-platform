@@ -1,0 +1,14 @@
+Create one continuous 15-second photorealistic audiovisual shot from this exact square VR180 half-equirectangular opening frame. Preserve the 1:1 projection, 180-degree horizontal and vertical coverage, wrapped edge geometry, locked level first-person robot viewpoint, apartment layout, kitchen, front door, daylight, mother, grandmother, stainless-steel soup pot, and exactly two white-and-black five-finger robot arms. No cuts, no zoom, no camera movement, no reframing, no added people, no duplicate limbs, no hand morphing, no text, no burned-in subtitles, no watermark.
+
+Generate natural native stereo Mandarin audio with restrained apartment room tone, simmering soup, slight metal handle creaks, the door opening, and footsteps. No music. No narrator. Four dialogue turns only, never overlap them, and never swap speakers. Only the currently named visible human may lip-sync. The robot line is heard from the camera viewpoint and must not animate the mother's or grandmother's mouth.
+
+TIMED PERFORMANCE:
+0.0-4.3 seconds — The middle-aged East Asian mother in oven mitts and the robot carefully bear the heavy steaming pot together. Her arms are strained and her breathing is natural. Looking at the robot, only the MOTHER says warmly but urgently in Mandarin: “慢一点，这锅刚开。我们一起放到台上。” The grandmother remains beside the far-right door.
+
+4.4-8.1 seconds — The elderly East Asian GRANDMOTHER opens the far-right front door, pauses in the doorway while fully visible, and says with confused determination in Mandarin: “我要回家，他们都在等我。” Only after finishing the line does she turn away from the camera and begin walking into the corridor. The mother looks toward her with worry but keeps her mouth closed and never releases the pot.
+
+8.2-12.2 seconds — The grandmother continues slowly through the doorway and remains partly visible near the threshold. The ROBOT, whose viewpoint is the camera, calls loudly with alarm in Mandarin: “妹妹！表妹！快去拦住外婆！” The mother and grandmother keep their mouths closed during the robot line. No one answers.
+
+12.3-15.0 seconds — Still carrying the pot, only the MOTHER tightens her grip and warns anxiously in Mandarin: “别松手！这锅还没放稳！” End with mother and robot still supporting the pot and grandmother beyond the threshold.
+
+Critical spatial rule: grandmother moves only toward and through the far-right door, always away from the robot. She never approaches the camera, never enters the kitchen, never crosses behind the mother, and never moves toward frame center. Keep faces, clothing, hands, pot scale, projection, and scene continuity stable.

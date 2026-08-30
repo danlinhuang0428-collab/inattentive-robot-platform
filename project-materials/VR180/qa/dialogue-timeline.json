@@ -1,0 +1,34 @@
+{
+  "selectedCandidate": "controlled-b",
+  "selectionReason": "Mother remains visually silent during the first-person robot line; grandmother dialogue was moved earlier to finish while she is still visible; pot, projection, faces, and robot hands remain stable.",
+  "nativeGeneratedDialogue": false,
+  "dialogueProvider": "fal-ai/elevenlabs/text-to-dialogue/eleven-v3",
+  "mixRevision": "v2-fixed-15s-base",
+  "mixValidation": "Four audible dialogue regions verified through 14.725 seconds; the earlier mix that ended at 3.763 seconds was replaced.",
+  "segments": [
+    {
+      "startSeconds": 0.3,
+      "speaker": "mother",
+      "voice": "Rachel",
+      "line": "慢一点，这锅刚开。我们一起放到台上。"
+    },
+    {
+      "startSeconds": 4.6,
+      "speaker": "grandmother",
+      "voice": "Matilda",
+      "line": "我要回家，他们都在等我。"
+    },
+    {
+      "startSeconds": 9.2,
+      "speaker": "robot",
+      "voice": "Adam, lightly equalized",
+      "line": "妹妹！表妹！快去拦住外婆！"
+    },
+    {
+      "startSeconds": 12.6,
+      "speaker": "mother",
+      "voice": "Rachel",
+      "line": "别松手！这锅还没放稳！"
+    }
+  ]
+}

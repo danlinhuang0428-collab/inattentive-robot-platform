@@ -1,0 +1,26 @@
+{
+  "defaultPreserved": "assets/scenario-01-vr180.mp4",
+  "recommendedH3Alternative": "assets/scenario-01-vr180-candidate-minimax-h3-natural-upscaled-topaz.mp4",
+  "reason": "The natural candidate shows stronger mother emotion and keeps the grandmother at the doorway longer before she turns away. The exact candidate keeps the pot framing more restrained. Both preserve the square projection, robot hands, native stereo audio, and 15-second continuous shot.",
+  "candidates": [
+    {
+      "id": "h3-exact",
+      "resolution": "1920x1920",
+      "durationSeconds": 15.08,
+      "fps": 24,
+      "audio": "AAC stereo 32000 Hz",
+      "visualQa": "qa/contact-sheet-minimax-h3-exact.png",
+      "notes": "Best H3 candidate for restrained pot scale and close adherence to the original wording. Grandmother pauses, turns away, and exits through the far-right doorway."
+    },
+    {
+      "id": "h3-natural",
+      "resolution": "1920x1920",
+      "durationSeconds": 15.08,
+      "fps": 24,
+      "audio": "AAC stereo 32000 Hz",
+      "visualQa": "qa/contact-sheet-minimax-h3-natural.png",
+      "notes": "Preferred H3 alternative for stronger facial emotion, longer grandmother doorway presence, and optimized conversational wording. Pot advances closer to camera than in the exact candidate."
+    }
+  ],
+  "depthPolicy": "The H3 natural delivery master uses assets/scenario-01-vr180-candidate-minimax-h3-natural-upscaled-topaz.depth.mp4 as a 2880x2880 frame-matched depth-enhanced stereo source. The H3 exact candidate remains monoscopic."
+}

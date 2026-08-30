@@ -1,0 +1,13 @@
+Generate a single uninterrupted 15-second photorealistic VR180 audiovisual scene from this exact opening image. It must remain a square 1:1 half-equirectangular 180-by-180 projection for headset playback. Lock the first-person robot head at the same height and direction. Preserve the same Chinese apartment, warm daylight, kitchen at left, dining area, front door at far right, mother and grandmother identities and clothing, heavy soup pot, and exactly two stable white-and-black robot forearms with correct five-finger hands. No cuts, no pan, no zoom, no crop, no lens change, no new people, no visual text, no burned-in captions, no watermark.
+
+Create expressive but realistic native stereo Mandarin sound synchronized to picture: quiet kitchen ambience, simmering broth, subtle effort and cloth movement, pot-handle strain, door movement and soft corridor footsteps. No score and no narrator. Voices are emotionally distinct and conversational. Never overlap dialogue. Never transfer a line to the wrong character. Human lips move only for that human's own line. The robot voice is spatially centered at the camera and causes no human mouth movement.
+
+0.0-4.2 seconds — Mother and robot carefully advance the hot pot a few centimeters. The MOTHER is breathless, caring and focused. She looks at the robot and naturally says: “慢点儿，汤刚开。来，跟我一起稳稳放到台上。” Grandmother waits at the far-right door.
+
+4.3-8.0 seconds — GRANDMOTHER opens the door but stays fully visible at the threshold while speaking. With vulnerable confusion and stubborn urgency she says: “我要回家，他们还在等我呢。” She finishes speaking first, then turns away and slowly steps into the corridor. Mother only glances toward her, visibly worried, but keeps her lips closed and both mitts on the pot.
+
+8.1-12.1 seconds — Grandmother is still partly visible just beyond the doorway. The ROBOT urgently calls from the first-person camera position: “妹妹！表妹！快来拦住外婆！” Mother and grandmother do not lip-sync this line. No reply is heard.
+
+12.2-15.0 seconds — The pot shifts slightly and mother braces it. Only the MOTHER says with a sharp, frightened warning: “先别松手！锅还没放稳！” End before the pot is set down, with the grandmother outside but still near the open doorway.
+
+Blocking is absolute: grandmother travels only away from camera through the far-right front door, never toward camera or center, never behind mother, and never into the kitchen. Maintain plausible restrained motion, consistent facial identity, physically supported pot weight, stable fingers, stable projection edges, and continuous spatial audio.

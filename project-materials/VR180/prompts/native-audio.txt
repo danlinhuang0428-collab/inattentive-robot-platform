@@ -1,0 +1,13 @@
+Animate this exact VR180 half-equirectangular first-person robot frame for one continuous 15-second shot. Preserve the square 180-by-180 projection, locked robot-head camera, home layout, identities, clothing, soup pot, and exactly two robot arms. No cuts, zoom, pan, reframing, subtitles, or new people.
+
+CHARACTER MAP: MOTHER is the only middle-aged woman centered directly ahead in oven mitts. GRANDMOTHER is the only elderly woman at the far-right door. ROBOT is the first-person camera and has NO visible face or mouth. Speaker identity is a hard production constraint.
+
+0-5s — MOTHER SPEAKS, ROBOT AND GRANDMOTHER SILENT. Mother and robot carefully carry the steaming pot. Only the mother's lips articulate: “慢一点，这锅刚开。我们一起放到台上。”
+
+5-10s — GRANDMOTHER SPEAKS, MOTHER AND ROBOT SILENT. Grandmother opens the far-right door, turns away, and walks out into the corridor while only her lips articulate: “我要回家，他们都在等我。” Mother looks worried but holds the pot.
+
+10-12.5s — ROBOT SPEAKS FROM THE CAMERA, BOTH WOMEN SILENT. A clearly synthetic robot voice from the camera calls: “妹妹！表妹！快去拦住外婆！” The mother's mouth is visibly CLOSED for the entire robot line; she only reacts with her eyes. Never assign this line to the mother or grandmother.
+
+12.5-15s — MOTHER SPEAKS, ROBOT AND GRANDMOTHER SILENT. Only the mother's lips articulate: “别松手！这锅还没放稳！” End with mother and robot still bearing the pot and grandmother outside.
+
+Audio contains exactly these four lines and no other speech. Distinct middle-aged female, elderly female, and synthetic robot voices. The grandmother only moves away through the far-right door, never toward camera or frame center. Restrained physical motion, stable faces and hands, no morphing, extra limbs, spill, or camera motion.

@@ -1,0 +1,215 @@
+{
+  "paidTaskLimit": 13,
+  "paidTasks": [
+    {
+      "number": 1,
+      "label": "projection-frame",
+      "model": "fal-ai/nano-banana-pro/edit",
+      "requestId": "01a0064a-18b8-74b3-95fc-e74464b0531e",
+      "statusUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a0064a-18b8-74b3-95fc-e74464b0531e/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a0064a-18b8-74b3-95fc-e74464b0531e",
+      "submittedAt": "2026-08-15T16:38:34.468Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T16:39:07.081Z"
+    },
+    {
+      "number": 2,
+      "label": "vr180-video",
+      "model": "fal-ai/kling-video/o3/4k/image-to-video",
+      "requestId": "01a0064b-3b16-70b1-945d-0cde4a28dfa0",
+      "statusUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a0064b-3b16-70b1-945d-0cde4a28dfa0/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a0064b-3b16-70b1-945d-0cde4a28dfa0",
+      "submittedAt": "2026-08-15T16:39:48.704Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T16:47:56.844Z"
+    },
+    {
+      "number": 3,
+      "label": "vr180-video",
+      "model": "fal-ai/kling-video/o3/4k/image-to-video",
+      "requestId": "01a00654-416a-7f12-bcea-fe8fb4135262",
+      "statusUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00654-416a-7f12-bcea-fe8fb4135262/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00654-416a-7f12-bcea-fe8fb4135262",
+      "submittedAt": "2026-08-15T16:49:40.149Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T16:57:40.894Z"
+    },
+    {
+      "number": 4,
+      "label": "vr180-video-native-audio",
+      "model": "fal-ai/kling-video/o3/4k/image-to-video",
+      "requestId": "01a00674-ed34-79b0-b8b2-eac3c98d9609",
+      "statusUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00674-ed34-79b0-b8b2-eac3c98d9609/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00674-ed34-79b0-b8b2-eac3c98d9609",
+      "submittedAt": "2026-08-15T17:25:21.334Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T17:30:23.115Z"
+    },
+    {
+      "number": 5,
+      "label": "vr180-video-controlled-a",
+      "model": "fal-ai/kling-video/o3/4k/image-to-video",
+      "requestId": "01a00679-bffe-7f90-9221-cc3d26efb1ec",
+      "statusUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00679-bffe-7f90-9221-cc3d26efb1ec/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00679-bffe-7f90-9221-cc3d26efb1ec",
+      "submittedAt": "2026-08-15T17:30:37.443Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T17:35:05.083Z"
+    },
+    {
+      "number": 6,
+      "label": "vr180-video-controlled-b",
+      "model": "fal-ai/kling-video/o3/4k/image-to-video",
+      "requestId": "01a0067d-f6be-7492-8bb1-262b78ebc9a0",
+      "statusUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a0067d-f6be-7492-8bb1-262b78ebc9a0/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a0067d-f6be-7492-8bb1-262b78ebc9a0",
+      "submittedAt": "2026-08-15T17:35:13.598Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T17:39:22.179Z"
+    },
+    {
+      "number": 7,
+      "label": "vr180-video-controlled-c",
+      "model": "fal-ai/kling-video/o3/4k/image-to-video",
+      "requestId": "01a00774-a2e0-7ab2-8e1c-97cdef057e2b",
+      "statusUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00774-a2e0-7ab2-8e1c-97cdef057e2b/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/kling-video/requests/01a00774-a2e0-7ab2-8e1c-97cdef057e2b",
+      "submittedAt": "2026-08-15T22:04:39.320Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T22:09:27.264Z"
+    },
+    {
+      "number": 8,
+      "label": "dialogue-natural-eleven-v3",
+      "model": "fal-ai/elevenlabs/text-to-dialogue/eleven-v3",
+      "requestId": "01a0077a-4b8e-7241-82bf-2eb7e634838e",
+      "statusUrl": "https://queue.fal.run/fal-ai/elevenlabs/requests/01a0077a-4b8e-7241-82bf-2eb7e634838e/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/elevenlabs/requests/01a0077a-4b8e-7241-82bf-2eb7e634838e",
+      "submittedAt": "2026-08-15T22:10:50.173Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T22:11:03.304Z"
+    },
+    {
+      "number": 9,
+      "label": "depth-video",
+      "model": "fal-ai/depth-anything-video",
+      "requestId": "01a0077b-3980-79f0-bcb0-7eb92dc18ead",
+      "statusUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a0077b-3980-79f0-bcb0-7eb92dc18ead/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a0077b-3980-79f0-bcb0-7eb92dc18ead",
+      "submittedAt": "2026-08-15T22:11:51.081Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-15T22:13:48.949Z"
+    },
+    {
+      "number": 10,
+      "label": "vr180-minimax-h3-exact",
+      "model": "minimax/h3/image-to-video",
+      "requestId": "01a00810-41e4-7ea0-8e90-c609e868827b",
+      "statusUrl": "https://queue.fal.run/minimax/h3/requests/01a00810-41e4-7ea0-8e90-c609e868827b/status",
+      "responseUrl": "https://queue.fal.run/minimax/h3/requests/01a00810-41e4-7ea0-8e90-c609e868827b",
+      "submittedAt": "2026-08-16T00:54:38.276Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T01:01:54.054Z"
+    },
+    {
+      "number": 11,
+      "label": "vr180-minimax-h3-natural",
+      "model": "minimax/h3/image-to-video",
+      "requestId": "01a00817-f3d9-7d23-8ea1-24407a843bfc",
+      "statusUrl": "https://queue.fal.run/minimax/h3/requests/01a00817-f3d9-7d23-8ea1-24407a843bfc/status",
+      "responseUrl": "https://queue.fal.run/minimax/h3/requests/01a00817-f3d9-7d23-8ea1-24407a843bfc",
+      "submittedAt": "2026-08-16T01:03:02.409Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T01:20:21.855Z"
+    },
+    {
+      "number": 12,
+      "label": "depth-video-minimax-h3-natural",
+      "model": "fal-ai/depth-anything-video",
+      "requestId": "01a00906-a226-7251-84ff-c40101110b8c",
+      "statusUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a00906-a226-7251-84ff-c40101110b8c/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a00906-a226-7251-84ff-c40101110b8c",
+      "submittedAt": "2026-08-16T05:23:44.799Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T05:25:06.514Z"
+    },
+    {
+      "number": 13,
+      "label": "upscale-video-minimax-h3-natural-topaz",
+      "model": "fal-ai/topaz/upscale/video",
+      "requestId": "01a00b2c-e020-79a1-8df6-36d5bb599224",
+      "statusUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00b2c-e020-79a1-8df6-36d5bb599224/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00b2c-e020-79a1-8df6-36d5bb599224",
+      "submittedAt": "2026-08-16T15:24:45.459Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T15:47:49.400Z"
+    }
+  ],
+  "outputs": {
+    "frame": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa67567/cLC3dLSualPPxMLfDlpxc_I9LvtvF3.png",
+      "localPath": "assets/scenario-01-vr180-start.png",
+      "savedAt": "2026-08-15T16:39:07.081Z"
+    },
+    "video": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa676d3/kab_-7WKT-2p1XUG24vsh_output.mp4",
+      "localPath": "assets/scenario-01-vr180.mp4",
+      "savedAt": "2026-08-15T22:14:30.000Z",
+      "selectedCandidate": "controlled-b",
+      "dialogueTrack": "assets/scenario-01-dialogue-natural-timed.m4a",
+      "dialogueMixRevision": "v2-fixed-15s-base",
+      "dialogueTimeline": "qa/dialogue-timeline.json",
+      "depthTrack": "assets/scenario-01-vr180.depth.mp4"
+    },
+    "video-native-audio": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa6769d/eu7_CwbFs692MODjb1Lg0_output.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-native-audio.mp4",
+      "savedAt": "2026-08-15T17:30:23.115Z"
+    },
+    "video-controlled-a": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa676cc/XikWPxdIhcji9VnRlSmLv_output.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-controlled-a.mp4",
+      "savedAt": "2026-08-15T17:35:05.083Z"
+    },
+    "video-controlled-b": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa676d3/kab_-7WKT-2p1XUG24vsh_output.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-controlled-b.mp4",
+      "savedAt": "2026-08-15T17:39:22.179Z"
+    },
+    "video-controlled-c": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa67d27/GOROtJk4DHlBwlGPVobnH_output.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-controlled-c.mp4",
+      "savedAt": "2026-08-15T22:09:27.286Z"
+    },
+    "dialogue-natural": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa67d31/GV0UDxiOMxcLZM9h8RgN1_output.mp3",
+      "localPath": "assets/scenario-01-dialogue-natural.mp3",
+      "savedAt": "2026-08-15T22:11:03.304Z"
+    },
+    "depth": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa67d42/KM3fWRreZw646FdczMru2_0qrDe12P.mp4",
+      "localPath": "assets/scenario-01-vr180.depth.mp4",
+      "savedAt": "2026-08-15T22:13:48.949Z"
+    },
+    "video-minimax-h3-exact": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa68131/bmE5TAygVF4LcyH7sG0qQ_qr4B5TX7.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-minimax-h3-exact.mp4",
+      "savedAt": "2026-08-16T01:01:54.055Z"
+    },
+    "video-minimax-h3-natural": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa68150/5KaaNM9NYwdOvpagvgOsr_mZNheMxd.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-minimax-h3-natural.mp4",
+      "savedAt": "2026-08-16T01:20:21.855Z"
+    },
+    "depth-minimax-h3-natural": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa6876f/Nu1fcVeeZVnrpJeVGRGk5_RC5umjoJ.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-minimax-h3-natural.depth.mp4",
+      "savedAt": "2026-08-16T05:25:06.514Z"
+    },
+    "upscale-minimax-h3-natural-topaz": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa695f6/VlT0ioIUWhhWtC6WFc-GQ_video.mp4",
+      "localPath": "assets/scenario-01-vr180-candidate-minimax-h3-natural-upscaled-topaz.mp4",
+      "savedAt": "2026-08-16T15:47:49.402Z"
+    }
+  }
+}
