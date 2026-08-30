@@ -1,0 +1,12 @@
+{
+  "audioChannels" : 2,
+  "audioCodec" : "aac ",
+  "audioPresent" : true,
+  "audioSampleRate" : 32000,
+  "durationSeconds" : 15.084,
+  "height" : 1920,
+  "input" : "\/Users\/huangdanlin\/Desktop\/ai yingyou test\/02_最新3001平台\/01_当前开发版_2026-08-14\/experiments\/VR180\/scenario-03-video01\/assets\/video01-vr180-h3-candidate.mp4",
+  "nominalFrameRate" : 24,
+  "videoCodec" : "avc1",
+  "width" : 1920
+}

@@ -1,0 +1,15 @@
+{
+  "input": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video01/assets/video01-vr180-h3-candidate.mp4",
+  "durationSeconds": 15.083333,
+  "width": 1920,
+  "height": 1920,
+  "averageRate": "24",
+  "videoCodec": "h264",
+  "pixelFormat": "yuv420p",
+  "decodedFrames": 362,
+  "audioPresent": true,
+  "audioCodec": "aac",
+  "audioSampleRate": 32000,
+  "audioChannels": 2,
+  "contactSheet": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video01/qa/candidate-contact-sheet.jpg"
+}

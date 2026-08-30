@@ -1,0 +1,18 @@
+{
+  "createdAt": "2026-08-16T17:19:55.093Z",
+  "promptSha256": "596d212ea60043cd4658cd20947f62b3dab1db6871e5908e5693f13e3dfe50d8",
+  "sources": [
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/03_AI影游资料/01_最终版影游资料/Family_01/Scenario_02_热汤与门口的外婆/关键帧/02_共用暂停帧.png",
+      "sha256": "fa1c581067f5b831dbb8abaebd26156345e6e31de8a235ff12a559d05406dca4"
+    },
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/03_AI影游资料/01_最终版影游资料/Family_01/Scenario_02_热汤与门口的外婆/关键帧/03_选择A_最终帧.png",
+      "sha256": "baf8f3e95e2e4c2cbe5c2ac58b184fcb19a306c8d142b78c66d252ea4e4e03f5"
+    },
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/references/reference-geometry.png",
+      "sha256": "be031528046015dc9279bbacbd8d751866f03861010542dda70f06d4115f17f2"
+    }
+  ]
+}

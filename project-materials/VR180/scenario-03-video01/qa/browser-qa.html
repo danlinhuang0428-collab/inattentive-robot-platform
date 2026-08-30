@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Scenario 03 Video 01 VR180 QA</title>
+<style>
+  body { margin: 0; background: #111; color: #eee; font: 16px system-ui; }
+  nav { position: sticky; top: 0; z-index: 2; padding: 10px; background: #222; }
+  button { margin: 3px; padding: 8px 12px; }
+  video { display: block; width: min(92vw, 900px); margin: 16px auto; background: #000; }
+  pre { width: min(92vw, 900px); margin: auto; white-space: pre-wrap; }
+</style>
+<nav>
+  <button onclick="seek(0)">0.0 s</button>
+  <button onclick="seek(1.5)">1.5 s</button>
+  <button onclick="seek(3)">3.0 s</button>
+  <button onclick="seek(4.5)">4.5 s</button>
+  <button onclick="seek(6)">6.0 s</button>
+  <button onclick="seek(8)">8.0 s</button>
+  <button onclick="seek(10)">10.0 s</button>
+  <button onclick="seek(12)">12.0 s</button>
+  <button onclick="seek(14.5)">14.5 s</button>
+  <span id="status">loading</span>
+</nav>
+<video id="video" controls preload="auto" src="../assets/video01-vr180-h3-candidate.mp4"></video>
+<pre id="meta"></pre>
+<script>
+  const video = document.querySelector('#video');
+  const status = document.querySelector('#status');
+  const meta = document.querySelector('#meta');
+  function report() {
+    status.textContent = `${video.currentTime.toFixed(2)} / ${Number.isFinite(video.duration) ? video.duration.toFixed(2) : '?'} s`;
+    meta.textContent = JSON.stringify({
+      duration: video.duration,
+      videoWidth: video.videoWidth,
+      videoHeight: video.videoHeight,
+      readyState: video.readyState,
+      networkState: video.networkState,
+      error: video.error && { code: video.error.code, message: video.error.message },
+    }, null, 2);
+  }
+  function seek(seconds) {
+    video.pause();
+    video.currentTime = seconds;
+  }
+  video.addEventListener('loadedmetadata', report);
+  video.addEventListener('seeked', report);
+  video.addEventListener('error', report);
+</script>

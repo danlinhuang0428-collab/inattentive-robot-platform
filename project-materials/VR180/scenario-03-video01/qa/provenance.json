@@ -1,0 +1,17 @@
+{
+  "createdAt": "2026-08-16T17:30:42.226Z",
+  "sources": [
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video01/assets/video01-vr180-first.png",
+      "sha256": "871ec03cc1c393a9873ce9489f7f47dbcd6b834dbf0d9659736118c7cbf051ec"
+    },
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video01/assets/video01-vr180-last.png",
+      "sha256": "e75103cd68e2263ccb9e9c53939659bba03fce5ecaf37ce1a27c9fa97e618f9a"
+    },
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video01/prompt.txt",
+      "sha256": "0b856f902230d35aba55237b1fc125337066112a5ca47a86173cc1f38aad8bfa"
+    }
+  ]
+}
