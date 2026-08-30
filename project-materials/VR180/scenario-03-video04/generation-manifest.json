@@ -1,0 +1,105 @@
+{
+  "paidTaskLimit": 5,
+  "authorization": "User explicitly authorized submission of all materials and generation tasks needed for Family 01 Scenario 03 Video04 VR180 on 2026-08-16.",
+  "paidTasks": [
+    {
+      "number": 1,
+      "label": "scenario03-video04-projection-first",
+      "model": "fal-ai/nano-banana-pro/edit",
+      "requestId": "01a00ba0-dfa8-7881-b757-e95fc6decdbe",
+      "statusUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00ba0-dfa8-7881-b757-e95fc6decdbe/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00ba0-dfa8-7881-b757-e95fc6decdbe",
+      "submittedAt": "2026-08-16T17:31:27.585Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:32:00.906Z"
+    },
+    {
+      "number": 2,
+      "label": "scenario03-video04-projection-last",
+      "model": "fal-ai/nano-banana-pro/edit",
+      "requestId": "01a00ba1-93ef-7413-85a5-f5225c90bb7a",
+      "statusUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00ba1-93ef-7413-85a5-f5225c90bb7a/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00ba1-93ef-7413-85a5-f5225c90bb7a",
+      "submittedAt": "2026-08-16T17:32:13.792Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:32:47.027Z"
+    },
+    {
+      "number": 3,
+      "label": "scenario03-video04-minimax-h3",
+      "model": "minimax/h3/image-to-video",
+      "requestId": "01a00ba2-89dd-7882-9f15-662dccf19bd2",
+      "statusUrl": "https://queue.fal.run/minimax/h3/requests/01a00ba2-89dd-7882-9f15-662dccf19bd2/status",
+      "responseUrl": "https://queue.fal.run/minimax/h3/requests/01a00ba2-89dd-7882-9f15-662dccf19bd2",
+      "submittedAt": "2026-08-16T17:33:16.619Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:37:41.329Z"
+    },
+    {
+      "number": 4,
+      "label": "scenario03-video04-depth-vda-large",
+      "model": "fal-ai/depth-anything-video",
+      "requestId": "01a00ba9-5152-7e10-9794-da70e3aec12f",
+      "statusUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a00ba9-5152-7e10-9794-da70e3aec12f/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a00ba9-5152-7e10-9794-da70e3aec12f",
+      "submittedAt": "2026-08-16T17:40:40.886Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:41:51.816Z"
+    },
+    {
+      "number": 5,
+      "label": "scenario03-video04-topaz-1.5x",
+      "model": "fal-ai/topaz/upscale/video",
+      "requestId": "01a00baa-9413-7210-a646-ac477faba882",
+      "statusUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00baa-9413-7210-a646-ac477faba882/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00baa-9413-7210-a646-ac477faba882",
+      "submittedAt": "2026-08-16T17:42:03.509Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T18:08:10.493Z"
+    }
+  ],
+  "outputs": {
+    "projection-first": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa69864/SiaxNmKPKsVaMqq7XN3z7_JcYA4qoK.png",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video04/assets/video04-vr180-first.png",
+      "savedAt": "2026-08-16T17:32:00.906Z",
+      "bytes": 5323390,
+      "sha256": "6bf13d7908cfa58f3b26d8a379e52057e7d82f3386f406c5b8cef263cb10430e"
+    },
+    "projection-last": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa69869/5Q_bUKemc1Pfxl8h2ZSQE_pbHZq0wh.png",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video04/assets/video04-vr180-last.png",
+      "savedAt": "2026-08-16T17:32:47.027Z",
+      "bytes": 5137528,
+      "sha256": "5e6815799506d16729684952afa27dc18efdbe7d8bc29b5155f513e39b9b63cd"
+    },
+    "video": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa69887/0FJuaz-3yjMjw9i3unb2e_DiE058ry.mp4",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video04/assets/video04-vr180-h3-candidate.mp4",
+      "savedAt": "2026-08-16T17:37:41.329Z",
+      "bytes": 24469263,
+      "sha256": "d19a04fc5ab9bee3743d580e3500ff852ecc6e736f22fe46ef535b8fe07bc82e",
+      "promptSha256": "d91c2b4f412f7638310f03cbc517ffc53f063b36ed3e8b470a438aaf499e2c06"
+    },
+    "depth": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa698a2/LzdQ8QuJS249g3IcxFv6E_f8x3efYK.mp4",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video04/assets/video04-vr180-h3-candidate.depth.mp4",
+      "savedAt": "2026-08-16T17:41:51.816Z",
+      "bytes": 4533104,
+      "sha256": "1b66bd80e5c7dc58981af0daf06641654b3440ca780e663686f08f80b27d8876"
+    },
+    "upscale": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa6993f/vEKtfYn1RgaUCTfhr3kT1_video.mp4",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video04/assets/video04-vr180-color-master-2880.mp4",
+      "savedAt": "2026-08-16T18:08:10.493Z",
+      "bytes": 93760053,
+      "sha256": "c9103806bdd9a2de7ffc2dbaabc1cfaf4593e97f8ade3fb037a5aabeb7e69090"
+    },
+    "depth-master": {
+      "derivation": "Deterministic local 1.5x geometric scaling of the VDA-Large depth source; no generative enhancement.",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video04/assets/video04-vr180-depth-master-2880.mp4",
+      "bytes": 8223539,
+      "sha256": "1b860fe16d34d0b362b1815a3f2f64b3091864991f5b69693956c2756624f125"
+    }
+  }
+}

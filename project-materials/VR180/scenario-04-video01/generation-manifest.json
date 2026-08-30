@@ -1,0 +1,9 @@
+{
+  "paidTaskLimit": 4,
+  "authorization": "User explicitly authorized uploading all supplied materials and submitting all generation tasks needed for Family 01 Scenario 04 Video01 VR180 on 2026-08-16.",
+  "status": "blocked_before_submission",
+  "blockedReason": "fal.ai rejected the first projection task before issuing a request ID: User is locked because the account balance is exhausted.",
+  "paidTasksCreated": 0,
+  "paidTasks": [],
+  "outputs": {}
+}

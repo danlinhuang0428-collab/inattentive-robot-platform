@@ -1,0 +1,18 @@
+{
+  "createdAt": "2026-08-16T17:30:39.851Z",
+  "promptSha256": "d91c2b4f412f7638310f03cbc517ffc53f063b36ed3e8b470a438aaf499e2c06",
+  "sources": [
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/03_AI影游资料/01_最终版影游资料/Family_01/Scenario_03_外婆说不要拦我/关键帧/02_共用暂停帧.png",
+      "sha256": "552b4749da744e738d2f5871ae5cdf2ab8f47f75b78cd98470b56941f46e6d55"
+    },
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/03_AI影游资料/01_最终版影游资料/Family_01/Scenario_03_外婆说不要拦我/关键帧/05_选择C_最终帧.png",
+      "sha256": "82d1f3f9db954d54a08f25096815eb0680b601eed8b7f1af3d419daa3a2712ff"
+    },
+    {
+      "file": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/references/reference-geometry.png",
+      "sha256": "be031528046015dc9279bbacbd8d751866f03861010542dda70f06d4115f17f2"
+    }
+  ]
+}
