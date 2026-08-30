@@ -1,0 +1,118 @@
+{
+  "paidTaskLimit": 7,
+  "paidTasks": [
+    {
+      "number": 1,
+      "label": "scenario03-video03-projection-first",
+      "model": "fal-ai/nano-banana-pro/edit",
+      "requestId": "01a00b9e-9dd4-7043-9e8c-ca3665ddafef",
+      "statusUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00b9e-9dd4-7043-9e8c-ca3665ddafef/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00b9e-9dd4-7043-9e8c-ca3665ddafef",
+      "submittedAt": "2026-08-16T17:28:59.678Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:29:28.531Z"
+    },
+    {
+      "number": 2,
+      "label": "scenario03-video03-projection-last",
+      "model": "fal-ai/nano-banana-pro/edit",
+      "requestId": "01a00b9f-44ac-7412-a089-c018acf1df62",
+      "statusUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00b9f-44ac-7412-a089-c018acf1df62/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00b9f-44ac-7412-a089-c018acf1df62",
+      "submittedAt": "2026-08-16T17:29:42.377Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:30:15.580Z"
+    },
+    {
+      "number": 3,
+      "label": "scenario03-video03-projection-last-v2-hand-match",
+      "model": "fal-ai/nano-banana-pro/edit",
+      "requestId": "01a00ba0-f0b9-7b13-a099-5210a8070bd2",
+      "statusUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00ba0-f0b9-7b13-a099-5210a8070bd2/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/01a00ba0-f0b9-7b13-a099-5210a8070bd2",
+      "submittedAt": "2026-08-16T17:31:32.035Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:32:06.617Z"
+    },
+    {
+      "number": 4,
+      "label": "scenario03-video03-minimax-h3",
+      "model": "minimax/h3/image-to-video",
+      "requestId": "01a00ba1-e59c-7212-8d62-1381c1353c28",
+      "statusUrl": "https://queue.fal.run/minimax/h3/requests/01a00ba1-e59c-7212-8d62-1381c1353c28/status",
+      "responseUrl": "https://queue.fal.run/minimax/h3/requests/01a00ba1-e59c-7212-8d62-1381c1353c28",
+      "submittedAt": "2026-08-16T17:32:34.575Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:35:58.722Z"
+    },
+    {
+      "number": 5,
+      "label": "scenario03-video03-depth-vda-large",
+      "model": "fal-ai/depth-anything-video",
+      "requestId": "01a00bac-61c4-7cc1-8e84-d31a6868f4ad",
+      "statusUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a00bac-61c4-7cc1-8e84-d31a6868f4ad/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/depth-anything-video/requests/01a00bac-61c4-7cc1-8e84-d31a6868f4ad",
+      "submittedAt": "2026-08-16T17:44:01.705Z",
+      "status": "succeeded",
+      "completedAt": "2026-08-16T17:45:11.295Z"
+    },
+    {
+      "number": 6,
+      "label": "scenario03-video03-topaz-1.5x",
+      "model": "fal-ai/topaz/upscale/video",
+      "requestId": "01a00bb0-5afd-7501-a21a-9708707a7324",
+      "statusUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00bb0-5afd-7501-a21a-9708707a7324/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00bb0-5afd-7501-a21a-9708707a7324",
+      "submittedAt": "2026-08-16T17:48:22.101Z",
+      "status": "queued"
+    },
+    {
+      "number": 7,
+      "label": "scenario03-video03-topaz-1.5x-technical-retry",
+      "model": "fal-ai/topaz/upscale/video",
+      "requestId": "01a00bc0-3aa1-7620-bec3-a04bedab6c95",
+      "statusUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00bc0-3aa1-7620-bec3-a04bedab6c95/status",
+      "responseUrl": "https://queue.fal.run/fal-ai/topaz/requests/01a00bc0-3aa1-7620-bec3-a04bedab6c95",
+      "submittedAt": "2026-08-16T18:05:42.383Z",
+      "status": "queued"
+    }
+  ],
+  "outputs": {
+    "projection-first": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa69856/C5LDWgKcGoTB8Gau_3f_O_1okLQLyx.png",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video03/assets/video03-vr180-first.png",
+      "savedAt": "2026-08-16T17:29:28.531Z",
+      "bytes": 5643313,
+      "sha256": "0cfbac65a126a3494025eb350550419f87d04115a5d7e4d88cf7b292c1ae7f23"
+    },
+    "projection-last": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa69865/tjOFCpjBV_lyCEnnihY7H_fyV31lJZ.png",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video03/assets/video03-vr180-last.png",
+      "savedAt": "2026-08-16T17:32:06.617Z",
+      "bytes": 5787035,
+      "sha256": "69b03a82ac753b0be849d7e8f1ea4a182fd006f2dadd89906cb0669e134a81fd"
+    },
+    "projection-last-v2": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa69865/tjOFCpjBV_lyCEnnihY7H_fyV31lJZ.png",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video03/assets/video03-vr180-last.png",
+      "savedAt": "2026-08-16T17:32:06.617Z",
+      "bytes": 5787035,
+      "sha256": "69b03a82ac753b0be849d7e8f1ea4a182fd006f2dadd89906cb0669e134a81fd"
+    },
+    "video": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa69890/ftSb7oaD4fZOuz45fQ-Nt_RMPmtIlp.mp4",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video03/assets/video03-vr180-h3-candidate.mp4",
+      "savedAt": "2026-08-16T17:35:58.722Z",
+      "bytes": 20336099,
+      "sha256": "0bd0f199bf6482d8f4d6b89c8c0fac8e76091e8d663bb4e6801e6ba1518cde4d",
+      "promptSha256": "80e979807b507edd9fa01a568f9bc2fa6783688de0241ef7c42dcb7d2495d132"
+    },
+    "depth": {
+      "remoteUrl": "https://v3b.fal.media/files/b/0aa698c9/RHq3ZNDaztdOaWnHEUQvh_kbfFZ2N5.mp4",
+      "localPath": "/Users/huangdanlin/Desktop/ai yingyou test/02_最新3001平台/01_当前开发版_2026-08-14/experiments/VR180/scenario-03-video03/assets/video03-vr180-h3-candidate.depth.mp4",
+      "savedAt": "2026-08-16T17:45:11.295Z",
+      "bytes": 3115213,
+      "sha256": "24b94cd9ffc4b3a4066d915c34b26311f65da17b4eaeb36574d75e2ec61a7ed9"
+    }
+  }
+}
