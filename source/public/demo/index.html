@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#050608" />
+    <meta name="description" content="进入家用机器人的第一人称视角，体验家庭成员需求冲突与选择的后果。" />
+    <title>Inattentive Robot · VR Demo</title>
+    <link rel="stylesheet" href="../VR180/styles.css" />
+    <link rel="stylesheet" href="./demo.css" />
+    <script type="importmap">
+      { "imports": { "three": "../VR180/vendor/three.module.js" } }
+    </script>
+  </head>
+  <body class="demo-page" data-demo-mode="true" data-demo-stage="briefing">
+    <div class="demo-backdrop" aria-hidden="true">
+      <img src="../inattentive-assets/family01-scenario03-conflict-first.png" alt="" />
+    </div>
+    <canvas id="vr-view" aria-label="机器人第一人称 VR180 体验画面"></canvas>
+    <div class="viewer-grade" aria-hidden="true"></div>
+
+    <header class="demo-header">
+      <a class="demo-brand" href="../" aria-label="返回完整研究平台">INATTENTIVE <strong>ROBOT</strong></a>
+      <a class="demo-platform-link" href="../">探索完整平台 <span>Explore the platform</span></a>
+    </header>
+
+    <main>
+      <section class="demo-intro" aria-labelledby="demo-title">
+        <div class="demo-copy">
+          <p class="demo-kicker">家庭政治 · 第一人称 VR 体验 <span>AN IMMERSIVE RESEARCH DEMO</span></p>
+          <h1 id="demo-title">一个身体，<br /><em>很多人的要求。</em></h1>
+          <p class="demo-lead">未来的家用机器人一次只能做一件事。它先听谁的？被推迟的照护，又由谁承担？</p>
+          <p class="demo-situation"><span>现在，你是机器人。</span>外婆想独自出门；姐姐要求你阻拦。请作出选择，并看见后果。</p>
+          <div class="demo-entry-actions">
+            <button id="enter-vr" type="button" disabled>正在检查 VR…</button>
+            <button id="preview-demo" type="button" disabled>桌面预览 <span>Desktop preview</span></button>
+          </div>
+          <p class="demo-hint">在 Quest Browser 中打开此页，按一次“进入 VR”，随后用手柄扳机选择。</p>
+        </div>
+        <div class="demo-side" aria-label="研究方法">
+          <span class="demo-side-label">THE RESEARCH LOOP</span>
+          <ol>
+            <li><span>01</span> 家庭共同制定规则 <small>Make the protocol</small></li>
+            <li><span>02</span> 从机器人视角选择 <small>Live the conflict</small></li>
+            <li><span>03</span> 看见后果，修改规则 <small>Reflect and revise</small></li>
+          </ol>
+          <p>这不是寻找唯一正确答案；体验让隐藏在“机器人帮忙”背后的权力、边界与劳动变得可讨论。</p>
+        </div>
+      </section>
+      <div id="experience-ui" class="experience-ui" aria-live="polite"></div>
+    </main>
+
+    <footer class="demo-footer">
+      <p><span id="viewer-status">正在加载场景</span> <span aria-hidden="true">·</span> <span id="time-label">0.0 / 0.0s</span></p>
+      <div class="demo-progress" aria-hidden="true"><i id="progress-fill"></i></div>
+      <a href="../" id="back-scenarios">完整平台 · Full platform</a>
+    </footer>
+    <span id="scenario-title" hidden></span>
+    <span id="scenario-brief" hidden></span>
+    <script type="module" src="../VR180/viewer.js?v=exhibition-1"></script>
+  </body>
+</html>

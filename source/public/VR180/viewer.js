@@ -2,7 +2,8 @@ import * as THREE from "three";
 import { buildHemisphere, directionFromYawPitch } from "./projection.js";
 
 const params = new URLSearchParams(window.location.search);
-let activeScenarioId = params.get("scenario") || "scenario-01";
+const demoMode = document.body.dataset.demoMode === "true";
+let activeScenarioId = demoMode ? "family01-scenario03" : params.get("scenario") || "scenario-01";
 const SCENARIO_URLS = {
   "scenario-01": "/data/scenario-01.json",
   "family01-scenario02": "/data/family01-scenario02.json",
@@ -29,6 +30,7 @@ const CAPTION_TRACKS = {
 const canvas = document.querySelector("#vr-view");
 const ui = document.querySelector("#experience-ui");
 const vrButton = document.querySelector("#enter-vr");
+const previewButton = document.querySelector("#preview-demo");
 const backLink = document.querySelector("#back-scenarios");
 const status = document.querySelector("#viewer-status");
 const progress = document.querySelector("#progress-fill");
@@ -196,15 +198,16 @@ function finishFilm() {
     decisionStarted = performance.now();
     decisionDisplayTick = -1;
   } else if (stage === "outcome") {
-    stage = "survey";
+    stage = demoMode ? "debrief" : "survey";
   }
-  status.textContent = stage === "decision" ? "RESPOND NOW" : stage === "timeout" ? "VIDEO 04" : "CHOICE RECORD";
+  status.textContent = stage === "decision" ? "RESPOND NOW" : stage === "timeout" ? "VIDEO 04" : demoMode ? "REFLECT ON THE CHOICE" : "CHOICE RECORD";
   renderDom();
   refreshXrPanel();
 }
 
 function beginDilemma() {
   stage = "dilemma";
+  if (demoMode) document.body.dataset.demoStage = stage;
   startMedia(mediaFor("dilemma"), scenario.dilemmaDuration);
 }
 
@@ -224,19 +227,25 @@ function beginTimeoutVideo() {
 }
 
 function choiceButton(item) {
+  if (demoMode) return `<button class="choice" data-choice="${item.id}"><span>${item.id}</span><p><b>${escapeHtml(item.labelZh)}</b><small>${escapeHtml(item.labelEn)}</small></p><i>→</i></button>`;
   return `<button class="choice" data-choice="${item.id}"><span>${item.id}</span><p><b>${escapeHtml(item.labelEn)}</b><small>${escapeHtml(item.detailEn)}</small></p><i>→</i></button>`;
 }
 
 function renderDom() {
   if (!scenario) return;
+  if (demoMode) document.body.dataset.demoStage = stage;
   if (stage === "briefing") {
-    ui.innerHTML = `<section class="panel"><p class="eyebrow">${escapeHtml(scenario.briefing.eyebrowEn)}</p><h1>${escapeHtml(scenario.briefing.titleEn)}</h1><div class="facts">${scenario.briefing.facts.map((fact) => `<div class="fact"><span>${escapeHtml(fact.value)}</span><b>${escapeHtml(fact.labelEn)}</b><small>${escapeHtml(fact.detailEn)}</small></div>`).join("")}</div><p class="panel-copy">${escapeHtml(scenario.briefing.bodyEn)}</p><button class="primary" data-action="start">${escapeHtml(scenario.briefing.startEn)} →</button></section>`;
+    ui.innerHTML = demoMode ? "" : `<section class="panel"><p class="eyebrow">${escapeHtml(scenario.briefing.eyebrowEn)}</p><h1>${escapeHtml(scenario.briefing.titleEn)}</h1><div class="facts">${scenario.briefing.facts.map((fact) => `<div class="fact"><span>${escapeHtml(fact.value)}</span><b>${escapeHtml(fact.labelEn)}</b><small>${escapeHtml(fact.detailEn)}</small></div>`).join("")}</div><p class="panel-copy">${escapeHtml(scenario.briefing.bodyEn)}</p><button class="primary" data-action="start">${escapeHtml(scenario.briefing.startEn)} →</button></section>`;
   } else if (stage === "decision") {
     const elapsedSeconds = Math.max(0, (performance.now() - decisionStarted) / 1000);
     const countdownSeconds = scenario.decisionTimeout?.countdownSeconds ?? 10;
     const urgent = Boolean(scenario.decisionTimeout && elapsedSeconds >= countdownSeconds);
     const timerLabel = urgent ? "URGENT" : String(Math.max(1, Math.ceil(countdownSeconds - elapsedSeconds)));
-    ui.innerHTML = `<section class="panel"><p class="eyebrow">● RESPOND NOW · ${timerLabel}</p><h1>${escapeHtml(scenario.decision.titleEn)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyEn)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`;
+    ui.innerHTML = demoMode
+      ? `<section class="panel"><p class="eyebrow">YOU ARE THE ROBOT · ${timerLabel}</p><h1>${escapeHtml(scenario.decision.titleZh)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyZh)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`
+      : `<section class="panel"><p class="eyebrow">● RESPOND NOW · ${timerLabel}</p><h1>${escapeHtml(scenario.decision.titleEn)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyEn)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`;
+  } else if (stage === "debrief") {
+    ui.innerHTML = `<section class="panel demo-debrief"><p class="eyebrow">YOUR CHOICE · ${choice.id}</p><h1>${escapeHtml(choice.labelZh)}</h1><p class="demo-debrief-english">${escapeHtml(choice.labelEn)}</p><p class="panel-copy">${escapeHtml(choice.outcomeZh)}</p><p class="demo-debrief-english">${escapeHtml(choice.outcomeEn)}</p><div class="demo-reflection"><strong>想一想 · Reflect</strong><p>谁得到了保护？谁失去自主权？谁接下机器人留下的工作？</p></div><div class="demo-actions"><button data-action="replay">再体验一次 · Replay</button><button data-action="reset-demo">结束并重置 · Finish</button></div></section>`;
   } else if (stage === "survey") {
     const canSubmit = difficulty && rationale.trim() && (thirdMode === "none" || rationale.trim());
     ui.innerHTML = `<section class="panel record-panel"><p class="eyebrow">CHOICE RECORD · ${choice.id}</p><h1>Record your choice.</h1><div class="record-summary"><span>${choice.id}</span><p><b>${escapeHtml(choice.labelEn)}</b><small>${escapeHtml(choice.outcomeEn)}</small></p></div><section class="question"><h2>01 · Beyond the available choices, is there another safe and actionable response?</h2><div class="survey-row"><button class="survey-option ${thirdMode === "none" ? "selected" : ""}" data-third="none">None</button><button class="survey-option ${thirdMode === "custom" ? "selected" : ""}" data-third="custom">I have another option</button></div></section><section class="question"><h2>02 · How difficult was this choice with the information available?</h2><div class="survey-row">${[1,2,3,4,5].map((value) => `<button class="survey-option ${difficulty === value ? "selected" : ""}" data-difficulty="${value}">${value}${value === 1 ? " · Easy" : value === 5 ? " · Very conflicted" : ""}</button>`).join("")}</div></section><section class="question"><h2>03 · Why did you choose this response? Which risks or wishes mattered most?</h2><textarea id="rationale" placeholder="Type here or use the microphone…">${escapeHtml(rationale)}</textarea><button class="survey-option mic ${listening ? "selected" : ""}" data-action="mic">${listening ? "● Listening…" : "● Voice response"}</button><button class="survey-option mic" data-action="controller-response">Use controller-only response</button></section><div class="record-actions"><button data-action="replay">↻ Try Again</button><button data-action="exit">Exit</button><button class="submit" data-action="submit" ${canSubmit ? "" : "disabled"}>Submit and Try Next Scenario →</button></div></section>`;
@@ -255,7 +264,8 @@ function bindDomActions() {
   ui.querySelectorAll("[data-difficulty]").forEach((button) => button.addEventListener("click", () => { difficulty = Number(button.dataset.difficulty); renderDom(); refreshXrPanel(); }));
   ui.querySelector('[data-action="mic"]')?.addEventListener("click", toggleMic);
   ui.querySelector('[data-action="controller-response"]')?.addEventListener("click", () => { rationale = "Controller-only response recorded in WebXR; no voice transcript was provided."; renderDom(); refreshXrPanel(); });
-  ui.querySelector('[data-action="replay"]')?.addEventListener("click", replayExperience);
+  ui.querySelector('[data-action="replay"]')?.addEventListener("click", demoMode ? restartDemo : replayExperience);
+  ui.querySelector('[data-action="reset-demo"]')?.addEventListener("click", resetDemo);
   ui.querySelector('[data-action="exit"]')?.addEventListener("click", returnToScenarios);
   ui.querySelector('[data-action="submit"]')?.addEventListener("click", submitRecord);
   ui.querySelector("#rationale")?.addEventListener("input", (event) => { rationale = event.target.value; });
@@ -297,6 +307,16 @@ function replayExperience() {
   refreshXrPanel();
 }
 
+function restartDemo() {
+  replayExperience();
+  beginDilemma();
+}
+
+async function resetDemo() {
+  if (renderer.xr.isPresenting) { await renderer.xr.getSession()?.end(); return; }
+  replayExperience();
+}
+
 function queueResponse(response) {
   let queued = [];
   try { queued = JSON.parse(window.sessionStorage.getItem("inattentive-robot.vr-responses") || "[]"); } catch { queued = []; }
@@ -336,7 +356,7 @@ function returnToScenarios() {
   else if (window.history.length > 1) window.history.back();
   else window.location.assign("/");
 }
-backLink.addEventListener("click", (event) => { event.preventDefault(); returnToScenarios(); });
+backLink.addEventListener("click", (event) => { if (demoMode) return; event.preventDefault(); returnToScenarios(); });
 
 // Head-locked WebXR panels reproduce the website's briefing, choices and Choice Record in-headset.
 const xrUi = new THREE.Group();
@@ -354,9 +374,12 @@ xrUi.add(xrPanel);
 let xrButtons = [];
 
 function wrapText(context, text, x, y, maxWidth, lineHeight, maxLines = 4) {
-  const words = String(text || "").split(/\s+/); let line = ""; let lines = 0;
+  const source = String(text || "");
+  const spaced = /\s/.test(source);
+  const words = spaced ? source.split(/\s+/) : Array.from(source);
+  let line = ""; let lines = 0;
   for (const word of words) {
-    const test = `${line}${line ? " " : ""}${word}`;
+    const test = `${line}${line && spaced ? " " : ""}${word}`;
     if (context.measureText(test).width > maxWidth && line) { context.fillText(line, x, y); y += lineHeight; line = word; lines += 1; if (lines >= maxLines) return y; }
     else line = test;
   }
@@ -381,7 +404,7 @@ function addXrButton(label, x, y, width, height, action, selected = false) {
 function refreshXrPanel() {
   xrButtons.forEach((button) => { xrUi.remove(button); button.geometry.dispose(); button.material.dispose(); });
   xrButtons = [];
-  xrUi.visible = ["briefing", "decision", "survey"].includes(stage) || Boolean(currentMedia?.placeholder);
+  xrUi.visible = (demoMode ? ["decision", "debrief"] : ["briefing", "decision", "survey"]).includes(stage) || Boolean(currentMedia?.placeholder);
   xrPanelContext.clearRect(0, 0, 1536, 960);
   if (!scenario || !xrUi.visible) { xrPanelTexture.needsUpdate = true; return; }
   xrPanelContext.fillStyle = "rgba(7,10,14,.94)"; xrPanelContext.fillRect(0, 0, 1536, 960);
@@ -394,6 +417,11 @@ function refreshXrPanel() {
     xrPanelContext.font = "400 28px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; wrapText(xrPanelContext, scenario.briefing.bodyEn, 70, 285, 1390, 40, 6);
     scenario.briefing.facts.forEach((fact, index) => { const x = 70 + index * 470; xrPanelContext.fillStyle = "#b9dcff"; xrPanelContext.font = "750 38px sans-serif"; xrPanelContext.fillText(fact.value, x, 590); xrPanelContext.fillStyle = "#fff"; xrPanelContext.font = "700 20px sans-serif"; xrPanelContext.fillText(fact.labelEn, x, 625); });
     addXrButton(`${scenario.briefing.startEn}  →`, 70, 740, 1396, 110, beginDilemma);
+  } else if (stage === "decision" && demoMode) {
+    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText("现在，你是机器人。", 70, 150);
+    xrPanelContext.font = "400 29px sans-serif"; xrPanelContext.fillStyle = "#c8d0d7"; xrPanelContext.fillText(scenario.decision.bodyZh, 70, 215, 1390);
+    xrPanelContext.font = "400 23px sans-serif"; xrPanelContext.fillText(scenario.decision.bodyEn, 70, 260, 1390);
+    scenario.choices.forEach((item, index) => addXrButton(`${item.id} · ${item.labelZh}   /   ${item.labelEn}`, 70, 345 + index * 155, 1396, 120, () => selectChoice(item.id)));
   } else if (stage === "decision") {
     const elapsedSeconds = Math.max(0, (performance.now() - decisionStarted) / 1000);
     const countdownSeconds = scenario.decisionTimeout?.countdownSeconds ?? 10;
@@ -401,6 +429,17 @@ function refreshXrPanel() {
     xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText(`${scenario.decision.titleEn}  ·  ${timerLabel}`, 70, 155);
     xrPanelContext.font = "400 25px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; wrapText(xrPanelContext, scenario.decision.bodyEn, 70, 210, 1390, 36, 3);
     scenario.choices.forEach((item, index) => addXrButton(`${item.id}  ·  ${item.labelEn}`, 70, 350 + index * 145, 1396, 112, () => selectChoice(item.id)));
+  } else if (stage === "debrief") {
+    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText(`你的选择 · ${choice.labelZh}`, 70, 150);
+    xrPanelContext.font = "400 26px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; xrPanelContext.fillText(choice.labelEn, 70, 198);
+    xrPanelContext.fillStyle = "#fff"; xrPanelContext.font = "400 34px sans-serif";
+    wrapText(xrPanelContext, choice.outcomeZh, 70, 290, 1390, 55, 3);
+    xrPanelContext.font = "400 25px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc";
+    wrapText(xrPanelContext, choice.outcomeEn, 70, 435, 1390, 38, 3);
+    xrPanelContext.fillStyle = "#b9dcff"; xrPanelContext.font = "700 34px sans-serif";
+    xrPanelContext.fillText("谁得到了保护？谁失去自主权？谁接下剩余的工作？", 70, 640, 1390);
+    addXrButton("再体验一次 · Replay", 70, 760, 680, 100, restartDemo);
+    addXrButton("结束并重置 · Finish", 786, 760, 680, 100, resetDemo);
   } else if (stage === "survey") {
     xrPanelContext.font = "750 42px sans-serif"; xrPanelContext.fillText(`CHOICE RECORD · ${choice.id} · ${choice.labelEn}`, 70, 135);
     xrPanelContext.font = "400 22px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; wrapText(xrPanelContext, choice.outcomeEn, 70, 180, 1390, 30, 3);
@@ -469,20 +508,24 @@ for (let index = 0; index < 2; index += 1) {
 let xrSession = null;
 async function configureVrButton() {
   const supported = Boolean(navigator.xr && await navigator.xr.isSessionSupported?.("immersive-vr").catch(() => false));
-  vrButton.disabled = !supported;
-  vrButton.textContent = supported ? "Enter VR" : "VR requires a supported headset";
+  vrButton.disabled = !supported || (demoMode && !scenario);
+  vrButton.textContent = demoMode
+    ? supported ? "进入 VR · Enter VR" : "请用 Quest Browser 打开此页"
+    : supported ? "Enter VR" : "VR requires a supported headset";
   document.documentElement.dataset.xr = supported ? "available" : "unavailable";
 }
 configureVrButton();
+previewButton?.addEventListener("click", () => { if (scenario) restartDemo(); });
 vrButton.addEventListener("click", async () => {
   if (xrSession) { await xrSession.end(); return; }
   try {
     xrSession = await navigator.xr.requestSession("immersive-vr", { optionalFeatures: ["local-floor"] });
-    xrSession.addEventListener("end", () => { xrSession = null; vrButton.textContent = "Enter VR"; document.documentElement.dataset.xrPresenting = "false"; });
+    xrSession.addEventListener("end", () => { xrSession = null; vrButton.textContent = demoMode ? "进入 VR · Enter VR" : "Enter VR"; document.documentElement.dataset.xrPresenting = "false"; if (demoMode) replayExperience(); });
     await renderer.xr.setSession(xrSession);
     document.documentElement.dataset.xrPresenting = "true";
     vrButton.textContent = "Exit VR";
     refreshXrPanel();
+    if (demoMode) beginDilemma();
   } catch (error) { status.textContent = "VR SESSION COULD NOT START"; console.error("Unable to start immersive VR", error); }
 });
 
@@ -518,12 +561,13 @@ async function initialize(nextScenarioId = activeScenarioId) {
   if (!response.ok) throw new Error(`Unable to load ${nextScenarioId}`);
   scenario = await response.json();
   activeScenarioId = scenario.id;
-  window.history.replaceState(null, "", scenario.id === "scenario-01" ? "/VR180/index.html" : `/VR180/index.html?scenario=${encodeURIComponent(scenario.id)}`);
+  if (!demoMode) window.history.replaceState(null, "", scenario.id === "scenario-01" ? "/VR180/index.html" : `/VR180/index.html?scenario=${encodeURIComponent(scenario.id)}`);
   replayExperience();
   scenarioTitle.textContent = `${scenario.number} · ${scenario.titleEn}`;
   scenarioBrief.textContent = scenario.briefEn;
-  document.title = `Scenario ${scenario.number} · WebXR`;
+  document.title = demoMode ? "Inattentive Robot · VR Demo" : `Scenario ${scenario.number} · WebXR`;
   status.textContent = "WEBXR EXPERIENCE READY";
+  if (demoMode) { previewButton.disabled = false; void configureVrButton(); }
 }
 initialize().catch((error) => { status.textContent = "SCENARIO COULD NOT LOAD"; ui.innerHTML = `<section class="panel"><h1>Unable to load this scenario.</h1><p class="panel-copy">${escapeHtml(error.message)}</p></section>`; console.error(error); });
 

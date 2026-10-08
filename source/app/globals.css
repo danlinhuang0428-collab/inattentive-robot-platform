@@ -121,6 +121,10 @@ html[data-language="zh"] .survey-actions .survey-submit { min-width: 250px; }
 .cover-ports button:nth-of-type(1) { color: var(--mint); } .cover-ports button:nth-of-type(2) { color: var(--blue); } .cover-ports button:nth-of-type(3) { color: var(--pink); }
 .cover-ports button:hover { color: white; transform: translateY(-2px); }
 .cover-ports span { color: rgba(255,255,255,.35); }
+.cover-demo-link { display: inline-flex; align-items: baseline; gap: 10px; margin-top: 24px; padding: 10px 0; border-bottom: 1px solid rgba(185,220,255,.55); color: #dcefff; font-size: 14px; font-weight: 650; text-decoration: none; }
+.cover-demo-link span { color: #9daebc; font-size: 11px; font-weight: 400; }
+.cover-demo-link:hover { color: white; border-color: white; }
+.cover-demo-link:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 .cover-local { position: absolute; z-index: 4; right: 28px; top: 24px; margin: 0; color: #8c929a; font-size: 9px; letter-spacing: .14em; }
 .cover-local i, .port-badge i, .sprint-badge i { display: inline-block; width: 6px; height: 6px; margin-right: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 12px rgba(185,241,223,.7); }
 .cover-project { position: absolute; z-index: 5; left: 24px; top: 20px; width: min(310px, calc(100% - 48px)); padding: 10px; background: rgba(13,15,18,.72); }
