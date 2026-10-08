@@ -227,7 +227,7 @@ function beginTimeoutVideo() {
 }
 
 function choiceButton(item) {
-  if (demoMode) return `<button class="choice" data-choice="${item.id}"><span>${item.id}</span><p><b>${escapeHtml(item.labelZh)}</b><small>${escapeHtml(item.labelEn)}</small></p><i>→</i></button>`;
+  if (demoMode) return `<button class="choice" data-choice="${item.id}"><span>${item.id}</span><p><b>${escapeHtml(item.labelEn)}</b><small>${escapeHtml(item.detailEn)}</small></p><i>→</i></button>`;
   return `<button class="choice" data-choice="${item.id}"><span>${item.id}</span><p><b>${escapeHtml(item.labelEn)}</b><small>${escapeHtml(item.detailEn)}</small></p><i>→</i></button>`;
 }
 
@@ -242,10 +242,10 @@ function renderDom() {
     const urgent = Boolean(scenario.decisionTimeout && elapsedSeconds >= countdownSeconds);
     const timerLabel = urgent ? "URGENT" : String(Math.max(1, Math.ceil(countdownSeconds - elapsedSeconds)));
     ui.innerHTML = demoMode
-      ? `<section class="panel"><p class="eyebrow">YOU ARE THE ROBOT · ${timerLabel}</p><h1>${escapeHtml(scenario.decision.titleZh)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyZh)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`
+      ? `<section class="panel"><p class="eyebrow">YOU ARE THE ROBOT · ${timerLabel}</p><h1>${escapeHtml(scenario.decision.titleEn)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyEn)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`
       : `<section class="panel"><p class="eyebrow">● RESPOND NOW · ${timerLabel}</p><h1>${escapeHtml(scenario.decision.titleEn)}</h1><p class="panel-copy">${escapeHtml(scenario.decision.bodyEn)}</p><div class="choices">${scenario.choices.map(choiceButton).join("")}</div></section>`;
   } else if (stage === "debrief") {
-    ui.innerHTML = `<section class="panel demo-debrief"><p class="eyebrow">YOUR CHOICE · ${choice.id}</p><h1>${escapeHtml(choice.labelZh)}</h1><p class="demo-debrief-english">${escapeHtml(choice.labelEn)}</p><p class="panel-copy">${escapeHtml(choice.outcomeZh)}</p><p class="demo-debrief-english">${escapeHtml(choice.outcomeEn)}</p><div class="demo-reflection"><strong>想一想 · Reflect</strong><p>谁得到了保护？谁失去自主权？谁接下机器人留下的工作？</p></div><div class="demo-actions"><button data-action="replay">再体验一次 · Replay</button><button data-action="reset-demo">结束并重置 · Finish</button></div></section>`;
+    ui.innerHTML = `<section class="panel demo-debrief"><p class="eyebrow">YOUR CHOICE · ${choice.id}</p><h1>${escapeHtml(choice.labelEn)}</h1><p class="panel-copy">${escapeHtml(choice.outcomeEn)}</p><div class="demo-reflection"><strong>Reflect</strong><p>Who was protected? Whose autonomy was limited? Who took on the care the robot could not provide?</p></div><div class="demo-actions"><button data-action="replay">Replay</button><button data-action="reset-demo">Finish and reset</button></div></section>`;
   } else if (stage === "survey") {
     const canSubmit = difficulty && rationale.trim() && (thirdMode === "none" || rationale.trim());
     ui.innerHTML = `<section class="panel record-panel"><p class="eyebrow">CHOICE RECORD · ${choice.id}</p><h1>Record your choice.</h1><div class="record-summary"><span>${choice.id}</span><p><b>${escapeHtml(choice.labelEn)}</b><small>${escapeHtml(choice.outcomeEn)}</small></p></div><section class="question"><h2>01 · Beyond the available choices, is there another safe and actionable response?</h2><div class="survey-row"><button class="survey-option ${thirdMode === "none" ? "selected" : ""}" data-third="none">None</button><button class="survey-option ${thirdMode === "custom" ? "selected" : ""}" data-third="custom">I have another option</button></div></section><section class="question"><h2>02 · How difficult was this choice with the information available?</h2><div class="survey-row">${[1,2,3,4,5].map((value) => `<button class="survey-option ${difficulty === value ? "selected" : ""}" data-difficulty="${value}">${value}${value === 1 ? " · Easy" : value === 5 ? " · Very conflicted" : ""}</button>`).join("")}</div></section><section class="question"><h2>03 · Why did you choose this response? Which risks or wishes mattered most?</h2><textarea id="rationale" placeholder="Type here or use the microphone…">${escapeHtml(rationale)}</textarea><button class="survey-option mic ${listening ? "selected" : ""}" data-action="mic">${listening ? "● Listening…" : "● Voice response"}</button><button class="survey-option mic" data-action="controller-response">Use controller-only response</button></section><div class="record-actions"><button data-action="replay">↻ Try Again</button><button data-action="exit">Exit</button><button class="submit" data-action="submit" ${canSubmit ? "" : "disabled"}>Submit and Try Next Scenario →</button></div></section>`;
@@ -418,10 +418,9 @@ function refreshXrPanel() {
     scenario.briefing.facts.forEach((fact, index) => { const x = 70 + index * 470; xrPanelContext.fillStyle = "#b9dcff"; xrPanelContext.font = "750 38px sans-serif"; xrPanelContext.fillText(fact.value, x, 590); xrPanelContext.fillStyle = "#fff"; xrPanelContext.font = "700 20px sans-serif"; xrPanelContext.fillText(fact.labelEn, x, 625); });
     addXrButton(`${scenario.briefing.startEn}  →`, 70, 740, 1396, 110, beginDilemma);
   } else if (stage === "decision" && demoMode) {
-    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText("现在，你是机器人。", 70, 150);
-    xrPanelContext.font = "400 29px sans-serif"; xrPanelContext.fillStyle = "#c8d0d7"; xrPanelContext.fillText(scenario.decision.bodyZh, 70, 215, 1390);
-    xrPanelContext.font = "400 23px sans-serif"; xrPanelContext.fillText(scenario.decision.bodyEn, 70, 260, 1390);
-    scenario.choices.forEach((item, index) => addXrButton(`${item.id} · ${item.labelZh}   /   ${item.labelEn}`, 70, 345 + index * 155, 1396, 120, () => selectChoice(item.id)));
+    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText("You are the robot. What do you do?", 70, 150);
+    xrPanelContext.font = "400 29px sans-serif"; xrPanelContext.fillStyle = "#c8d0d7"; wrapText(xrPanelContext, scenario.decision.bodyEn, 70, 215, 1390, 42, 2);
+    scenario.choices.forEach((item, index) => addXrButton(`${item.id} · ${item.labelEn}`, 70, 345 + index * 155, 1396, 120, () => selectChoice(item.id)));
   } else if (stage === "decision") {
     const elapsedSeconds = Math.max(0, (performance.now() - decisionStarted) / 1000);
     const countdownSeconds = scenario.decisionTimeout?.countdownSeconds ?? 10;
@@ -430,16 +429,13 @@ function refreshXrPanel() {
     xrPanelContext.font = "400 25px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; wrapText(xrPanelContext, scenario.decision.bodyEn, 70, 210, 1390, 36, 3);
     scenario.choices.forEach((item, index) => addXrButton(`${item.id}  ·  ${item.labelEn}`, 70, 350 + index * 145, 1396, 112, () => selectChoice(item.id)));
   } else if (stage === "debrief") {
-    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText(`你的选择 · ${choice.labelZh}`, 70, 150);
-    xrPanelContext.font = "400 26px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; xrPanelContext.fillText(choice.labelEn, 70, 198);
-    xrPanelContext.fillStyle = "#fff"; xrPanelContext.font = "400 34px sans-serif";
-    wrapText(xrPanelContext, choice.outcomeZh, 70, 290, 1390, 55, 3);
-    xrPanelContext.font = "400 25px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc";
-    wrapText(xrPanelContext, choice.outcomeEn, 70, 435, 1390, 38, 3);
+    xrPanelContext.font = "750 48px sans-serif"; xrPanelContext.fillText(`Your choice · ${choice.labelEn}`, 70, 150);
+    xrPanelContext.fillStyle = "#fff"; xrPanelContext.font = "400 32px sans-serif";
+    wrapText(xrPanelContext, choice.outcomeEn, 70, 270, 1390, 48, 4);
     xrPanelContext.fillStyle = "#b9dcff"; xrPanelContext.font = "700 34px sans-serif";
-    xrPanelContext.fillText("谁得到了保护？谁失去自主权？谁接下剩余的工作？", 70, 640, 1390);
-    addXrButton("再体验一次 · Replay", 70, 760, 680, 100, restartDemo);
-    addXrButton("结束并重置 · Finish", 786, 760, 680, 100, resetDemo);
+    xrPanelContext.fillText("Who was protected? Whose autonomy was limited?", 70, 630, 1390);
+    addXrButton("Replay", 70, 760, 680, 100, restartDemo);
+    addXrButton("Finish and reset", 786, 760, 680, 100, resetDemo);
   } else if (stage === "survey") {
     xrPanelContext.font = "750 42px sans-serif"; xrPanelContext.fillText(`CHOICE RECORD · ${choice.id} · ${choice.labelEn}`, 70, 135);
     xrPanelContext.font = "400 22px sans-serif"; xrPanelContext.fillStyle = "#aeb5bc"; wrapText(xrPanelContext, choice.outcomeEn, 70, 180, 1390, 30, 3);
@@ -478,9 +474,11 @@ function renderSubtitle(cue) {
   subtitleContext.clearRect(0, 0, 2048, 420); subtitleLayer.visible = Boolean(cue);
   if (cue) {
     subtitleContext.fillStyle = "rgba(0,0,0,.76)"; subtitleContext.fillRect(40, 35, 1968, 330);
-    subtitleContext.textAlign = "center"; subtitleContext.fillStyle = "#f0c878"; subtitleContext.font = "600 40px sans-serif"; subtitleContext.fillText(cue.speakerZh || cue.speaker, 1024, 105);
-    subtitleContext.fillStyle = "#fff"; subtitleContext.font = "700 52px sans-serif"; subtitleContext.fillText(cue.textZh || cue.text, 1024, 190);
-    subtitleContext.fillStyle = "#d1d5d9"; subtitleContext.font = "500 34px sans-serif"; subtitleContext.fillText(cue.textEn || "", 1024, 270);
+    subtitleContext.textAlign = "center"; subtitleContext.fillStyle = "#f0c878"; subtitleContext.font = "600 40px sans-serif";
+    subtitleContext.fillText(demoMode ? cue.speakerEn || cue.speaker : cue.speakerZh || cue.speaker, 1024, 105);
+    subtitleContext.fillStyle = "#fff"; subtitleContext.font = "700 52px sans-serif";
+    subtitleContext.fillText(demoMode ? cue.textEn || cue.text : cue.textZh || cue.text, 1024, demoMode ? 225 : 190, 1850);
+    if (!demoMode) { subtitleContext.fillStyle = "#d1d5d9"; subtitleContext.font = "500 34px sans-serif"; subtitleContext.fillText(cue.textEn || "", 1024, 270); }
   }
   subtitleTexture.needsUpdate = true;
 }
@@ -510,7 +508,7 @@ async function configureVrButton() {
   const supported = Boolean(navigator.xr && await navigator.xr.isSessionSupported?.("immersive-vr").catch(() => false));
   vrButton.disabled = !supported || (demoMode && !scenario);
   vrButton.textContent = demoMode
-    ? supported ? "进入 VR · Enter VR" : "请用 Quest Browser 打开此页"
+    ? supported ? "Enter VR" : "Open in Quest Browser to enter VR"
     : supported ? "Enter VR" : "VR requires a supported headset";
   document.documentElement.dataset.xr = supported ? "available" : "unavailable";
 }
@@ -520,7 +518,7 @@ vrButton.addEventListener("click", async () => {
   if (xrSession) { await xrSession.end(); return; }
   try {
     xrSession = await navigator.xr.requestSession("immersive-vr", { optionalFeatures: ["local-floor"] });
-    xrSession.addEventListener("end", () => { xrSession = null; vrButton.textContent = demoMode ? "进入 VR · Enter VR" : "Enter VR"; document.documentElement.dataset.xrPresenting = "false"; if (demoMode) replayExperience(); });
+    xrSession.addEventListener("end", () => { xrSession = null; vrButton.textContent = "Enter VR"; document.documentElement.dataset.xrPresenting = "false"; if (demoMode) replayExperience(); });
     await renderer.xr.setSession(xrSession);
     document.documentElement.dataset.xrPresenting = "true";
     vrButton.textContent = "Exit VR";

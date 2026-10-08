@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#050608" />
-    <meta name="description" content="进入家用机器人的第一人称视角，体验家庭成员需求冲突与选择的后果。" />
+    <meta name="description" content="Step into a home robot's perspective and decide whose needs take priority in a family conflict." />
     <title>Inattentive Robot · VR Demo</title>
     <link rel="stylesheet" href="../VR180/styles.css" />
-    <link rel="stylesheet" href="./demo.css" />
+    <link rel="stylesheet" href="./demo.css?v=english-2" />
     <script type="importmap">
       { "imports": { "three": "../VR180/vendor/three.module.js" } }
     </script>
@@ -16,47 +16,47 @@
     <div class="demo-backdrop" aria-hidden="true">
       <img src="../inattentive-assets/family01-scenario03-conflict-first.png" alt="" />
     </div>
-    <canvas id="vr-view" aria-label="机器人第一人称 VR180 体验画面"></canvas>
+    <canvas id="vr-view" aria-label="First-person VR180 view from the home robot"></canvas>
     <div class="viewer-grade" aria-hidden="true"></div>
 
     <header class="demo-header">
-      <a class="demo-brand" href="../" aria-label="返回完整研究平台">INATTENTIVE <strong>ROBOT</strong></a>
-      <a class="demo-platform-link" href="../">探索完整平台 <span>Explore the platform</span></a>
+      <a class="demo-brand" href="../" aria-label="Return to the full research platform">INATTENTIVE <strong>ROBOT</strong></a>
+      <a class="demo-platform-link" href="../">Explore the full platform</a>
     </header>
 
     <main>
       <section class="demo-intro" aria-labelledby="demo-title">
         <div class="demo-copy">
-          <p class="demo-kicker">家庭政治 · 第一人称 VR 体验 <span>AN IMMERSIVE RESEARCH DEMO</span></p>
-          <h1 id="demo-title">一个身体，<br /><em>很多人的要求。</em></h1>
-          <p class="demo-lead">未来的家用机器人一次只能做一件事。它先听谁的？被推迟的照护，又由谁承担？</p>
-          <p class="demo-situation"><span>现在，你是机器人。</span>外婆想独自出门；姐姐要求你阻拦。请作出选择，并看见后果。</p>
+          <p class="demo-kicker">DOMESTIC POLITICS · FIRST-PERSON VR <span>AN IMMERSIVE RESEARCH DEMO</span></p>
+          <h1 id="demo-title">One body.<br /><em>Many demands.</em></h1>
+          <p class="demo-lead">A home robot can do only one thing at a time. Whose needs come first? Who takes on the care it cannot provide?</p>
+          <p class="demo-situation"><span>You are the robot.</span>Your grandmother, who has Alzheimer's disease, wants to go out alone. Your family protocol puts her safety first. In all other household matters, you must follow the older sister's instructions; she has the final say. She now orders you to block the door. What do you do?</p>
           <div class="demo-entry-actions">
-            <button id="enter-vr" type="button" disabled>正在检查 VR…</button>
-            <button id="preview-demo" type="button" disabled>桌面预览 <span>Desktop preview</span></button>
+            <button id="enter-vr" type="button" disabled>Checking VR…</button>
+            <button id="preview-demo" type="button" disabled>Desktop preview</button>
           </div>
-          <p class="demo-hint">在 Quest Browser 中打开此页，按一次“进入 VR”，随后用手柄扳机选择。</p>
+          <p class="demo-hint">Open this page in Quest Browser, select Enter VR, then use a controller trigger to choose.</p>
         </div>
-        <div class="demo-side" aria-label="研究方法">
+        <div class="demo-side" aria-label="Research method">
           <span class="demo-side-label">THE RESEARCH LOOP</span>
           <ol>
-            <li><span>01</span> 家庭共同制定规则 <small>Make the protocol</small></li>
-            <li><span>02</span> 从机器人视角选择 <small>Live the conflict</small></li>
-            <li><span>03</span> 看见后果，修改规则 <small>Reflect and revise</small></li>
+            <li><span>01</span> Set the family protocol <small>Agree on the rules</small></li>
+            <li class="current-step" aria-current="step"><span>02</span> Choose as the robot <small>You are here</small></li>
+            <li><span>03</span> See what follows <small>Reflect and revise</small></li>
           </ol>
-          <p>这不是寻找唯一正确答案；体验让隐藏在“机器人帮忙”背后的权力、边界与劳动变得可讨论。</p>
+          <p>The experience makes power, autonomy, and the care work behind a robot's choice visible.</p>
         </div>
       </section>
       <div id="experience-ui" class="experience-ui" aria-live="polite"></div>
     </main>
 
     <footer class="demo-footer">
-      <p><span id="viewer-status">正在加载场景</span> <span aria-hidden="true">·</span> <span id="time-label">0.0 / 0.0s</span></p>
+      <p><span id="viewer-status">Loading scene</span> <span aria-hidden="true">·</span> <span id="time-label">0.0 / 0.0s</span></p>
       <div class="demo-progress" aria-hidden="true"><i id="progress-fill"></i></div>
-      <a href="../" id="back-scenarios">完整平台 · Full platform</a>
+      <a href="../" id="back-scenarios">Full platform</a>
     </footer>
     <span id="scenario-title" hidden></span>
     <span id="scenario-brief" hidden></span>
-    <script type="module" src="../VR180/viewer.js?v=exhibition-1"></script>
+    <script type="module" src="../VR180/viewer.js?v=exhibition-2"></script>
   </body>
 </html>

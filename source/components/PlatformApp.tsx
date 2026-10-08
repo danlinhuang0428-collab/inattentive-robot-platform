@@ -541,7 +541,7 @@ function Cover({ projects, activeProjectId, onSelectProject, onCreateProject, on
           <span>·</span>
           <button onClick={() => onEnter("case-first")}>CASE SHOP</button>
         </div>
-        <a className="cover-demo-link" href="./demo/">进入展会 VR Demo <span>Exhibition demo ↗</span></a>
+        <a className="cover-demo-link" href="./demo/">Enter VR Demo</a>
       </section>
       <p className="cover-local"><i /> LOCAL STUDY ENVIRONMENT</p>
     </main>

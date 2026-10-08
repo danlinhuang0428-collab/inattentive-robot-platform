@@ -5,7 +5,7 @@
     const link = document.createElement('a');
     link.className = 'cover-demo-link';
     link.href = './demo/';
-    link.innerHTML = '进入展会 VR Demo <span>Exhibition demo ↗</span>';
+    link.textContent = 'Enter VR Demo';
     ports.after(link);
   }
   new MutationObserver(addDemoLink).observe(document.getElementById('root'), { childList: true, subtree: true });
